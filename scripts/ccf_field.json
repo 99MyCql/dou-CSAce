@@ -4,30 +4,35 @@
   "journal": {
     "A": [
       {
+        "isHandle": true,
         "shortName": "TOCS",
         "name": "ACM Transactions on Computer Systems",
         "publisher": "ACM",
         "url": "https://dblp.org/db/journals/tocs/"
       },
       {
+        "isHandle": true,
         "shortName": "TOS",
         "name": "ACM Transactions on Storage",
         "publisher": "ACM",
         "url": "https://dblp.org/db/journals/tos/"
       },
       {
+        "isHandle": true,
         "shortName": "TCAD",
         "name": "IEEE Transactions on Computer-Aided Design of Integrated Circuits And System",
         "publisher": "IEEE",
         "url": "https://dblp.org/db/journals/tcad/"
       },
       {
+        "isHandle": true,
         "shortName": "TC",
         "name": "IEEE Transactions on Computers",
         "publisher": "IEEE",
         "url": "https://dblp.org/db/journals/tc/"
       },
       {
+        "isHandle": true,
         "shortName": "TPDS",
         "name": "IEEE Transactions on Parallel and Distributed Systems",
         "publisher": "IEEE",
@@ -36,60 +41,70 @@
     ],
     "B": [
       {
+        "isHandle": true,
         "shortName": "TACO",
         "name": "ACM Transactions on Architecture and Code Optimization",
         "publisher": "ACM",
         "url": "https://dblp.org/db/journals/taco/"
       },
       {
+        "isHandle": true,
         "shortName": "TAAS",
         "name": "ACM Transactions on Autonomous and Adaptive Systems",
         "publisher": "ACM",
         "url": "https://dblp.org/db/journals/taas/"
       },
       {
+        "isHandle": true,
         "shortName": "TODAES",
         "name": "ACM Transactions on Design Automation of Electronic Systems",
         "publisher": "ACM",
         "url": "https://dblp.org/db/journals/todaes/"
       },
       {
+        "isHandle": true,
         "shortName": "TECS",
         "name": "ACM Transactions on Embedded Computing Systems",
         "publisher": "ACM",
         "url": "https://dblp.org/db/journals/tecs/"
       },
       {
+        "isHandle": true,
         "shortName": "TRETS",
         "name": "ACM Transactions on Reconfigurable Technology and Systems",
         "publisher": "ACM",
         "url": "https://dblp.org/db/journals/trets/"
       },
       {
+        "isHandle": true,
         "shortName": "TVLSI",
         "name": "IEEE Transactions on Very Large Scale Integration (VLSI) Systems",
         "publisher": "IEEE",
-        "url": "https://dblp.org/db/journals/tvlst/"
+        "url": "https://dblp.org/db/journals/tvlsi/"
       },
       {
+        "isHandle": true,
         "shortName": "JPDC",
         "name": "Journal of Parallel and Distributed Computing",
         "publisher": "Elsevier",
         "url": "https://dblp.org/db/journals/jpdc/"
       },
       {
+        "isHandle": true,
         "shortName": "JSA",
         "name": "Journal of Systems Architecture: Embedded Software Design",
         "publisher": "Elsevier",
         "url": "https://dblp.org/db/journals/jsa/"
       },
       {
+        "isHandle": true,
         "shortName": "PARCO",
         "name": "Parallel Computing",
         "publisher": "Elsevier",
-        "url": "https://dblp.org/db/journals/parco/"
+        "url": "https://dblp.org/db/journals/pc/"
       },
       {
+        "isHandle": true,
         "shortName": "pe",
         "name": "Performance Evaluation: An International Journal",
         "publisher": "Elsevier",
@@ -98,66 +113,77 @@
     ],
     "C": [
       {
+        "isHandle": true,
         "shortName": "JETC",
         "name": "ACM Journal on Emerging Technologies in Computing Systems",
         "publisher": "ACM",
         "url": "https://dblp.org/db/journals/jetc/"
       },
       {
+        "isHandle": true,
         "shortName": "concurrency",
         "name": "Concurrency and Computation: Practice and Experience",
         "publisher": "Wiley",
         "url": "https://dblp.org/db/journals/concurrency/"
       },
       {
+        "isHandle": true,
         "shortName": "DC",
         "name": "Distributed Computing",
         "publisher": "Springer",
         "url": "https://dblp.org/db/journals/dc/"
       },
       {
+        "isHandle": true,
         "shortName": "FGCS",
         "name": "Future Generation Computer Systems",
         "publisher": "Elsevier",
         "url": "https://dblp.org/db/journals/fgcs/"
       },
       {
+        "isHandle": true,
         "shortName": "TCC",
         "name": "IEEE Transactions on Cloud Computing",
         "publisher": "IEEE",
         "url": "https://dblp.org/db/journals/tcc/"
       },
       {
+        "isHandle": true,
         "shortName": "Integration",
         "name": "Integration, the VLSI Journal",
         "publisher": "Elsevier",
         "url": "https://dblp.org/db/journals/integration/"
       },
       {
+        "isHandle": true,
         "shortName": "JETTA",
         "name": "Journal of Electronic Testing-Theory and Applications",
         "publisher": "Springer",
         "url": "http://link.springer.com/journal/10836"
       },
       {
+        "isHandle": true,
         "shortName": "JGC",
         "name": "Journal of Grid computing",
         "publisher": "Springer",
         "url": "https://dblp.org/db/journals/grid/"
       },
       {
+        "isHandle": true,
         "shortName": "MICPRO",
         "name": "Microprocessors and Microsystems: Embedded Hardware Design",
         "publisher": "Elsevier",
         "url": "https://dblp.org/db/journals/mam/"
       },
       {
+        "isHandle": true,
         "shortName": "RTS",
         "name": "Real-Time Systems",
         "publisher": "Springer",
         "url": "https://dblp.org/db/journals/rts/"
       },
       {
+        "isHandle": true,
         "shortName": "TJSC",
         "name": "The Journal of Supercomputing",
         "publisher": "Springer",
@@ -168,54 +194,63 @@
   "conference": {
     "A": [
       {
+        "isHandle": true,
         "shortName": "PPoPP",
         "name": "ACM SIGPLAN Symposium on Principles & Practice of Parallel Programming",
         "publisher": "ACM",
         "url": "https://dblp.org/db/conf/ppopp/"
       },
       {
+        "isHandle": true,
         "shortName": "FAST",
         "name": "Conference on File and Storage Technologies",
         "publisher": "USENIX",
         "url": "https://dblp.org/db/conf/fast/"
       },
       {
+        "isHandle": true,
         "shortName": "DAC",
         "name": "Design Automation Conference",
         "publisher": "ACM",
         "url": "https://dblp.org/db/conf/dac/"
       },
       {
+        "isHandle": true,
         "shortName": "HPCA",
         "name": "High Performance Computer Architecture",
         "publisher": "IEEE",
         "url": "https://dblp.org/db/conf/hpca/"
       },
       {
+        "isHandle": true,
         "shortName": "MICRO",
         "name": "IEEE/ACM International Symposium on Microarchitecture",
         "publisher": "IEEE/ACM",
         "url": "https://dblp.org/db/conf/micro/"
       },
       {
+        "isHandle": true,
         "shortName": "SC",
         "name": "International Conference for High Performance Computing, Networking, Storage, and Analysis",
         "publisher": "IEEE",
         "url": "https://dblp.org/db/conf/sc/"
       },
       {
+        "isHandle": true,
         "shortName": "ASPLOS",
         "name": "International Conference on Architectural Support for Programming Languages and Operating Systems",
         "publisher": "ACM",
         "url": "https://dblp.org/db/conf/asplos/"
       },
       {
+        "isHandle": true,
         "shortName": "ISCA",
         "name": "International Symposium on Computer Architecture",
         "publisher": "ACM/IEEE",
         "url": "https://dblp.org/db/conf/isca/"
       },
       {
+        "isHandle": true,
         "shortName": "USENIX ATC",
         "name": "USENIX Annul Technical Conference",
         "publisher": "USENIX",
@@ -224,156 +259,182 @@
     ],
     "B": [
       {
+        "isHandle": true,
         "shortName": "SoCC",
         "name": "ACM Symposium on Cloud Computing",
         "publisher": "ACM",
         "url": "https://dblp.org/db/conf/cloud/"
       },
       {
+        "isHandle": true,
         "shortName": "SPAA",
         "name": "ACM Symposium on Parallelism in Algorithms and Architectures",
         "publisher": "ACM",
         "url": "https://dblp.org/db/conf/spaa/"
       },
       {
+        "isHandle": true,
         "shortName": "PODC",
         "name": "ACM Symposium on Principles of Distributed Computing",
         "publisher": "ACM",
         "url": "https://dblp.org/db/conf/podc/"
       },
       {
+        "isHandle": true,
         "shortName": "FPGA",
         "name": "ACM/SIGDA International Symposium on Field-Programmable Gate Arrays",
         "publisher": "ACM",
         "url": "https://dblp.org/db/conf/fpga/"
       },
       {
+        "isHandle": true,
         "shortName": "CGO",
         "name": "Code Generation and Optimization",
         "publisher": "IEEE/ACM",
         "url": "https://dblp.org/db/conf/cgo/"
       },
       {
+        "isHandle": true,
         "shortName": "DATE",
         "name": "Design, Automation & Test in Europe",
         "publisher": "IEEE/ACM",
         "url": "https://dblp.org/db/conf/date/"
       },
       {
+        "isHandle": true,
         "shortName": "EuroSys",
         "name": "European Conference on Computer Systems",
         "publisher": "ACM",
         "url": "https://dblp.org/db/conf/eurosys/"
       },
       {
+        "isHandle": true,
         "shortName": "HOT CHIPS",
         "name": "Hot Chips: A Symposium on High Performance Chips",
         "publisher": "IEEE",
         "url": "https://dblp.org/db/conf/hotchips/"
       },
       {
+        "isHandle": true,
         "shortName": "CLUSTER",
         "name": "IEEE International Conference on Cluster Computing",
         "publisher": "IEEE",
         "url": "https://dblp.org/db/conf/cluster/"
       },
       {
+        "isHandle": true,
         "shortName": "ICCD",
         "name": "International Conference on Computer Design",
         "publisher": "IEEE",
         "url": "https://dblp.org/db/conf/iccd/"
       },
       {
+        "isHandle": true,
         "shortName": "ICCAD",
         "name": "International Conference on Computer-Aided Design",
         "publisher": "IEEE/ACM",
         "url": "https://dblp.org/db/conf/iccad/"
       },
       {
+        "isHandle": true,
         "shortName": "ICDCS",
         "name": "International Conference on Distributed Computing Systems",
         "publisher": "IEEE",
         "url": "https://dblp.org/db/conf/icdcs/"
       },
       {
+        "isHandle": true,
         "shortName": "CODES+ISSS",
         "name": "International Conference on Hardware/Software Co-design and System Synthesis",
         "publisher": "ACM/IEEE",
         "url": "https://dblp.org/db/conf/codes/"
       },
       {
+        "isHandle": true,
         "shortName": "HiPEAC",
         "name": "International Conference on High Performance and Embedded Architectures and Compilers",
         "publisher": "ACM",
         "url": "https://dblp.org/db/conf/hipeac/"
       },
       {
+        "isHandle": true,
         "shortName": "SIGMETRICS",
         "name": "International Conference on Measurement and Modeling of Computer Systems",
         "publisher": "ACM",
         "url": "https://dblp.org/db/conf/sigmetrics/"
       },
       {
+        "isHandle": true,
         "shortName": "PACT",
         "name": "International Conference on Parallel Architectures and Compilation Techniques",
         "publisher": "IEEE/ACM",
         "url": "https://dblp.org/db/conf/IEEEpact/"
       },
       {
+        "isHandle": true,
         "shortName": "ICPP",
         "name": "International Conference on Parallel Processing",
         "publisher": "",
         "url": "https://dblp.org/db/conf/spaa/"
       },
       {
+        "isHandle": true,
         "shortName": "ICS",
         "name": "International Conference on Supercomputing",
         "publisher": "ACM",
         "url": "https://dblp.org/db/conf/ics/"
       },
       {
+        "isHandle": true,
         "shortName": "VEE",
         "name": "International Conference on Virtual Execution Environments",
         "publisher": "ACM",
         "url": "https://dblp.org/db/conf/vee/"
       },
       {
+        "isHandle": true,
         "shortName": "IPDPS",
         "name": "International Parallel & Distributed Processing Symposium",
         "publisher": "IEEE",
-        "url": "https://dblp.org/db/conf/ipdps/"
+        "url": "https://dblp.org/db/conf/ipps/"
       },
       {
+        "isHandle": true,
         "shortName": "Performance",
         "name": "International Symposium on Computer Performance Modeling, Measurements and Evaluation",
         "publisher": "ACM",
         "url": "https://dblp.org/db/conf/performance/"
       },
       {
+        "isHandle": true,
         "shortName": "HPDC",
         "name": "International Symposium on High Performance Distributed Computing",
         "publisher": "IEEE",
         "url": "https://dblp.org/db/conf/hpdc/"
       },
       {
+        "isHandle": true,
         "shortName": "ITC",
         "name": "International Test Conference",
         "publisher": "IEEE",
         "url": "https://dblp.org/db/conf/itc/"
       },
       {
+        "isHandle": true,
         "shortName": "LISA",
         "name": "Large Installation System Administration Conference",
         "publisher": "USENIX",
         "url": "https://dblp.org/db/conf/lisa/"
       },
       {
+        "isHandle": true,
         "shortName": "MSST",
         "name": "Mass Storage Systems and Technologies",
         "publisher": "IEEE",
         "url": "https://dblp.org/db/conf/mss/"
       },
       {
+        "isHandle": true,
         "shortName": "RTAS",
         "name": "Real-Time and Embedded Technology and Applications Symposium",
         "publisher": "IEEE",
@@ -382,156 +443,182 @@
     ],
     "C": [
       {
+        "isHandle": true,
         "shortName": "CF",
         "name": "ACM International Conference on Computing Frontiers",
         "publisher": "ACM",
         "url": "https://dblp.org/db/conf/cf/"
       },
       {
+        "isHandle": true,
         "shortName": "SYSTOR",
         "name": "ACM International Systems and Storage Conference",
         "publisher": "ACM",
         "url": "https://dblp.org/db/conf/systor/"
       },
       {
+        "isHandle": true,
         "shortName": "NOCS",
         "name": "ACM/IEEE International Symposium on Networks-on-Chip",
         "publisher": "ACM/IEEE",
         "url": "https://dblp.org/db/conf/nocs/"
       },
       {
+        "isHandle": true,
         "shortName": "ASAP",
         "name": "Application-Specific Systems, Architectures, and Processors",
         "publisher": "IEEE",
         "url": "https://dblp.org/db/conf/asap/"
       },
       {
+        "isHandle": true,
         "shortName": "ASP-DAC",
         "name": "Asia and South Pacific Design Automation Conference",
         "publisher": "ACM/IEEE",
         "url": "https://dblp.org/db/conf/aspdac/"
       },
       {
+        "isHandle": true,
         "shortName": "Euro-Par",
         "name": "European Conference on Parallel and Distributed Computing",
         "publisher": "Springer",
         "url": "https://dblp.org/db/conf/europar/"
       },
       {
+        "isHandle": true,
         "shortName": "ETS",
         "name": "European Test Symposium",
         "publisher": "IEEE",
         "url": "https://dblp.org/db/conf/ets/"
       },
       {
+        "isHandle": true,
         "shortName": "FPL",
         "name": "Field Programmable Logic and Applications",
         "publisher": "IEEE",
         "url": "https://dblp.org/db/conf/fpl/"
       },
       {
+        "isHandle": true,
         "shortName": "FCCM",
         "name": "Field-Programmable Custom Computing Machines",
         "publisher": "IEEE",
         "url": "https://dblp.org/db/conf/fccm/"
       },
       {
+        "isHandle": true,
         "shortName": "GLSVLSI",
         "name": "Great Lakes Symposium on VLSI",
         "publisher": "ACM/IEEE",
         "url": "https://dblp.org/db/conf/glvlsi/"
       },
       {
+        "isHandle": true,
         "shortName": "ATS",
         "name": "IEEE Asian Test Symposium",
         "publisher": "IEEE",
         "url": "https://dblp.org/db/conf/ats/"
       },
       {
+        "isHandle": true,
         "shortName": "HPCC",
         "name": "IEEE International Conference on High Performance Computing and Communications",
         "publisher": "IEEE",
         "url": "https://dblp.org/db/conf/hpcc/"
       },
       {
+        "isHandle": true,
         "shortName": "HiPC",
         "name": "IEEE International Conference on High Performance Computing, Data and Analytics",
         "publisher": "IEEE/ACM",
         "url": "https://dblp.org/db/conf/hipc/"
       },
       {
+        "isHandle": true,
         "shortName": "MASCOTS",
         "name": "IEEE International Symposium on Modeling, Analysis, and Simulation of Computer and Telecommunication Systems",
         "publisher": "IEEE",
         "url": "https://dblp.org/db/conf/mascots/"
       },
       {
+        "isHandle": true,
         "shortName": "ISPA",
         "name": "IEEE International Symposium on Parallel and Distributed Processing with Applications",
         "publisher": "IEEE",
         "url": "https://dblp.org/db/conf/ispa/"
       },
       {
+        "isHandle": true,
         "shortName": "CCGRID",
         "name": "IEEE/ACM International Symposium on Cluster, Cloud and Grid Computing",
         "publisher": "ACM/IEEE",
         "url": "https://dblp.org/db/conf/ccgrid/"
       },
       {
+        "isHandle": true,
         "shortName": "NPC",
         "name": "IFIP International Conference on Network and Parallel Computing",
         "publisher": "Springer",
         "url": "https://dblp.org/db/conf/npc/"
       },
       {
+        "isHandle": true,
         "shortName": "ICA3PP",
         "name": "International Conference on Algorithms and Architectures for Parallel Processing",
         "publisher": "IEEE",
         "url": "https://dblp.org/db/conf/ica3pp/"
       },
       {
+        "isHandle": true,
         "shortName": "CASES",
         "name": "International Conference on Compilers, Architectures, and Synthesis for Embedded Systems",
         "publisher": "ACM",
         "url": "https://dblp.org/db/conf/cases/"
       },
       {
+        "isHandle": true,
         "shortName": "FPT",
         "name": "International Conference on Field-Programmable Technology",
         "publisher": "IEEE",
         "url": "https://dblp.org/db/conf/fpt/"
       },
       {
+        "isHandle": true,
         "shortName": "ICPADS",
         "name": "International Conference on Parallel and Distributed Systems",
         "publisher": "IEEE",
         "url": "https://dblp.org/db/conf/icpads/"
       },
       {
+        "isHandle": true,
         "shortName": "ISCAS",
         "name": "International Symposium on Circuits and Systems",
         "publisher": "IEEE",
         "url": "https://dblp.org/db/conf/iscas/"
       },
       {
+        "isHandle": true,
         "shortName": "ISLPED",
         "name": "International Symposium on Low Power Electronics and Design",
         "publisher": "ACM/IEEE",
         "url": "https://dblp.org/db/conf/islped/"
       },
       {
+        "isHandle": true,
         "shortName": "ISPD",
         "name": "International Symposium on Physical Design",
         "publisher": "ACM",
         "url": "https://dblp.org/db/conf/ispd/"
       },
       {
+        "isHandle": true,
         "shortName": "HotI",
         "name": "Symposium on High-Performance Interconnects",
         "publisher": "IEEE",
         "url": "https://dblp.org/db/conf/hoti/"
       },
       {
+        "isHandle": true,
         "shortName": "VTS",
         "name": "VLSI Test Symposium",
         "publisher": "IEEE",

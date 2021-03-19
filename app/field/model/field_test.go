@@ -1,4 +1,4 @@
-package field
+package model
 
 import (
 	"fmt"
@@ -10,6 +10,7 @@ import (
 
 func TestField_Create(t *testing.T) {
 	f := &Field{
+		Key:           GenKey(1, "Computer Architecture"),
 		Name:          "Computer Architecture",
 		ZhName:        "计算机体系结构/并行与分布计算/存储系统",
 		Type:          1,
@@ -24,7 +25,7 @@ func TestField_Create(t *testing.T) {
 }
 
 func TestMain(m *testing.M) {
-	pkg.TestSetup("../../conf.yaml")
+	pkg.TestSetup("../../../conf.yaml")
 	code := m.Run()
 	os.Exit(code)
 }

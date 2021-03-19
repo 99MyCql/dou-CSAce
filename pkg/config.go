@@ -13,7 +13,7 @@ type ArangoDBInfo struct {
 	Username string            `yaml:"username"`
 	Passwd   string            `yaml:"passwd"`
 	Database string            `yaml:"database"`
-	Cols     map[string]string `yaml:"collections"`
+	ColNames map[string]string `yaml:"collections"`
 }
 
 type Config struct {

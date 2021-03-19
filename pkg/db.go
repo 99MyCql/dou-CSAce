@@ -67,12 +67,12 @@ func NewDB(DBUrl string, username string, passwd string, database string, cols m
 
 // ComDocCreate 通用数据库文档创建操作
 func ComDocCreate(data interface{}, modelName string) (string, error) {
-	Log.Info(fmt.Sprintf("%+v", data))
+	Log.Info(fmt.Sprintf("ready to create document: %+v", data))
 	ctx := context.Background()
 	docMeta, err := DB.Cols[modelName].CreateDocument(ctx, data)
 	if err != nil {
 		return "", err
 	}
-	Log.Info(fmt.Sprintf("%+v", docMeta))
+	Log.Info(fmt.Sprintf("create document successfully: %+v", docMeta))
 	return docMeta.ID.String(), nil
 }

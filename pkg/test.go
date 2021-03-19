@@ -5,5 +5,5 @@ func TestSetup(confFilepath string) {
 	Conf = NewConfig(confFilepath)
 	Log = NewLog(Conf.LogPath, DebugLevel)
 	DB = NewDB(Conf.ArangoDB.Url, Conf.ArangoDB.Username, Conf.ArangoDB.Passwd,
-		Conf.ArangoDB.Database, Conf.ArangoDB.Cols)
+		Conf.ArangoDB.Database, Conf.ArangoDB.ColNames)
 }

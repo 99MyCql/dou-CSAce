@@ -38,9 +38,8 @@
 
 |Field Name|Field Type|Description|
 |---|---|---|
-|_key|string|唯一标识，等同于 dblp 中文章的 key ，`_key = <type>-<journal _key/conf _key>-<dblpkey>`，比如：`1-ppopp-GavrielatosKNGJ20`|
+|_key|string|唯一标识，等同于 dblp 中文章的 key ，`_key = dblpKey.replaceAll("/", "-")`，比如：`journals-tocs-BalmauDZGCD20`|
 |title|string||
-|abstract|string||
 |type|uint|0:Other, 1:Conference, 2:Journal|
 |pages|string||
 |year|string||
@@ -49,26 +48,25 @@
 |number|string|type=2|
 |doiUrl|string||
 |dblpUrl|string||
-|referenceCount|long||
-|citationCount|long||
+|referenceCount|uint64||
+|citationCount|uint64||
 
-- 会议实例（哪一年哪一场的会议）实体模型（Document），表名：`conferenceInstances`
+- 会议实例（哪一年哪一场的会议）实体模型（Document），表名：`confInstances`
 
 |Field Name|Field Type|Description|
 |---|---|---|
-|_key|string|唯一标识，等同于 dblp 中会议实例的 key ，比如：`ppopp2020`|
+|_key|string|唯一标识，等同于 dblp 中会议实例的 key ，比如：dblpKey 是 conf/ppopp/2020 ，则 key 为 ppopp-2020|
 |title|string||
 |publisher|string|出版方|
-|booktitle|string||
+|bookTitle|string||
 |year|string||
 |isbn|string|dblp 中会议实例的属性，用处未知，暂且保存下来|
-|location|string|举办地点|
 |doiUrl|string||
 |dblpUrl|string||
-|paperCount|uint||
-|citationCount|uint||
+|paperCount|uint64||
+|citationCount|uint64||
 
-- 会议实体模型（Document），表名：`conferenceSeries`
+- 会议实体模型（Document），表名：`confSeries`
 
 |Field Name|Field Type|Description|
 |---|---|---|
@@ -77,8 +75,8 @@
 |name|string||
 |publisher|string||
 |dblpUrl|string||
-|paperCount|uint||
-|citationCount|uint||
+|paperCount|uint64||
+|citationCount|uint64||
 
 - 期刊实体模型（Document），表名：`journals`
 
@@ -89,8 +87,8 @@
 |name|string||
 |publisher|string||
 |dblpUrl|string||
-|paperCount|uint||
-|citationCount|uint||
+|paperCount|uint64||
+|citationCount|uint64||
 
 - 研究方向实体模型（Document），表名：`fields`
 
@@ -100,19 +98,19 @@
 |name|string||
 |zhName|string||
 |type|uint|0:Other, 1:CCF|
-|paperCount|uint||
-|citationCount|uint||
+|paperCount|uint64||
+|citationCount|uint64||
 
 - 作者实体模型（Document），表名：`authors`
 
 |Field Name|Field Type|Description|
 |---|---|---|
-|_key|string|唯一标识，等同于 dblp 中作者的 pid ，`_key = pid.replaceAll("/", "_")`，比如：`g_RajivGupta`|
+|_key|string|唯一标识，等同于 dblp 中作者的 pid ，`_key = pid.replaceAll("/", "-")`，比如：`g-RajivGupta`|
 |name|string||
 |zhName|string||
 |urls|string|作者主页，如果有多个则用空格分隔|
-|paperCount|uint||
-|citationCount|uint||
+|paperCount|uint64||
+|citationCount|uint64||
 
 - 机构实体模型（Document），表名：`affiliations`
 
@@ -120,49 +118,57 @@
 |---|---|---|
 |_key|string|唯一标识，自动生成|
 |name|string||
-|paperCount|uint||
+|paperCount|uint64||
 |authorCount|uint||
-|citationCount|uint||
+|citationCount|uint64||
 
 - 论文->论文 引用关系模型（Edge），表名：`cit_by`，From 表：`papers`，To 表：`papers`
 
 |Field Name|Field Type|Description|
 |---|---|---|
 |_key|string|唯一标识，自动生成|
-|_from|string| From 表中某个文档的 _key |
-|_to|string| To 表中某个文档的 _key |
+|_from|string| From 表中对应文档的 _id （_id=<表名>/<_key>） |
+|_to|string| To 表中对应文档的 _id |
 
-- 论文->会议实例 发表关系模型（Edge），表名：`publish_on_confIns`，From 表：`papers`，To 表：`conferenceInstances`
+- 论文->会议实例 发表关系模型（Edge），表名：`publish_on_confIns`，From 表：`papers`，To 表：`confInstances`
 
 |Field Name|Field Type|Description|
 |---|---|---|
 |_key|string|唯一标识，自动生成|
-|_from|string| From 表中某个文档的 _key |
-|_to|string| To 表中某个文档的 _key |
+|_from|string| From 表中对应文档的 _id |
+|_to|string| To 表中对应文档的 _id |
 
 - 论文->期刊 发表关系模型（Edge），表名：`publish_on_jou`，From 表：`papers`，To 表：`journals`
 
 |Field Name|Field Type|Description|
 |---|---|---|
 |_key|string|唯一标识，自动生成|
-|_from|string| From 表中某个文档的 _key |
-|_to|string| To 表中某个文档的 _key |
+|_from|string| From 表中对应文档的 _id |
+|_to|string| To 表中对应文档的 _id |
 
-- 会议实例->会议 从属关系模型（Edge），表名：`confIns_belong_to_confSer`，From 表：`conferenceInstances`，To 表：`conferenceSeries`
-
-|Field Name|Field Type|Description|
-|---|---|---|
-|_key|string|唯一标识，自动生成|
-|_from|string| From 表中某个文档的 _key |
-|_to|string| To 表中某个文档的 _key |
-
-- 会议->研究方向 从属关系模型（Edge），表名：`confSer_belong_to_field`，From 表：`conferenceSeries`，To 表：`fields`
+- 论文->作者 著作关系模型（Edge），表名：`write_by`，From 表：`papers`，To 表：`authors`
 
 |Field Name|Field Type|Description|
 |---|---|---|
 |_key|string|唯一标识，自动生成|
-|_from|string| From 表中某个文档的 _key |
-|_to|string| To 表中某个文档的 _key |
+|_from|string| From 表中对应文档的 _id |
+|_to|string| To 表中对应文档的 _id |
+
+- 会议实例->会议 从属关系模型（Edge），表名：`confIns_belong_to_confSer`，From 表：`confInstances`，To 表：`confSeries`
+
+|Field Name|Field Type|Description|
+|---|---|---|
+|_key|string|唯一标识，自动生成|
+|_from|string| From 表中对应文档的 _id |
+|_to|string| To 表中对应文档的 _id |
+
+- 会议->研究方向 从属关系模型（Edge），表名：`confSer_belong_to_field`，From 表：`confSeries`，To 表：`fields`
+
+|Field Name|Field Type|Description|
+|---|---|---|
+|_key|string|唯一标识，自动生成|
+|_from|string| From 表中对应文档的 _id |
+|_to|string| To 表中对应文档的 _id |
 |note|string|备注，若指向的研究方向类型是 CCF ，则备注分类：A、B、C|
 
 - 期刊->研究方向 从属关系模型（Edge），表名：`jou_belong_to_field`，From 表：`journals`，To 表：`fields`
@@ -170,8 +176,8 @@
 |Field Name|Field Type|Description|
 |---|---|---|
 |_key|string|唯一标识，自动生成|
-|_from|string| From 表中某个文档的 _key |
-|_to|string| To 表中某个文档的 _key |
+|_from|string| From 表中对应文档的 _id |
+|_to|string| To 表中对应文档的 _id |
 |note|string|备注，若指向的研究方向类型是 CCF ，则备注分类：A 类、B 类、C 类|
 
 - 作者->作者 合作关系模型（Edge），表名：`co_with`，From 表：`authors`，To 表：`authors`
@@ -179,16 +185,16 @@
 |Field Name|Field Type|Description|
 |---|---|---|
 |_key|string|唯一标识，自动生成|
-|_from|string| From 表中对应文档的 _key |
-|_to|string| To 表中对应文档的 _key |
+|_from|string| From 表中对应文档的 _id |
+|_to|string| To 表中对应文档的 _id |
 
 - 作者->机构 从属关系模型（Edge），表名：`author_belong_to_aff`，From 表：`authors`，To 表：`affiliations`
 
 |Field Name|Field Type|Description|
 |---|---|---|
 |_key|string|唯一标识，自动生成|
-|_from|string| From 表中对应文档的 _key |
-|_to|string| To 表中对应文档的 _key |
+|_from|string| From 表中对应文档的 _id |
+|_to|string| To 表中对应文档的 _id |
 |startYear|string||
 |endYear|string||
 |note|string|备注|
