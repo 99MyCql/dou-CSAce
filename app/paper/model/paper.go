@@ -87,3 +87,9 @@ func FindByKey(key string) (*Paper, error) {
 	p.ID = docMeta.ID.String()
 	return p, nil
 }
+
+// Count 返回该集合中文档（记录）数量
+func Count() (int64, error) {
+	ctx := context.Background()
+	return pkg.DB.Cols[pkg.PaperName].Count(ctx)
+}

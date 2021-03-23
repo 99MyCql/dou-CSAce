@@ -1,6 +1,7 @@
 package model
 
 import (
+	"context"
 	"strings"
 
 	"douCSAce/pkg"
@@ -45,4 +46,10 @@ func FindByKey(key string) (*Author, error) {
 	}
 	a.ID = docMeta.ID.String()
 	return a, nil
+}
+
+// Count 返回该集合中文档（记录）数量
+func Count() (int64, error) {
+	ctx := context.Background()
+	return pkg.DB.Cols[pkg.AuthorName].Count(ctx)
 }

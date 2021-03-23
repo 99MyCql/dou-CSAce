@@ -463,14 +463,15 @@ func main() {
 	defer f.Close()
 
 	// 解析 json 文件
-	var jsonData []map[string]interface{}
+	var jsonData map[string]interface{}
 	decoder := json.NewDecoder(f)
 	if err := decoder.Decode(&jsonData); err != nil {
 		pkg.Log.Fatal(err)
 	}
 
+	ccfInter := jsonData["ccf_international"].([]interface{})
 	// 处理各个研究方向
-	for i := 0; i < len(jsonData); i++ {
-		handleField(jsonData[i], CCFFieldType)
+	for i := 0; i < len(ccfInter); i++ {
+		handleField(ccfInter[i].(map[string]interface{}), CCFFieldType)
 	}
 }

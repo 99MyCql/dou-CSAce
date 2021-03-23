@@ -63,3 +63,9 @@ func FindByKey(key string) (*Journal, error) {
 	j.ID = docMeta.ID.String()
 	return j, nil
 }
+
+// Count 返回该集合中文档（记录）数量
+func Count() (int64, error) {
+	ctx := context.Background()
+	return pkg.DB.Cols[pkg.JournalName].Count(ctx)
+}

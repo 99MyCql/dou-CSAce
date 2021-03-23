@@ -198,3 +198,39 @@
 |startYear|string||
 |endYear|string||
 |note|string|备注|
+
+## 快速开始
+
+### 准备
+
+1. Go 1.14
+2. ArangoDB 3.7.6
+
+安装 swag 生成工具：
+
+```
+go get -u github.com/swaggo/swag/cmd/swag
+```
+
+生成 swagger 文档：
+
+```
+swag init
+```
+
+在根目录下创建配置文件 `conf.yaml` ，内容如下：
+
+```yaml
+```
+
+### 运行
+
+```
+go run main.go
+```
+
+or 直接生成可执行程序：
+
+```
+go build
+```

@@ -65,3 +65,9 @@ func FindByKey(key string) (*ConfSeries, error) {
 	c.ID = docMeta.ID.String()
 	return c, nil
 }
+
+// Count 返回该集合中文档（记录）数量
+func Count() (int64, error) {
+	ctx := context.Background()
+	return pkg.DB.Cols[pkg.ConfSeriesName].Count(ctx)
+}

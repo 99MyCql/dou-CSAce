@@ -11,6 +11,14 @@ import (
 	"github.com/gin-gonic/gin"
 )
 
+const (
+	DebugLevel = "Debug"
+	InfoLevel  = "Info"
+	WarnLevel  = "Warn"
+	ErrorLevel = "Error"
+	FatalLevel = "Fatal"
+)
+
 // myFormatter 实现 logrus.Formatter 接口，自定义输出格式
 type myFormatter struct{}
 
@@ -20,14 +28,6 @@ func (f *myFormatter) Format(entry *logrus.Entry) ([]byte, error) {
 		entry.Caller.File, entry.Caller.Line, entry.Message)
 	return []byte(msg), nil
 }
-
-const (
-	DebugLevel = "Debug"
-	InfoLevel  = "Info"
-	WarnLevel  = "Warn"
-	ErrorLevel = "Error"
-	FatalLevel = "Fatal"
-)
 
 // NewLog 初始化日志配置。若 logPath 为空，则输出到控制台
 func NewLog(logPath string, level string) *logrus.Logger {
