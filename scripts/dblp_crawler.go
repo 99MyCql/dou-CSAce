@@ -99,7 +99,7 @@ func handlePaper(paperXml *etree.Element, typ uint, venue interface{}) {
 			p, _ = paperModel.FindByKey(key)
 		} else {
 			p = &paperModel.Paper{
-				Key:     paperModel.GenKey(paperXml.SelectAttr("key").Value),
+				Key:     key,
 				Title:   paperXml.SelectElement("title").Text(),
 				Type:    typ,
 				Pages:   pages,
@@ -184,7 +184,7 @@ func handleJournal(journalMap map[string]interface{}, f *fieldModel.Field, categ
 	}
 
 	jou := &jouModel.Journal{
-		Key:       jouModel.GenKey(journalMap["shortName"].(string)),
+		Key:       key,
 		Name:      journalMap["name"].(string),
 		ShortName: journalMap["shortName"].(string),
 		Publisher: journalMap["publisher"].(string),
@@ -273,6 +273,7 @@ func handleConfInstances(confInstanceXml *etree.Element, cs *confSerModel.ConfSe
 		doiUrl    string
 		bookTitle string
 		publisher string
+		url       string
 	)
 	if i := confInstanceXml.SelectElement("isbn"); i != nil {
 		isbn = i.Text()
@@ -286,6 +287,9 @@ func handleConfInstances(confInstanceXml *etree.Element, cs *confSerModel.ConfSe
 	if p := confInstanceXml.SelectElement("publisher"); p != nil {
 		publisher = p.Text()
 	}
+	if u := confInstanceXml.SelectElement("url"); u != nil {
+		url = "https://dblp.org/" + u.Text()
+	}
 
 	ci := &confInsModel.ConfInstance{
 		Key:       key,
@@ -295,7 +299,7 @@ func handleConfInstances(confInstanceXml *etree.Element, cs *confSerModel.ConfSe
 		Year:      confInstanceXml.SelectElement("year").Text(),
 		Isbn:      isbn,
 		DoiUrl:    doiUrl,
-		DblpUrl:   "https://dblp.org/" + confInstanceXml.SelectElement("url").Text(),
+		DblpUrl:   url,
 	}
 	if err := ci.Create(); err != nil {
 		pkg.Log.Fatal(err)
@@ -309,6 +313,22 @@ func handleConfInstances(confInstanceXml *etree.Element, cs *confSerModel.ConfSe
 	}
 
 	// 请求接口获取数据
+	if ci.DblpUrl == "" {
+		return
+	}
+	bugUrls := [...][2]string{
+		{"conf/pldi/madl2020.html", "conf/pldi/mapl2020.html"},
+		{"conf/models/mddaui2006.htmlk", "conf/models/mddaui2006.html"},
+		{"conf/esws/esws2020s.html", "conf/esws/eswc2020.html"},
+		{"conf/acl/acl2003la.html", "conf/acl/acl2003.html"},
+	}
+	for i := 0; i < len(bugUrls); i++ {
+		ci.DblpUrl = strings.ReplaceAll(ci.DblpUrl, bugUrls[i][0], bugUrls[i][1])
+	}
+	ci.DblpUrl = strings.ReplaceAll(
+		strings.ReplaceAll(ci.DblpUrl, "conf/pldi/madl2020.html", "conf/pldi/mapl2020.html"),
+		"conf/models/mddaui2006.htmlk",
+		"conf/models/mddaui2006.html")
 	confInsUrl := strings.ReplaceAll(ci.DblpUrl, ".html", ".xml")
 	pkg.Log.Info(confInsUrl)
 	rsp, err := http.Get(confInsUrl)
@@ -430,7 +450,7 @@ func handleField(fieldMap map[string]interface{}, typ uint) {
 		f, _ = fieldModel.FindByKey(key)
 	} else {
 		f = &fieldModel.Field{
-			Key:           fieldModel.GenKey(typ, fieldMap["name"].(string)),
+			Key:           key,
 			Name:          fieldMap["name"].(string),
 			ZhName:        fieldMap["zhName"].(string),
 			Type:          typ,
@@ -449,7 +469,7 @@ func handleField(fieldMap map[string]interface{}, typ uint) {
 // 初始化：读取配置、启动日志、连接数据库
 func init() {
 	pkg.Conf = pkg.NewConfig("../conf.yaml")
-	pkg.Log = pkg.NewLog("", pkg.DebugLevel)
+	pkg.Log = pkg.NewLog("dblp_crawler.log", pkg.DebugLevel)
 	pkg.DB = pkg.NewDB(pkg.Conf.ArangoDB.Url, pkg.Conf.ArangoDB.Username,
 		pkg.Conf.ArangoDB.Passwd, pkg.Conf.ArangoDB.Database, pkg.Conf.ArangoDB.ColNames)
 }

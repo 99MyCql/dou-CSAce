@@ -3,6 +3,7 @@ package model
 import (
 	"context"
 	"fmt"
+	"strings"
 
 	"douCSAce/pkg"
 )
@@ -45,7 +46,7 @@ func (j *Journal) DeleteJouBelongToField() error {
 
 // GenKey 需传入 Journal 的 ShortName 属性
 func GenKey(shortName string) string {
-	return shortName
+	return strings.ReplaceAll(shortName, " ", "-")
 }
 
 // IsExist 判断 key 是否已存在

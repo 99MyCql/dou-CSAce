@@ -47,7 +47,7 @@ func (c *ConfSeries) DeleteConfSerBelongToField() error {
 
 // GenKey 需传入会议实体的 ShortName 属性
 func GenKey(shortName string) string {
-	return strings.ReplaceAll(shortName, " ", "-")
+	return strings.ReplaceAll(strings.ReplaceAll(shortName, "/", "-"), " ", "-")
 }
 
 // IsExist 判断 key 是否已存在

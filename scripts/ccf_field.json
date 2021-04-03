@@ -628,6 +628,3861 @@
           }
         ]
       }
+    },
+    {
+      "name": "Computer Network",
+      "zhName": "计算机网络",
+      "journal": {
+        "A": [
+          {
+            "isHandle": true,
+            "shortName": "JSAC",
+            "name": "IEEE Journal of Selected Areas in Communications",
+            "publisher": "IEEE",
+            "url": "https://dblp.org/db/journals/jsac/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "TMC",
+            "name": "IEEE Transactions on Mobile Computing",
+            "publisher": "IEEE",
+            "url": "https://dblp.org/db/journals/tmc/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "TON",
+            "name": "IEEE/ACM Transactions on Networking",
+            "publisher": "IEEE/ACM",
+            "url": "https://dblp.org/db/journals/ton/"
+          }
+        ],
+        "B": [
+          {
+            "isHandle": true,
+            "shortName": "TOIT",
+            "name": "ACM Transactions on Internet Technology",
+            "publisher": "ACM",
+            "url": "https://dblp.org/db/journals/toit/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "TOMCCAP",
+            "name": "ACM Transactions on Multimedia Computing, Communications and Applications",
+            "publisher": "ACM",
+            "url": "https://dblp.org/db/journals/tomccap/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "TOSN",
+            "name": "ACM Transactions on Sensor Networks",
+            "publisher": "ACM",
+            "url": "https://dblp.org/db/journals/tosn/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "CN",
+            "name": "Computer Networks",
+            "publisher": "Elsevier",
+            "url": "https://dblp.org/db/journals/cn/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "TCOM",
+            "name": "IEEE Transactions on Communications",
+            "publisher": "IEEE",
+            "url": "https://dblp.org/db/journals/tcom/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "TWC",
+            "name": "IEEE Transactions on Wireless Communications",
+            "publisher": "IEEE",
+            "url": "https://dblp.org/db/journals/twc/"
+          }
+        ],
+        "C": [
+          {
+            "isHandle": true,
+            "shortName": "adhoc",
+            "name": "Ad Hoc Networks",
+            "publisher": "Elsevier",
+            "url": "https://dblp.org/db/journals/adhoc/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "CC",
+            "name": "Computer Communications",
+            "publisher": "Elsevier",
+            "url": "https://dblp.org/db/journals/comcom/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "TNSM",
+            "name": "IEEE Transactions on Network and Service Management",
+            "publisher": "IEEE",
+            "url": "https://dblp.org/db/journals/tnsm/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "iet-com",
+            "name": "IET Communications",
+            "publisher": "IET",
+            "url": "https://dblp.org/db/journals/iet-com/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "JNCA",
+            "name": "Journal of Network and Computer Applications",
+            "publisher": "Elsevier",
+            "url": "https://dblp.org/db/journals/jnca/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "MONET",
+            "name": "Mobile Networks & Applications",
+            "publisher": "Springer",
+            "url": "https://dblp.org/db/journals/monet/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "networks",
+            "name": "Networks",
+            "publisher": "Wiley",
+            "url": "https://dblp.org/db/journals/networks/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "PPNA",
+            "name": "Peer-to-Peer Networking and Applications",
+            "publisher": "Springer",
+            "url": "https://dblp.org/db/journals/ppna/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "WCMC",
+            "name": "Wireless Communications & Mobile Computing",
+            "publisher": "Wiley.",
+            "url": "https://dblp.org/db/journals/wicomm/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "winet",
+            "name": "Wireless Networks",
+            "publisher": "Springer",
+            "url": "https://dblp.org/db/journals/winet/"
+          }
+        ]
+      },
+      "conference": {
+        "A": [
+          {
+            "isHandle": true,
+            "shortName": "SIGCOMM",
+            "name": "ACM International Conference on Applications, Technologies, Architectures, and Protocols for Computer Communication",
+            "publisher": "ACM",
+            "url": "https://dblp.org/db/conf/sigcomm/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "MobiCom",
+            "name": "ACM International Conference on Mobile Computing and Networking",
+            "publisher": "ACM",
+            "url": "https://dblp.org/db/conf/mobicom/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "INFOCOM",
+            "name": "IEEE International Conference on Computer Communications",
+            "publisher": "IEEE",
+            "url": "https://dblp.org/db/conf/infocom/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "NSDI",
+            "name": "Symposium on Network System Design and Implementation",
+            "publisher": "USENIX",
+            "url": "https://dblp.org/db/conf/nsdi/"
+          }
+        ],
+        "B": [
+          {
+            "isHandle": true,
+            "shortName": "SenSys",
+            "name": "ACM Conference on Embedded Networked Sensor Systems",
+            "publisher": "ACM",
+            "url": "https://dblp.org/db/conf/sensys/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "CoNEXT",
+            "name": "ACM International Conference on Emerging Networking Experiments and Technologies",
+            "publisher": "ACM",
+            "url": "https://dblp.org/db/conf/conext/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "SECON",
+            "name": "IEEE Communications Society Conference on Sensor and Ad Hoc Communications and Networks",
+            "publisher": "IEEE",
+            "url": "https://dblp.org/db/conf/secon/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "IPSN",
+            "name": "International Conference on Information Processing in Sensor Networks",
+            "publisher": "IEEE/ACM",
+            "url": "https://dblp.org/db/conf/ipsn/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "MobiSys",
+            "name": "International Conference on Mobile Systems, Applications, and Services",
+            "publisher": "ACM",
+            "url": "https://dblp.org/db/conf/mobisys/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "ICNP",
+            "name": "International Conference on Network Protocols",
+            "publisher": "IEEE",
+            "url": "https://dblp.org/db/conf/icnp/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "MobiHoc",
+            "name": "International Symposium on Mobile Ad Hoc Networking and Computing",
+            "publisher": "ACM/IEEE",
+            "url": "https://dblp.org/db/conf/mobihoc/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "NOSSDAV",
+            "name": "International Workshop on Network and Operating System Support for Digital Audio and Video",
+            "publisher": "ACM",
+            "url": "https://dblp.org/db/conf/nossdav/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "IWQoS",
+            "name": "International Workshop on Quality of Service",
+            "publisher": "IEEE",
+            "url": "https://dblp.org/db/conf/iwqos/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "IMC",
+            "name": "Internet Measurement Conference",
+            "publisher": "ACM/USENIX",
+            "url": "https://dblp.org/db/conf/imc/"
+          }
+        ],
+        "C": [
+          {
+            "isHandle": true,
+            "shortName": "ANCS",
+            "name": "Architectures for Networking and Communications Systems",
+            "publisher": "ACM/IEEE",
+            "url": "https://dblp.org/db/conf/ancs/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "APNOMS",
+            "name": "Asia-Pacific Network Operations and Management Symposium",
+            "publisher": "IFIP/IEEE",
+            "url": "https://dblp.org/db/conf/apnoms/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "FORTE",
+            "name": "Formal Techniques for Networked and Distributed Systems",
+            "publisher": "Springer",
+            "url": "https://dblp.org/db/conf/forte/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "LCN",
+            "name": "IEEE Conference on Local Computer Networks",
+            "publisher": "IEEE",
+            "url": "https://dblp.org/db/conf/lcn/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "GLOBECOM",
+            "name": "IEEE Global Communications Conference",
+            "publisher": "IEEE",
+            "url": "https://dblp.org/db/conf/globecom/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "ICC",
+            "name": "IEEE International Conference on Communications",
+            "publisher": "IEEE",
+            "url": "https://dblp.org/db/conf/icc/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "ICCCN",
+            "name": "IEEE International Conference on Computer Communications and Networks",
+            "publisher": "IEEE",
+            "url": "https://dblp.org/db/conf/icccn/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "MASS",
+            "name": "IEEE International Conference on Mobile Ad-hoc and Sensor Systems",
+            "publisher": "IEEE",
+            "url": "https://dblp.org/db/conf/mass/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "P2P",
+            "name": "IEEE International Conference on Peer-to-Peer Computing",
+            "publisher": "IEEE",
+            "url": "https://dblp.org/db/conf/p2p/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "IPCCC",
+            "name": "IEEE International Performance Computing and Communications Conference",
+            "publisher": "IEEE",
+            "url": "https://dblp.org/db/conf/ipccc/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "WoWMoM",
+            "name": "IEEE International Symposium on a World of Wireless, Mobile and Multimedia Networks",
+            "publisher": "IEEE",
+            "url": "https://dblp.org/db/conf/wowmom/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "ISCC",
+            "name": "IEEE Symposium on Computers and Communications",
+            "publisher": "IEEE",
+            "url": "https://dblp.org/db/conf/iscc/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "WCNC",
+            "name": "IEEE Wireless Communications & Networking Conference",
+            "publisher": "IEEE",
+            "url": "https://dblp.org/db/conf/wcnc/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "Networking",
+            "name": "IFIP International Conferences on Networking",
+            "publisher": "IFIP",
+            "url": "https://dblp.org/db/conf/networking/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "IM",
+            "name": "IFIP/IEEE International Symposium on Integrated Network Management",
+            "publisher": "IFIP/IEEE",
+            "url": "https://dblp.org/db/conf/im/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "MSN",
+            "name": "International Conference on Mobile Ad-hoc and Sensor Networks",
+            "publisher": "IEEE",
+            "url": "https://dblp.org/db/conf/msn/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "MSWiM",
+            "name": "International Conference on Modeling, Analysis and Simulation of Wireless and Mobile Systems",
+            "publisher": "ACM",
+            "url": "https://dblp.org/db/conf/mswim/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "WASA",
+            "name": "International Conference on Wireless Algorithms, Systems, and Applications",
+            "publisher": "Springer",
+            "url": "https://dblp.org/db/conf/wasa/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "HotNets",
+            "name": "The Workshop on Hot Topics in Networks",
+            "publisher": "ACM",
+            "url": "https://dblp.org/db/conf/hotnets/"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Security",
+      "zhName": "网络与信息安全",
+      "journal": {
+        "A": [
+          {
+            "isHandle": true,
+            "shortName": "TDSC",
+            "name": "IEEE Transactions on Dependable and Secure Computing",
+            "publisher": "IEEE",
+            "url": "https://dblp.org/db/journals/tdsc/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "TIFS",
+            "name": "IEEE Transactions on Information Forensics and Security",
+            "publisher": "IEEE",
+            "url": "https://dblp.org/db/journals/tifs/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "joc",
+            "name": "Journal of Cryptology",
+            "publisher": "Springer",
+            "url": "https://dblp.org/db/journals/joc/"
+          }
+        ],
+        "B": [
+          {
+            "isHandle": true,
+            "shortName": "TOPS",
+            "name": "ACM Transactions on Privacy and Security",
+            "publisher": "ACM",
+            "url": "https://tops.acm.org/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "compsec",
+            "name": "Computers & Security",
+            "publisher": "Elsevier",
+            "url": "https://dblp.org/db/journals/compsec/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "dcc",
+            "name": "Designs, Codes and Cryptography",
+            "publisher": "Springer",
+            "url": "https://dblp.org/db/journals/dcc/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "JCS",
+            "name": "Journal of Computer Security",
+            "publisher": "IOS Press",
+            "url": "https://dblp.org/db/journals/jcs/"
+          }
+        ],
+        "C": [
+          {
+            "isHandle": true,
+            "shortName": "CLSR",
+            "name": "Computer Law and Security Review",
+            "publisher": "Elsevier",
+            "url": "http://www.journals.elsevier.com/computer-law-and-security-review/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "ejisec",
+            "name": "EURASIP Journal on Information Security",
+            "publisher": "Springer",
+            "url": "https://dblp.org/db/journals/ejisec/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "iet-ifs",
+            "name": "IET Information Security",
+            "publisher": "IET",
+            "url": "https://dblp.org/db/journals/iet-ifs/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "IMCS",
+            "name": "Information Management & Computer Security",
+            "publisher": "Emerald",
+            "url": "https://dblp.org/db/journals/imcs/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "IJICS",
+            "name": "International Journal of Information and Computer Security",
+            "publisher": "Inderscience",
+            "url": "https://dblp.org/db/journals/ijics/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "IJISP",
+            "name": "International Journal of Information Security and Privacy",
+            "publisher": "Idea Group Inc",
+            "url": "https://dblp.org/db/journals/ijisp/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "JISA",
+            "name": "Journal of Information Security and Application",
+            "publisher": "Elsevier",
+            "url": "https://dblp.org/db/journals/istr/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "SCN",
+            "name": "Security and Communication Networks",
+            "publisher": "Wiley",
+            "url": "https://dblp.org/db/journals/scn/"
+          }
+        ]
+      },
+      "conference": {
+        "A": [
+          {
+            "isHandle": true,
+            "shortName": "CCS",
+            "name": "ACM Conference on Computer and Communications Security",
+            "publisher": "ACM",
+            "url": "https://dblp.org/db/conf/ccs/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "EUROCRYPT",
+            "name": "European Cryptology Conference",
+            "publisher": "Springer",
+            "url": "https://dblp.org/db/conf/eurocrypt/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "SandP",
+            "name": "IEEE Symposium on Security and Privacy",
+            "publisher": "IEEE",
+            "url": "https://dblp.org/db/conf/sp/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "CRYPTO",
+            "name": "International Cryptology Conference",
+            "publisher": "Springer",
+            "url": "https://dblp.org/db/conf/crypto/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "USENIX Security",
+            "name": "Usenix Security Symposium",
+            "publisher": "USENIX Association",
+            "url": "https://dblp.org/db/conf/uss/"
+          }
+        ],
+        "B": [
+          {
+            "isHandle": true,
+            "shortName": "ACSAC",
+            "name": "Annual Computer Security Applications Conference",
+            "publisher": "IEEE",
+            "url": "https://dblp.org/db/conf/acsac/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "ASIACRYPT",
+            "name": "Annual International Conference on the Theory and Application of Cryptology and Information Security",
+            "publisher": "Springer",
+            "url": "https://dblp.org/db/conf/asiacrypt/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "ESORICS",
+            "name": "European Symposium on Research in Computer Security",
+            "publisher": "Springer",
+            "url": "https://dblp.org/db/conf/esorics/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "FSE",
+            "name": "Fast Software Encryption",
+            "publisher": "Springer",
+            "url": "https://dblp.org/db/conf/fse/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "CSFW",
+            "name": "IEEE Computer Security Foundations Workshop",
+            "publisher": "IEEE",
+            "url": "https://dblp.org/db/conf/csfw/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "SRDS",
+            "name": "IEEE International Symposium on Reliable Distributed Systems",
+            "publisher": "IEEE",
+            "url": "https://dblp.org/db/conf/srds/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "CHES",
+            "name": "International Conference on Cryptographic Hardware and Embedded Systems",
+            "publisher": "Springer",
+            "url": "https://dblp.org/db/conf/ches/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "DSN",
+            "name": "International Conference on Dependable Systems and Networks",
+            "publisher": "IEEE/IFIP",
+            "url": "https://dblp.org/db/conf/dsn/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "RAID",
+            "name": "International Symposium on Recent Advances in Intrusion Detection",
+            "publisher": "Springer",
+            "url": "https://dblp.org/db/conf/raid/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "PKC",
+            "name": "International Workshop on Practice and Theory in Public Key Cryptography",
+            "publisher": "Springer",
+            "url": "https://dblp.org/db/conf/pkc/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "NDSS",
+            "name": "ISOC Network and Distributed System Security Symposium",
+            "publisher": "ISOC",
+            "url": "https://dblp.org/db/conf/ndss/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "TCC",
+            "name": "Theory of Cryptography Conference",
+            "publisher": "Springer",
+            "url": "https://dblp.org/db/conf/tcc/"
+          }
+        ],
+        "C": [
+          {
+            "isHandle": true,
+            "shortName": "WiSec",
+            "name": "ACM Conference on Security and Privacy in Wireless and Mobile Networks",
+            "publisher": "ACM",
+            "url": "https://dblp.org/db/conf/wisec/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "SACMAT",
+            "name": "ACM Symposium on Access Control Models and Technologies",
+            "publisher": "ACM",
+            "url": "https://dblp.org/db/conf/sacmat/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "DRM",
+            "name": "ACM Workshop on Digital Rights Management",
+            "publisher": "ACM",
+            "url": "https://dblp.org/db/conf/drm/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "IHandMMSec",
+            "name": "ACM Workshop on Information Hiding and Multimedia Security",
+            "publisher": "ACM",
+            "url": "https://dblp.org/db/conf/ih/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "ACNS",
+            "name": "Applied Cryptography and Network Security",
+            "publisher": "Springer",
+            "url": "https://dblp.org/db/conf/acns/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "AsiaCCS",
+            "name": "Asia Conference on Computer and Communications Security",
+            "publisher": "ACM",
+            "url": "https://dblp.org/db/conf/ccs/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "ACISP",
+            "name": "Australasia Conference on Information Security and Privacy",
+            "publisher": "Springer",
+            "url": "https://dblp.org/db/conf/acisp/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "CT-RSA",
+            "name": "Cryptographer's Track at RSA Conference",
+            "publisher": "Springer",
+            "url": "https://dblp.org/db/conf/ctrsa/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "DIMVA",
+            "name": "Detection of Intrusions and Malware & Vulnerability",
+            "publisher": "Assessment",
+            "url": "https://dblp.org/db/conf/dimva/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "DFRWS",
+            "name": "Digital Forensic Research Workshop",
+            "publisher": "Elsevier",
+            "url": "https://dblp.org/db/conf/dfrws/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "FC",
+            "name": "Financial Cryptography and Data Security",
+            "publisher": "Springer",
+            "url": "https://dblp.org/db/conf/fc/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "TrustCom",
+            "name": "IEEE International Conference on Trust, Security and Privacy in Computing and Communications",
+            "publisher": "IEEE",
+            "url": "https://dblp.org/db/conf/trustcom/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "SEC",
+            "name": "IFIP International Information Security Conference",
+            "publisher": "Springer",
+            "url": "https://dblp.org/db/conf/sec/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "IFIP WG 11.9",
+            "name": "IFIP WG 11.9 International Conference on Digital Forensics",
+            "publisher": "Springer",
+            "url": "http://www.ifip119.org/Conferences/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "ISC",
+            "name": "Information Security Conference",
+            "publisher": "Springer",
+            "url": "https://dblp.org/db/conf/isw/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "ICDF2C",
+            "name": "International Conference on Digital Forensics & Cyber Crime",
+            "publisher": "Springer",
+            "url": "https://dblp.org/db/conf/icdf2c/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "ICICS",
+            "name": "International Conference on Information and Communications Security",
+            "publisher": "Springer",
+            "url": "https://dblp.org/db/conf/icics/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "SecureComm",
+            "name": "International Conference on Security and Privacy in Communication Networks",
+            "publisher": "ACM",
+            "url": "https://dblp.org/db/conf/securecomm/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "NSPW",
+            "name": "New Security Paradigms Workshop",
+            "publisher": "ACM",
+            "url": "https://dblp.org/db/conf/nspw/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "PAM",
+            "name": "Passive and Active Measurement Conference",
+            "publisher": "Springer",
+            "url": "https://dblp.org/db/conf/pam/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "PETS",
+            "name": "Privacy Enhancing Technologies Symposium",
+            "publisher": "Springer",
+            "url": "https://dblp.org/db/conf/pet/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "SAC",
+            "name": "Selected Areas in Cryptography",
+            "publisher": "Springer",
+            "url": "https://dblp.org/db/conf/sacrypt/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "SOUPS",
+            "name": "Symposium On Usable Privacy and Security",
+            "publisher": "USENIX",
+            "url": "https://dblp.org/db/conf/soups/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "HotSec",
+            "name": "USENIX Workshop on Hot Topics in Security",
+            "publisher": "USENIX",
+            "url": "*http://www.usenix.org/events/"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Software and System",
+      "zhName": "软件工程/系统软件/程序设计语言",
+      "journal": {
+        "A": [
+          {
+            "isHandle": true,
+            "shortName": "TOPLAS",
+            "name": "ACM Transactions on Programming Languages & Systems",
+            "publisher": "ACM",
+            "url": "https://dblp.org/db/journals/toplas/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "TOSEM",
+            "name": "ACM Transactions on Software Engineering and Methodology",
+            "publisher": "ACM",
+            "url": "https://dblp.org/db/journals/tosem/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "TSE",
+            "name": "IEEE Transactions on Software Engineering",
+            "publisher": "IEEE",
+            "url": "https://dblp.org/db/journals/tse/"
+          }
+        ],
+        "B": [
+          {
+            "isHandle": true,
+            "shortName": "ASE",
+            "name": "Automated Software Engineering",
+            "publisher": "Springer",
+            "url": "https://dblp.org/db/journals/ase/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "ESE",
+            "name": "Empirical Software Engineering",
+            "publisher": "Springer",
+            "url": "https://dblp.org/db/journals/ese/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "TSC",
+            "name": "IEEE Transactions on Service Computing",
+            "publisher": "IEEE",
+            "url": "https://dblp.org/db/journals/tsc/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "IETS",
+            "name": "IET Software",
+            "publisher": "IET",
+            "url": "https://dblp.org/db/journals/iet-sen/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "IST",
+            "name": "Information and Software Technology",
+            "publisher": "Elsevier",
+            "url": "https://dblp.org/db/journals/infsof/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "JFP",
+            "name": "Journal of Functional Programming",
+            "publisher": "Cambridge University Press",
+            "url": "https://dblp.org/db/journals/jfp/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "smr",
+            "name": "Journal of Software: Evolution and Process",
+            "publisher": "Wiley",
+            "url": "https://dblp.org/db/journals/smr/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "JSS",
+            "name": "Journal of Systems and Software",
+            "publisher": "Elsevier",
+            "url": "https://dblp.org/db/journals/jss/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "RE",
+            "name": "Requirements Engineering",
+            "publisher": "Springer",
+            "url": "https://dblp.org/db/journals/re/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "SCP",
+            "name": "Science of Computer Programming",
+            "publisher": "Elsevier",
+            "url": "https://dblp.org/db/journals/scp/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "SoSyM",
+            "name": "Software and System Modeling",
+            "publisher": "Springer",
+            "url": "https://dblp.org/db/journals/sosym/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "STVR",
+            "name": "Software Testing, Verification and Reliability",
+            "publisher": "Wiley",
+            "url": "https://dblp.org/db/journals/stvr/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "SPE",
+            "name": "Software: Practice and Experience",
+            "publisher": "Wiley",
+            "url": "https://dblp.org/db/journals/spe/"
+          }
+        ],
+        "C": [
+          {
+            "isHandle": true,
+            "shortName": "CL",
+            "name": "Computer Languages, Systems and Structures",
+            "publisher": "Elsevier",
+            "url": "https://dblp.org/db/journals/cl/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "IJSEKE",
+            "name": "International Journal on Software Engineering and Knowledge Engineering",
+            "publisher": "World Scientific",
+            "url": "https://dblp.org/db/journals/ijseke/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "STTT",
+            "name": "International Journal on Software Tools for Technology Transfer",
+            "publisher": "Springer",
+            "url": "https://dblp.org/db/journals/sttt/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "JLAP",
+            "name": "Journal of Logic and Algebraic Programming",
+            "publisher": "Elsevier",
+            "url": "https://dblp.org/db/journals/jlp/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "JWE",
+            "name": "Journal of Web Engineering",
+            "publisher": "Rinton Press",
+            "url": "https://dblp.org/db/journals/jwe/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "SOCA",
+            "name": "Service Oriented Computing and Applications",
+            "publisher": "Springer",
+            "url": "https://dblp.org/db/journals/soca/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "SQJ",
+            "name": "Software Quality Journal",
+            "publisher": "Springer",
+            "url": "https://dblp.org/db/journals/sqj/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "TPLP",
+            "name": "Theory and Practice of Logic Programming",
+            "publisher": "Cambridge University Press",
+            "url": "https://dblp.org/db/journals/tplp/"
+          }
+        ]
+      },
+      "conference": {
+        "A": [
+          {
+            "isHandle": true,
+            "shortName": "PLDI",
+            "name": "ACM SIGPLAN Conference on Programming Language Design & Implementation",
+            "publisher": "ACM",
+            "url": "https://dblp.org/db/conf/pldi/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "POPL",
+            "name": "ACM SIGPLAN-SIGACT Symposium on Principles of Programming Languages",
+            "publisher": "ACM",
+            "url": "https://dblp.org/db/conf/popl/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "FSE/ESEC",
+            "name": "ACM SIGSOFT Symposium on the Foundation of Software Engineering/ European Software Engineering Conference",
+            "publisher": "ACM",
+            "url": "https://dblp.org/db/conf/sigsoft/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "SOSP",
+            "name": "ACM Symposium on Operating Systems Principles",
+            "publisher": "ACM",
+            "url": "https://dblp.org/db/conf/sosp/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "OOPSLA",
+            "name": "Conference on Object-Oriented Programming Systems, Languages, and Applications",
+            "publisher": "ACM",
+            "url": "https://dblp.org/db/conf/oopsla/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "ASE",
+            "name": "International Conference on Automated Software Engineering",
+            "publisher": "IEEE/ACM",
+            "url": "https://dblp.org/db/conf/kbse/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "ICSE",
+            "name": "International Conference on Software Engineering",
+            "publisher": "ACM/IEEE",
+            "url": "https://dblp.org/db/conf/icse/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "ISSTA",
+            "name": "International Symposium on Software Testing and Analysis",
+            "publisher": "ACM",
+            "url": "https://dblp.org/db/conf/issta/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "OSDI",
+            "name": "USENIX Symposium on Operating Systems Design and Implementations",
+            "publisher": "USENIX",
+            "url": "https://dblp.org/db/conf/osdi/"
+          }
+        ],
+        "B": [
+          {
+            "isHandle": true,
+            "shortName": "ECOOP",
+            "name": "European Conference on Object-Oriented Programming",
+            "publisher": "AITO",
+            "url": "https://dblp.org/db/conf/ecoop/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "ETAPS",
+            "name": "European Joint Conferences on Theory and Practice of Software",
+            "publisher": "Springer",
+            "url": "https://dblp.org/db/conf/etaps/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "ICPC",
+            "name": "IEEE International Conference on Program Comprehension",
+            "publisher": "IEEE",
+            "url": "https://dblp.org/db/conf/iwpc/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "RE",
+            "name": "IEEE International Requirement Engineering Conference",
+            "publisher": "IEEE",
+            "url": "https://dblp.org/db/conf/re/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "CAiSE",
+            "name": "International Conference on Advanced Information Systems Engineering",
+            "publisher": "Springer",
+            "url": "https://dblp.org/db/conf/caise/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "ICFP",
+            "name": "International Conference on Function Programming",
+            "publisher": "ACM",
+            "url": "https://dblp.org/db/conf/icfp/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "LCTES",
+            "name": "International Conference on Languages, Compilers and Tools for Embedded Systems",
+            "publisher": "ACM",
+            "url": "https://dblp.org/db/conf/lctrts/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "MoDELS",
+            "name": "International Conference on Model Driven Engineering Languages and Systems",
+            "publisher": "ACM, IEEE",
+            "url": "https://dblp.org/db/conf/models/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "CP",
+            "name": "International Conference on Principles and Practice of Constraint Programming",
+            "publisher": "Springer",
+            "url": "https://dblp.org/db/conf/cp/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "ICSOC",
+            "name": "International Conference on Service Oriented Computing",
+            "publisher": "Springer",
+            "url": "https://dblp.org/db/conf/icsoc/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "SANER",
+            "name": "International Conference on Software Analysis, Evolution, and Reengineering",
+            "publisher": "IEEE",
+            "url": "https://dblp.org/db/conf/wcre/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "ICSME",
+            "name": "International Conference on Software Maintenance and Evolution",
+            "publisher": "IEEE",
+            "url": "https://dblp.org/db/conf/icsm/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "VMCAI",
+            "name": "International Conference on Verification, Model Checking, and Abstract Interpretation",
+            "publisher": "Springer",
+            "url": "https://dblp.org/db/conf/vmcai/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "ICWS",
+            "name": "International Conference on Web Services （Research Track）",
+            "publisher": "IEEE",
+            "url": "https://dblp.org/db/conf/icws/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "Middleware",
+            "name": "International Middleware Conference",
+            "publisher": "ACM/IFIP/ USENIX",
+            "url": "https://dblp.org/db/conf/middleware/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "SAS",
+            "name": "International Static Analysis Symposium",
+            "publisher": "Springer",
+            "url": "https://dblp.org/db/conf/sas/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "ESEM",
+            "name": "International Symposium on Empirical Software Engineering and Measurement",
+            "publisher": "ACM/IEEE",
+            "url": "https://dblp.org/db/conf/esem/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "FM",
+            "name": "International Symposium on Formal Methods",
+            "publisher": "FME",
+            "url": "https://dblp.org/db/conf/fm/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "ISSRE",
+            "name": "International Symposium on Software Reliability Engineering",
+            "publisher": "IEEE",
+            "url": "https://dblp.org/db/conf/issre/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "HotOS",
+            "name": "USENIX Workshop on Hot Topics in Operating Systems",
+            "publisher": "USENIX",
+            "url": "https://dblp.org/db/conf/hotos/"
+          }
+        ],
+        "C": [
+          {
+            "isHandle": true,
+            "shortName": "PEPM",
+            "name": "ACM SIGPLAN Workshop on Partial Evaluation and Program Manipulation",
+            "publisher": "ACM",
+            "url": "https://dblp.org/db/conf/pepm/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "PASTE",
+            "name": "ACMSIGPLAN-SIGSOFT Workshop on Program Analysis for Software Tools and Engineering",
+            "publisher": "ACM",
+            "url": "https://dblp.org/db/conf/paste/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "APLAS",
+            "name": "Asian Symposium on Programming Languages and Systems",
+            "publisher": "Springer",
+            "url": "https://dblp.org/db/conf/aplas/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "APSEC",
+            "name": "Asia-Pacific Software Engineering Conference",
+            "publisher": "IEEE",
+            "url": "https://dblp.org/db/conf/apsec/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "EASE",
+            "name": "Evaluation and Assessment in Software Engineering",
+            "publisher": "ACM",
+            "url": "https://dblp.org/db/conf/ease/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "ICECCS",
+            "name": "IEEE International Conference on Engineering of Complex Computer Systems",
+            "publisher": "IEEE",
+            "url": "https://dblp.org/db/conf/iceccs/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "ICST",
+            "name": "IEEE International Conference on Software Testing, Verification and Validation",
+            "publisher": "IEEE",
+            "url": "https://dblp.org/db/conf/icst/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "ISPASS",
+            "name": "IEEE International Symposium on Performance Analysis of Systems and Software",
+            "publisher": "IEEE",
+            "url": "https://dblp.org/db/conf/ispass/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "SCAM",
+            "name": "IEEE International Working Conference on Source Code Analysis and Manipulation",
+            "publisher": "IEEE",
+            "url": "https://dblp.org/db/conf/scam/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "COMPSAC",
+            "name": "International Computer Software and Applications Conference",
+            "publisher": "IEEE",
+            "url": "https://dblp.org/db/conf/compsac/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "ICFEM",
+            "name": "International Conference on Formal Engineering Methods",
+            "publisher": "Springer",
+            "url": "https://dblp.org/db/conf/icfem/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "TOOLS",
+            "name": "International Conference on Objects, Models, Components, Patterns",
+            "publisher": "Springer",
+            "url": "https://dblp.org/db/conf/tools/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "SCC",
+            "name": "International Conference on Service Computing",
+            "publisher": "IEEE",
+            "url": "https://dblp.org/db/conf/IEEEscc/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "ICSSP",
+            "name": "International Conference on Software and System Process",
+            "publisher": "ACM",
+            "url": "https://dblp.org/db/conf/ispw/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "SEKE",
+            "name": "International Conference on Software Engineering and Knowledge Engineering",
+            "publisher": "KSI",
+            "url": "https://dblp.org/db/conf/seke/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "QRS",
+            "name": "International Conference on Software Quality, Reliability and Security",
+            "publisher": "IEEE",
+            "url": "https://dblp.org/db/conf/qrs/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "ICSR",
+            "name": "International Conference on Software Reuse",
+            "publisher": "Springer",
+            "url": "https://dblp.org/db/conf/icsr/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "ICWE",
+            "name": "International Conference on Web Engineering",
+            "publisher": "Springer",
+            "url": "https://dblp.org/db/conf/icwe/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "SPIN",
+            "name": "International SPIN Workshop on Model Checking Software",
+            "publisher": "Springer",
+            "url": "https://dblp.org/db/conf/spin/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "ATVA",
+            "name": "International Symposium on Automated Technology for Verification and Analysis",
+            "publisher": "Springer",
+            "url": "https://dblp.org/db/conf/atva/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "LOPSTR",
+            "name": "International Symposium on Logic-based Program Synthesis and Transformation",
+            "publisher": "Springer",
+            "url": "https://dblp.org/db/conf/lopstr/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "TASE",
+            "name": "International Symposium on Theoretical Aspects of Software Engineering",
+            "publisher": "IEEE",
+            "url": "https://dblp.org/db/conf/tase/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "MSR",
+            "name": "Mining Software Repositories",
+            "publisher": "IEEE/ACM",
+            "url": "https://dblp.org/db/conf/msr/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "REFSQ",
+            "name": "Requirements Engineering: Foundation for Software Quality",
+            "publisher": "Springer",
+            "url": "https://dblp.org/db/conf/refsq/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "WICSA",
+            "name": "Working IEEE/IFIP Conference on Software Architecture",
+            "publisher": "IEEE",
+            "url": "https://dblp.org/db/conf/wicsa/"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Database and Data Mining",
+      "zhName": "数据库/数据挖掘/内容检索",
+      "journal": {
+        "A": [
+          {
+            "isHandle": true,
+            "shortName": "TODS",
+            "name": "ACM Transactions on Database Systems",
+            "publisher": "ACM",
+            "url": "https://dblp.org/db/journals/tods/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "TOIS",
+            "name": "ACM Transactions on Information Systems",
+            "publisher": "ACM",
+            "url": "https://dblp.org/db/journals/tois/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "TKDE",
+            "name": "IEEE Transactions on Knowledge and Data Engineering",
+            "publisher": "IEEE",
+            "url": "https://dblp.org/db/journals/tkde/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "VLDBJ",
+            "name": "The VLDB Journal",
+            "publisher": "Springer",
+            "url": "https://dblp.org/db/journals/vldb/"
+          }
+        ],
+        "B": [
+          {
+            "isHandle": true,
+            "shortName": "TKDD",
+            "name": "ACM Transactions on Knowledge Discovery from Data",
+            "publisher": "ACM",
+            "url": "https://dblp.org/db/journals/tkdd/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "TWEB",
+            "name": "ACM Transactions on the Web",
+            "publisher": "ACM",
+            "url": "https://dblp.org/db/journals/tweb/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "AEI",
+            "name": "Advanced Engineering Informatics",
+            "publisher": "Elsevier",
+            "url": "https://dblp.org/db/journals/aei/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "DKE",
+            "name": "Data and Knowledge Engineering",
+            "publisher": "Elsevier",
+            "url": "https://dblp.org/db/journals/dke/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "DMKD",
+            "name": "Data Mining and Knowledge Discovery",
+            "publisher": "Springer",
+            "url": "https://dblp.org/db/journals/datamine/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "EJIS",
+            "name": "European Journal of Information Systems",
+            "publisher": "Springer",
+            "url": "https://dblp.org/db/journals/ejis/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "geoinformatica",
+            "name": "GeoInformatica",
+            "publisher": "Springer",
+            "url": "https://dblp.org/db/journals/geoinformatica/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "IPM",
+            "name": "Information Processing and Management",
+            "publisher": "Elsevier",
+            "url": "https://dblp.org/db/journals/ipm/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "isci",
+            "name": "Information Sciences",
+            "publisher": "Elsevier",
+            "url": "https://dblp.org/db/journals/isci/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "IS",
+            "name": "Information Systems",
+            "publisher": "Elsevier",
+            "url": "https://dblp.org/db/journals/is/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "JASIST",
+            "name": "Journal of the American Society for Information Science and Technology",
+            "publisher": "American Society for Information Science and Technology",
+            "url": "https://dblp.org/db/journals/jasis/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "JWS",
+            "name": "Journal of Web Semantics",
+            "publisher": "Elsevier",
+            "url": "https://dblp.org/db/journals/ws/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "KAIS",
+            "name": "Knowledge and Information Systems",
+            "publisher": "Springer",
+            "url": "https://dblp.org/db/journals/kais/"
+          }
+        ],
+        "C": [
+          {
+            "isHandle": true,
+            "shortName": "DPD",
+            "name": "Distributed and Parallel Databases",
+            "publisher": "Springer",
+            "url": "https://dblp.org/db/journals/dpd/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "IandM",
+            "name": "Information and Management",
+            "publisher": "Elsevier",
+            "url": "https://dblp.org/db/journals/iam/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "IPL",
+            "name": "Information Processing Letters",
+            "publisher": "Elsevier",
+            "url": "https://dblp.org/db/journals/ipl/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "IR",
+            "name": "Information Retrieval Journal",
+            "publisher": "Springer",
+            "url": "https://dblp.org/db/journals/ir/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "IJCIS",
+            "name": "International Journal of Cooperative Information Systems",
+            "publisher": "World Scientific",
+            "url": "https://dblp.org/db/journals/ijcis/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "IJGIS",
+            "name": "International Journal of Geographical Information Science",
+            "publisher": "Taylor & Francis",
+            "url": "https://dblp.org/db/journals/gis/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "IJIS",
+            "name": "International Journal of Intelligent Systems",
+            "publisher": "Wiley",
+            "url": "https://dblp.org/db/journals/ijis/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "IJKM",
+            "name": "International Journal of Knowledge Management",
+            "publisher": "IGI",
+            "url": "https://dblp.org/db/journals/ijkm/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "IJSWIS",
+            "name": "International Journal on Semantic Web and Information Systems",
+            "publisher": "IGI",
+            "url": "https://dblp.org/db/journals/ijswis/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "JCIS",
+            "name": "Journal of Computer Information Systems",
+            "publisher": "IACIS",
+            "url": "https://dblp.org/db/journals/jcis/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "JDM",
+            "name": "Journal of Database Management",
+            "publisher": "IGI-Global",
+            "url": "https://dblp.org/db/journals/jdm/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "JGITM",
+            "name": "Journal of Global Information Technology Management",
+            "publisher": "Ivy League Publishing",
+            "url": "http://www.tandfonline.com/loi/ugit20#.Vnv35pN97rI"
+          },
+          {
+            "isHandle": true,
+            "shortName": "JIIS",
+            "name": "Journal of Intelligent Information Systems",
+            "publisher": "Springer",
+            "url": "https://dblp.org/db/journals/jiis/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "JSIS",
+            "name": "Journal of Strategic Information Systems",
+            "publisher": "Elsevier",
+            "url": "https://dblp.org/db/journals/jsis/"
+          }
+        ]
+      },
+      "conference": {
+        "A": [
+          {
+            "isHandle": true,
+            "shortName": "SIGMOD",
+            "name": "ACM Conference on Management of Data",
+            "publisher": "ACM",
+            "url": "https://dblp.org/db/conf/sigmod/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "SIGKDD",
+            "name": "ACM Knowledge Discovery and Data Mining",
+            "publisher": "ACM",
+            "url": "https://dblp.org/db/conf/kdd/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "ICDE",
+            "name": "IEEE International Conference on Data Engineering",
+            "publisher": "IEEE",
+            "url": "https://dblp.org/db/conf/icde/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "SIGIR",
+            "name": "International Conference on Research on Development in Information Retrieval",
+            "publisher": "ACM",
+            "url": "https://dblp.org/db/conf/sigir/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "VLDB",
+            "name": "International Conference on Very Large Data Bases",
+            "publisher": "Morgan Kaufmann/ACM",
+            "url": "https://dblp.org/db/conf/vldb/"
+          }
+        ],
+        "B": [
+          {
+            "isHandle": true,
+            "shortName": "CIKM",
+            "name": "ACM International Conference on Information and Knowledge Management",
+            "publisher": "ACM",
+            "url": "https://dblp.org/db/conf/cikm/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "WSDM",
+            "name": "ACM International Conference on Web Search and Data Mining",
+            "publisher": "ACM",
+            "url": "https://dblp.org/db/conf/wsdm/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "PODS",
+            "name": "ACM Symposium on Principles of Database Systems",
+            "publisher": "ACM",
+            "url": "https://dblp.org/db/conf/pods/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "DASFAA",
+            "name": "Database Systems for Advanced Applications",
+            "publisher": "Springer",
+            "url": "https://dblp.org/db/conf/dasfaa/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "ECML-PKDD",
+            "name": "European Conference on Machine Learning and Principles and Practice of Knowledge Discovery in Databases",
+            "publisher": "Springer",
+            "url": "https://dblp.org/db/conf/ecml/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "ISWC",
+            "name": "IEEE International Semantic Web Conference",
+            "publisher": "IEEE",
+            "url": "https://dblp.org/db/conf/semweb/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "ICDM",
+            "name": "International Conference on Data Mining",
+            "publisher": "IEEE",
+            "url": "https://dblp.org/db/conf/icdm/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "ICDT",
+            "name": "International Conference on Database Theory",
+            "publisher": "Springer",
+            "url": "https://dblp.org/db/conf/icdt/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "EDBT",
+            "name": "International Conference on Extending DB Technology",
+            "publisher": "Springer",
+            "url": "https://dblp.org/db/conf/edbt/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "CIDR",
+            "name": "International Conference on Innovative Data Systems Research",
+            "publisher": "Online Proceeding",
+            "url": "https://dblp.org/db/conf/cidr/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "SDM",
+            "name": "SIAM International Conference on Data Mining",
+            "publisher": "SIAM",
+            "url": "https://dblp.org/db/conf/sdm/"
+          }
+        ],
+        "C": [
+          {
+            "isHandle": true,
+            "shortName": "APWeb",
+            "name": "Asia Pacific Web Conference",
+            "publisher": "Springer",
+            "url": "https://dblp.org/db/conf/apweb/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "DEXA",
+            "name": "Database and Expert System Applications",
+            "publisher": "Springer",
+            "url": "https://dblp.org/db/conf/dexa/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "ECIR",
+            "name": "European Conference on IR Research",
+            "publisher": "Springer",
+            "url": "https://dblp.org/db/conf/ecir/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "ESWC",
+            "name": "Extended Semantic Web Conference",
+            "publisher": "Springer",
+            "url": "https://dblp.org/db/conf/esws/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "WebDB",
+            "name": "International ACM Workshop on Web and Databases",
+            "publisher": "ACM",
+            "url": "https://dblp.org/db/conf/webdb/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "ER",
+            "name": "International Conference on Conceptual Modeling",
+            "publisher": "Springer",
+            "url": "https://dblp.org/db/conf/er/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "MDM",
+            "name": "International Conference on Mobile Data Management",
+            "publisher": "IEEE",
+            "url": "https://dblp.org/db/conf/mdm/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "SSDBM",
+            "name": "International Conference on Scientific and Statistical DB Management",
+            "publisher": "IEEE",
+            "url": "https://dblp.org/db/conf/ssdbm/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "WAIM",
+            "name": "International Conference on Web Age Information Management",
+            "publisher": "Springer",
+            "url": "https://dblp.org/db/conf/waim/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "SSTD",
+            "name": "International Symposium on Spatial and Temporal Databases",
+            "publisher": "Springer",
+            "url": "https://dblp.org/db/conf/ssd/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "PAKDD",
+            "name": "Pacific-Asia Conference on Knowledge Discovery and Data Mining",
+            "publisher": "Springer",
+            "url": "https://dblp.org/db/conf/pakdd/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "WISE",
+            "name": "Web Information Systems Engineering",
+            "publisher": "Springer",
+            "url": "https://dblp.org/db/conf/wise/"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Computer Theory",
+      "zhName": "计算机科学理论",
+      "journal": {
+        "A": [
+          {
+            "isHandle": true,
+            "shortName": "TIT",
+            "name": "IEEE Transactions on Information Theory",
+            "publisher": "IEEE",
+            "url": "https://dblp.org/db/journals/tit/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "IANDC",
+            "name": "Information and Computation",
+            "publisher": "Elsevier",
+            "url": "https://dblp.org/db/journals/iandc/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "SICOMP",
+            "name": "SIAM Journal on Computing",
+            "publisher": "SIAM",
+            "url": "https://dblp.org/db/journals/siamcomp/"
+          }
+        ],
+        "B": [
+          {
+            "isHandle": true,
+            "shortName": "TALG",
+            "name": "ACM Transactions on Algorithms",
+            "publisher": "ACM",
+            "url": "https://dblp.org/db/journals/talg/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "TOCL",
+            "name": "ACM Transactions on Computational Logic",
+            "publisher": "ACM",
+            "url": "https://dblp.org/db/journals/tocl/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "TOMS",
+            "name": "ACM Transactions on Mathematical Software",
+            "publisher": "ACM",
+            "url": "https://dblp.org/db/journals/toms/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "Algorithmica",
+            "name": "Algorithmica",
+            "publisher": "Springer",
+            "url": "https://dblp.org/db/journals/algorithmica/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "CC",
+            "name": "Computational Complexity",
+            "publisher": "Springer",
+            "url": "https://dblp.org/db/journals/cc/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "FAC",
+            "name": "Formal Aspects of Computing",
+            "publisher": "Springer",
+            "url": "https://dblp.org/db/journals/fac/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "FMSD",
+            "name": "Formal Methods in System Design",
+            "publisher": "Springer",
+            "url": "https://dblp.org/db/journals/fmsd/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "INFORMS",
+            "name": "INFORMS Journal on Computing",
+            "publisher": "INFORMS",
+            "url": "https://dblp.org/db/journals/informs/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "JCSS",
+            "name": "Journal of Computer and System Sciences",
+            "publisher": "Elsevier",
+            "url": "https://dblp.org/db/journals/jcss/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "JGO",
+            "name": "Journal of Global Optimization",
+            "publisher": "Springer",
+            "url": "https://dblp.org/db/journals/jgo/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "JSC",
+            "name": "Journal of Symbolic Computation",
+            "publisher": "Elsevier",
+            "url": "https://dblp.org/db/journals/jsc/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "MSCS",
+            "name": "Mathematical Structures in Computer Science",
+            "publisher": "Cambridge University Press",
+            "url": "https://dblp.org/db/journals/mscs/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "TCS",
+            "name": "Theoretical Computer Science",
+            "publisher": "Elsevier",
+            "url": "https://dblp.org/db/journals/tcs/"
+          }
+        ],
+        "C": [
+          {
+            "isHandle": true,
+            "shortName": "ACTA",
+            "name": "Acta Informatica",
+            "publisher": "Springer",
+            "url": "https://dblp.org/db/journals/acta/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "APAL",
+            "name": "Annals of Pure and Applied Logic",
+            "publisher": "Elsevier",
+            "url": "https://dblp.org/db/journals/apal/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "DAM",
+            "name": "Discrete Applied Mathematics",
+            "publisher": "Elsevier",
+            "url": "https://dblp.org/db/journals/dam/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "FUIN",
+            "name": "Fundamenta Informaticae",
+            "publisher": "IOS Press",
+            "url": "https://dblp.org/db/journals/fuin/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "LISP",
+            "name": "Higher-Order and Symbolic Computation",
+            "publisher": "Springer",
+            "url": "https://dblp.org/db/journals/lisp/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "IPL",
+            "name": "Information Processing Letters",
+            "publisher": "Elsevier",
+            "url": "https://dblp.org/db/journals/ipl/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "JCOMPLEXITY",
+            "name": "Journal of Complexity",
+            "publisher": "Elsevier",
+            "url": "https://dblp.org/db/journals/jc/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "LOGCOM",
+            "name": "Journal of Logic and Computation",
+            "publisher": "Oxford University Press",
+            "url": "https://dblp.org/db/journals/logcom/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "JSL",
+            "name": "Journal of Symbolic Logic",
+            "publisher": "Association for Symbolic Logic",
+            "url": "https://dblp.org/db/journals/jsyml/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "LMCS",
+            "name": "Logical Methods in Computer Science",
+            "publisher": "LMCS",
+            "url": "https://dblp.org/db/journals/lmcs/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "SIDMA",
+            "name": "SIAM Journal on Discrete Mathematics",
+            "publisher": "SIAM",
+            "url": "https://dblp.org/db/journals/siamdm/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "mst",
+            "name": "Theory of Computing Systems",
+            "publisher": "Springer",
+            "url": "https://dblp.org/db/journals/mst/"
+          }
+        ]
+      },
+      "conference": {
+        "A": [
+          {
+            "isHandle": true,
+            "shortName": "STOC",
+            "name": "ACM Symposium on the Theory of Computing",
+            "publisher": "ACM",
+            "url": "https://dblp.org/db/conf/stoc/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "SODA",
+            "name": "ACM-SIAM Symposium on Discrete Algorithms",
+            "publisher": "SIAM",
+            "url": "https://dblp.org/db/conf/soda/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "CAV",
+            "name": "Computer Aided Verification",
+            "publisher": "Springer",
+            "url": "https://dblp.org/db/conf/cav/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "FOCS",
+            "name": "IEEE Annual Symposium on Foundations of Computer Science",
+            "publisher": "IEEE",
+            "url": "https://dblp.org/db/conf/focs/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "LICS",
+            "name": "IEEE Symposium on Logic in Computer Science",
+            "publisher": "IEEE",
+            "url": "https://dblp.org/db/conf/lics/"
+          }
+        ],
+        "B": [
+          {
+            "isHandle": true,
+            "shortName": "SoCG",
+            "name": "ACM Symposium on Computational Geometry",
+            "publisher": "ACM",
+            "url": "https://dblp.org/db/conf/compgeom/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "ESA",
+            "name": "European Symposium on Algorithms",
+            "publisher": "Springer",
+            "url": "https://dblp.org/db/conf/esa/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "CCC",
+            "name": "IEEE Conference on Computational Complexity",
+            "publisher": "IEEE",
+            "url": "https://dblp.org/db/conf/coco/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "ICALP",
+            "name": "International Colloquium on Automata, Languages and Programming",
+            "publisher": "Springer",
+            "url": "https://dblp.org/db/conf/icalp/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "CADE/IJCAR",
+            "name": "International Conference on Automated Deduction/International Joint Conference on Automated Reasoning",
+            "publisher": "Springer",
+            "url": "https://dblp.org/db/conf/cade/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "CONCUR",
+            "name": "International Conference on Concurrency Theory",
+            "publisher": "Springer",
+            "url": "https://dblp.org/db/conf/concur/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "HSCC",
+            "name": "International Conference on Hybrid Systems: Computation and Control",
+            "publisher": "Springer and ACM",
+            "url": "https://dblp.org/db/conf/hybrid/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "SAT",
+            "name": "Theory and Applications of Satisfiability Testing",
+            "publisher": "Springer",
+            "url": "https://dblp.org/db/conf/sat/"
+          }
+        ],
+        "C": [
+          {
+            "isHandle": true,
+            "shortName": "CSL",
+            "name": "Computer Science Logic",
+            "publisher": "Springer",
+            "url": "https://dblp.org/db/conf/csl/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "FMCAD",
+            "name": "Formal Methods in Computer-Aided Design",
+            "publisher": "ACM",
+            "url": "https://dblp.org/db/conf/fmcad/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "FSTTCS",
+            "name": "Foundations of Software Technology and Theoretical Computer Science",
+            "publisher": "Indian Association for Research in Computing Science",
+            "url": "https://dblp.org/db/conf/fsttcs/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "DSAA",
+            "name": "IEEE International Conference on Data Science and Advanced Analytics",
+            "publisher": "IEEE",
+            "url": "https://dblp.org/db/conf/dsaa/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "ICTAC",
+            "name": "International Colloquium on Theoretical Aspects of Computing",
+            "publisher": "Springer",
+            "url": "https://dblp.org/db/conf/ictac/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "IPCO",
+            "name": "International Conference on Integer Programming and Combinatorial Optimization",
+            "publisher": "Springer",
+            "url": "https://dblp.org/db/conf/ipco/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "RTA",
+            "name": "International Conference on Rewriting Techniques and Applications",
+            "publisher": "Springer",
+            "url": "https://dblp.org/db/conf/rta/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "ISAAC",
+            "name": "International Symposium on Algorithms and Computation",
+            "publisher": "Springer",
+            "url": "https://dblp.org/db/conf/isaac/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "MFCS",
+            "name": "Mathematical Foundations of Computer Science",
+            "publisher": "Springer",
+            "url": "https://dblp.org/db/conf/mfcs/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "STACS",
+            "name": "Symposium on Theoretical Aspects of Computer Science",
+            "publisher": "Springer",
+            "url": "https://dblp.org/db/conf/stacs/"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Computer Graphics",
+      "zhName": "计算机图形学与多媒体",
+      "journal": {
+        "A": [
+          {
+            "isHandle": true,
+            "shortName": "TOG",
+            "name": "ACM Transactions on Graphics",
+            "publisher": "ACM",
+            "url": "https://dblp.org/db/journals/tog/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "TIP",
+            "name": "IEEE Transactions on Image Processing",
+            "publisher": "IEEE",
+            "url": "https://dblp.org/db/journals/tip/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "TVCG",
+            "name": "IEEE Transactions on Visualization and Computer Graphics",
+            "publisher": "IEEE",
+            "url": "https://dblp.org/db/journals/tvcg/"
+          }
+        ],
+        "B": [
+          {
+            "isHandle": true,
+            "shortName": "TOMCCAP",
+            "name": "ACM Transactions on Multimedia Computing, Communications and Application",
+            "publisher": "ACM",
+            "url": "https://dblp.org/db/journals/tomccap/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "CAGD",
+            "name": "Computer Aided Geometric Design",
+            "publisher": "Elsevier",
+            "url": "https://dblp.org/db/journals/cagd/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "CGF",
+            "name": "Computer Graphics Forum",
+            "publisher": "Wiley",
+            "url": "https://dblp.org/db/journals/cgf/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "CAD",
+            "name": "Computer-Aided Design",
+            "publisher": "Elsevier",
+            "url": "https://dblp.org/db/journals/cad/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "GM",
+            "name": "Graphical Models",
+            "publisher": "Elsevier",
+            "url": "https://dblp.org/db/journals/cvgip/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "TCSVT",
+            "name": "IEEE Transactions on Circuits and Systems for Video Technology",
+            "publisher": "IEEE",
+            "url": "https://dblp.org/db/journals/tcsv/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "TMM",
+            "name": "IEEE Transactions on Multimedia",
+            "publisher": "IEEE",
+            "url": "https://dblp.org/db/journals/tmm/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "JASA",
+            "name": "Journal of The Acoustical Society of America",
+            "publisher": "AIP",
+            "url": "http://scitation.aip.org/content/asa/journal/jasa"
+          },
+          {
+            "isHandle": true,
+            "shortName": "SIIMS",
+            "name": "SIAM Journal on Imaging Sciences",
+            "publisher": "SIAM",
+            "url": "https://dblp.org/db/journals/siamis/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "SpeechCom",
+            "name": "Speech Communication",
+            "publisher": "Elsevier",
+            "url": "https://dblp.org/db/journals/speech/"
+          }
+        ],
+        "C": [
+          {
+            "isHandle": true,
+            "shortName": "CGTA",
+            "name": "Computational Geometry: Theory and Applications",
+            "publisher": "Elsevier",
+            "url": "https://dblp.org/db/journals/comgeo/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "CAVW",
+            "name": "Computer Animation and Virtual Worlds",
+            "publisher": "Wiley",
+            "url": "http://onlinelibrary.wiley.com/journal/10.1002/(ISSN)1546-427X"
+          },
+          {
+            "isHandle": true,
+            "shortName": "CandG",
+            "name": "Computers & Graphics",
+            "publisher": "Elsevier",
+            "url": "https://dblp.org/db/journals/cg/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "DCG",
+            "name": "Discrete & Computational Geometry",
+            "publisher": "Springer",
+            "url": "https://dblp.org/db/journals/dcg/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "SPL",
+            "name": "IEEE Signal Processing Letters",
+            "publisher": "IEEE",
+            "url": "https://dblp.org/db/journals/spl/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "IET-IPR",
+            "name": "IET Image Processing",
+            "publisher": "IET",
+            "url": "https://dblp.org/db/journals/iet-ipr/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "JVCIR",
+            "name": "Journal of Visual Communication and Image Representation",
+            "publisher": "Elsevier",
+            "url": "https://dblp.org/db/journals/jvcir/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "MS",
+            "name": "Multimedia Systems",
+            "publisher": "Springer",
+            "url": "https://dblp.org/db/journals/mms/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "MTA",
+            "name": "Multimedia Tools and Applications",
+            "publisher": "Springer",
+            "url": "https://dblp.org/db/journals/mta/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "sigpro",
+            "name": "Signal Processing",
+            "publisher": "Elsevier",
+            "url": "https://dblp.org/db/journals/sigpro/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "SPIC",
+            "name": "Signal Processing: Image Communication",
+            "publisher": "Elsevier",
+            "url": "https://dblp.org/db/journals/spic/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "TVC",
+            "name": "The Visual Computer",
+            "publisher": "Springer",
+            "url": "https://dblp.org/db/journals/vc/"
+          }
+        ]
+      },
+      "conference": {
+        "A": [
+          {
+            "isHandle": true,
+            "shortName": "ACM MM",
+            "name": "ACM International Conference on Multimedia",
+            "publisher": "ACM",
+            "url": "https://dblp.org/db/conf/mm/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "SIGGRAPH",
+            "name": "ACM SIGGRAPH Annual Conference",
+            "publisher": "ACM",
+            "url": "https://dblp.org/db/conf/siggraph/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "VR",
+            "name": "IEEE Virtual Reality",
+            "publisher": "IEEE",
+            "url": "https://dblp.org/db/conf/vr/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "IEEE VIS",
+            "name": "IEEE Visualization Conference",
+            "publisher": "IEEE",
+            "url": "https://dblp.org/db/conf/visualization/"
+          }
+        ],
+        "B": [
+          {
+            "isHandle": true,
+            "shortName": "ICMR",
+            "name": "ACM SIGMM International Conference on Multimedia Retrieval",
+            "publisher": "ACM",
+            "url": "https://dblp.org/db/conf/mir/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "SI3D",
+            "name": "ACM Symposium on Interactive 3D Graphics",
+            "publisher": "ACM",
+            "url": "https://dblp.org/db/conf/si3d/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "SCA",
+            "name": "ACM/Eurographics Symposium on Computer Animation",
+            "publisher": "ACM",
+            "url": "https://dblp.org/db/conf/sca/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "DCC",
+            "name": "Data Compression Conference",
+            "publisher": "IEEE",
+            "url": "https://dblp.org/db/conf/dcc/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "EG",
+            "name": "Eurographics",
+            "publisher": "Wiley/Blackwell",
+            "url": "https://dblp.org/db/conf/eurographics/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "EuroVis",
+            "name": "Eurographics Conference on Visualization",
+            "publisher": "ACM",
+            "url": "https://dblp.org/db/conf/vissym/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "SGP",
+            "name": "Eurographics Symposium on Geometry Processing",
+            "publisher": "Wiley/Blackwell",
+            "url": "https://dblp.org/db/conf/sgp/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "EGSR",
+            "name": "Eurographics Symposium on Rendering",
+            "publisher": "Wiley/Blackwell",
+            "url": "https://dblp.org/db/conf/rt/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "ICASSP",
+            "name": "IEEE International Conference on Acoustics, Speech and SP",
+            "publisher": "IEEE",
+            "url": "https://dblp.org/db/conf/icassp/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "ICME",
+            "name": "IEEE International Conference on Multimedia & Expo",
+            "publisher": "IEEE",
+            "url": "https://dblp.org/db/conf/icmcs/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "ISMAR",
+            "name": "International Symposium on Mixed and Augmented Reality",
+            "publisher": "IEEE/ACM",
+            "url": "https://dblp.org/db/conf/ismar/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "PG",
+            "name": "Pacific Graphics: The Pacific Conference on Computer Graphics and Applications",
+            "publisher": "Wiley/Blackwell",
+            "url": "https://dblp.org/db/conf/pg/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "SPM",
+            "name": "Symposium on Solid and Physical Modeling",
+            "publisher": "SMA/Elsevier",
+            "url": "https://dblp.org/db/conf/sma/"
+          }
+        ],
+        "C": [
+          {
+            "isHandle": true,
+            "shortName": "vrst",
+            "name": "ACM Symposium on Virtual Reality Software and Technology",
+            "publisher": "ACM",
+            "url": "http://dblp2.uni-trier.de/db/conf/vrst/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "CASA",
+            "name": "Computer Animation and Social Agents",
+            "publisher": "Wiley",
+            "url": "https://dblp.org/db/conf/ca/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "CGI",
+            "name": "Computer Graphics International",
+            "publisher": "Springer",
+            "url": "https://dblp.org/db/conf/cgi/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "INTERSPEECH",
+            "name": "Conference of the International Speech Communication Association",
+            "publisher": "",
+            "url": "https://dblp.org/db/conf/interspeech/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "GMP",
+            "name": "Geometric Modeling and Processing",
+            "publisher": "Elsevier",
+            "url": "https://dblp.org/db/conf/gmp/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "PacificVis",
+            "name": "IEEE Pacific Visualization Symposium",
+            "publisher": "IEEE",
+            "url": "https://dblp.org/db/conf/apvis/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "3DV",
+            "name": "International Conference on 3D Vision",
+            "publisher": "IEEE",
+            "url": "https://dblp.org/db/conf/3dim/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "CAD/Graphics",
+            "name": "International Conference on Computer-Aided Design and Computer Graphics",
+            "publisher": "IEEE",
+            "url": "https://dblp.org/db/conf/cadgraphics/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "ICIP",
+            "name": "International Conference on Image Processing",
+            "publisher": "IEEE",
+            "url": "https://dblp.org/db/conf/icip/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "MMM",
+            "name": "International Conference on Multimedia Modeling",
+            "publisher": "Springer",
+            "url": "https://dblp.org/db/conf/mmm/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "PCM",
+            "name": "Pacific-Rim Conference on Multimedia",
+            "publisher": "Springer",
+            "url": "https://dblp.org/db/conf/pcm/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "SMI",
+            "name": "Shape Modeling International",
+            "publisher": "IEEE",
+            "url": "https://dblp.org/db/conf/smi/"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Artificial Intelligence",
+      "zhName": "人工智能",
+      "journal": {
+        "A": [
+          {
+            "isHandle": true,
+            "shortName": "AI",
+            "name": "Artificial Intelligence",
+            "publisher": "Elsevier",
+            "url": "https://dblp.org/db/journals/ai/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "TPAMI",
+            "name": "IEEE Trans on Pattern Analysis and Machine Intelligence",
+            "publisher": "IEEE",
+            "url": "https://dblp.org/db/journals/pami/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "IJCV",
+            "name": "International Journal of Computer Vision",
+            "publisher": "Springer",
+            "url": "https://dblp.org/db/journals/ijcv/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "JMLR",
+            "name": "Journal of Machine Learning Research",
+            "publisher": "MIT Press",
+            "url": "https://dblp.org/db/journals/jmlr/"
+          }
+        ],
+        "B": [
+          {
+            "isHandle": true,
+            "shortName": "TAP",
+            "name": "ACM Transactions on Applied Perception",
+            "publisher": "ACM",
+            "url": "https://dblp.org/db/journals/tap/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "TSLP",
+            "name": "ACM Transactions on Speech and Language Processing",
+            "publisher": "ACM",
+            "url": "https://dblp.org/db/journals/tslp/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "AAMAS",
+            "name": "Autonomous Agents and Multi-Agent Systems",
+            "publisher": "Springer",
+            "url": "https://dblp.org/db/journals/aamas/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "coling",
+            "name": "Computational Linguistics",
+            "publisher": "MIT Press",
+            "url": "https://dblp.org/db/journals/coling/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "CVIU",
+            "name": "Computer Vision and Image Understanding",
+            "publisher": "Elsevier",
+            "url": "https://dblp.org/db/journals/cviu/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "DKE",
+            "name": "Data and Knowledge Engineering",
+            "publisher": "Elsevier",
+            "url": "https://dblp.org/db/journals/dke/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "ec",
+            "name": "Evolutionary Computation",
+            "publisher": "MIT Press",
+            "url": "https://dblp.org/db/journals/ec/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "TAC",
+            "name": "IEEE Transactions on Affective Computing",
+            "publisher": "IEEE",
+            "url": "https://dblp.org/db/journals/taffco/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "TASLP",
+            "name": "IEEE Transactions on Audio, Speech, and Language Processing",
+            "publisher": "IEEE",
+            "url": "https://dblp.org/db/journals/taslp/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "tcyb",
+            "name": "IEEE Transactions on Cybernetics",
+            "publisher": "IEEE",
+            "url": "https://dblp.org/db/journals/tcyb/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "TEC",
+            "name": "IEEE Transactions on Evolutionary Computation",
+            "publisher": "IEEE",
+            "url": "https://dblp.org/db/journals/tec/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "TFS",
+            "name": "IEEE Transactions on Fuzzy Systems",
+            "publisher": "IEEE",
+            "url": "https://dblp.org/db/journals/tfs/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "TNNLS",
+            "name": "IEEE Transactions on Neural Networks and learning systems",
+            "publisher": "IEEE",
+            "url": "https://dblp.org/db/journals/tnn/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "IJAR",
+            "name": "International Journal of Approximate Reasoning",
+            "publisher": "Elsevier",
+            "url": "https://dblp.org/db/journals/ijar/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "JAIR",
+            "name": "Journal of Artificial Intelligence Research",
+            "publisher": "AAAI",
+            "url": "https://dblp.org/db/journals/jair/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "jar",
+            "name": "Journal of Automated Reasoning",
+            "publisher": "Springer",
+            "url": "https://dblp.org/db/journals/jar/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "JSLHR",
+            "name": "Journal of Speech, Language, and Hearing Research",
+            "publisher": "American Speech-Language Hearing Association",
+            "url": "http://jslhr.pubs.asha.org/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "ml",
+            "name": "Machine Learning",
+            "publisher": "Springer",
+            "url": "https://dblp.org/db/journals/ml/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "neco",
+            "name": "Neural Computation",
+            "publisher": "MIT Press",
+            "url": "https://dblp.org/db/journals/neco/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "nn",
+            "name": "Neural Networks",
+            "publisher": "Elsevier",
+            "url": "https://dblp.org/db/journals/nn/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "par PR",
+            "name": "Pattern Recognition",
+            "publisher": "Elsevier",
+            "url": "https://dblp.org/db/conf/par/"
+          }
+        ],
+        "C": [
+          {
+            "isHandle": true,
+            "shortName": "TALLIP",
+            "name": "ACM Transactions on Asian and Low-Resource Language Information Processing",
+            "publisher": "ACM",
+            "url": "https://dblp.org/db/journals/talip/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "apin",
+            "name": "Applied Intelligence",
+            "publisher": "Springer",
+            "url": "https://dblp.org/db/journals/apin/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "AIM",
+            "name": "Artificial Intelligence in Medicine",
+            "publisher": "Elsevier",
+            "url": "https://dblp.org/db/journals/artmed/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "alife",
+            "name": "Artificial Life",
+            "publisher": "MIT Press",
+            "url": "https://dblp.org/db/journals/alife/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "ci",
+            "name": "Computational Intelligence",
+            "publisher": "Wiley",
+            "url": "https://dblp.org/db/journals/ci/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "csl",
+            "name": "Computer Speech and Language",
+            "publisher": "Elsevier",
+            "url": "https://dblp.org/db/journals/csl/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "connection",
+            "name": "Connection Science",
+            "publisher": "Taylor & Francis",
+            "url": "https://dblp.org/db/journals/connection/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "DSS",
+            "name": "Decision Support Systems",
+            "publisher": "Elsevier",
+            "url": "https://dblp.org/db/journals/dss/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "EAAI",
+            "name": "Engineering Applications of Artificial Intelligence",
+            "publisher": "Elsevier",
+            "url": "https://dblp.org/db/journals/eaai/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "es",
+            "name": "Expert Systems",
+            "publisher": "Blackwell/Wiley",
+            "url": "https://dblp.org/db/journals/es/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "ESWA",
+            "name": "Expert Systems with Applications",
+            "publisher": "Elsevier",
+            "url": "https://dblp.org/db/journals/eswa/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "fss",
+            "name": "Fuzzy Sets and Systems",
+            "publisher": "Elsevier",
+            "url": "https://dblp.org/db/journals/fss/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "TG",
+            "name": "IEEE Transactions on Games",
+            "publisher": "IEEE",
+            "url": "https://dblp.org/db/journals/tciaig/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "IET-CVI",
+            "name": "IET Computer Vision",
+            "publisher": "IET",
+            "url": "http://digital-library.theiet.org/content/journals/iet-cvi/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "iet-spr",
+            "name": "IET Signal Processing",
+            "publisher": "IET",
+            "url": "* http://digital-library.theiet.org/content/journals/iet-spr/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "IVC",
+            "name": "Image and Vision Computing",
+            "publisher": "Elsevier",
+            "url": "https://dblp.org/db/journals/ivc/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "IDA",
+            "name": "Intelligent Data Analysis",
+            "publisher": "IOS Press",
+            "url": "https://dblp.org/db/journals/ida/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "IJCIA",
+            "name": "International Journal of Computational Intelligence and Applications",
+            "publisher": "World Scientific",
+            "url": "https://dblp.org/db/journals/ijcia/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "IJIS",
+            "name": "International Journal of Intelligent Systems",
+            "publisher": "Wiley",
+            "url": "https://dblp.org/db/journals/ijis/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "IJNS",
+            "name": "International Journal of Neural Systems",
+            "publisher": "World Scientific",
+            "url": "https://dblp.org/db/journals/ijns/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "IJPRAI",
+            "name": "International Journal of Pattern Recognition and Artificial Intelligence",
+            "publisher": "World Scientific",
+            "url": "https://dblp.org/db/journals/ijprai/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "IJUFKS",
+            "name": "International Journal of Uncertainty, Fuzziness and Knowledge-Based System",
+            "publisher": "World Scientific",
+            "url": "https://dblp.org/db/journals/ijufks/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "IJDAR",
+            "name": "International Journal on Document Analysis and Recognition",
+            "publisher": "Springer",
+            "url": "https://dblp.org/db/journals/ijdar/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "JETAI",
+            "name": "Journal of Experimental and Theoretical Artificial Intelligence",
+            "publisher": "Taylor & Francis",
+            "url": "https://dblp.org/db/journals/jetai/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "KBS",
+            "name": "Knowledge-Based Systems",
+            "publisher": "Elsevier",
+            "url": "https://dblp.org/db/journals/kbs/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "mt",
+            "name": "Machine Translation",
+            "publisher": "Springer",
+            "url": "https://dblp.org/db/journals/mt/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "mva",
+            "name": "Machine Vision and Applications",
+            "publisher": "Springer",
+            "url": "https://dblp.org/db/journals/mva/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "nc",
+            "name": "Natural Computing",
+            "publisher": "Springer",
+            "url": "https://dblp.org/db/journals/nc/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "NLE",
+            "name": "Natural Language Engineering",
+            "publisher": "Cambridge University Press",
+            "url": "https://dblp.org/db/journals/nle/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "NCA",
+            "name": "Neural Computing & Applications",
+            "publisher": "Springer",
+            "url": "https://dblp.org/db/journals/nca/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "NPL",
+            "name": "Neural Processing Letters",
+            "publisher": "Springer",
+            "url": "https://dblp.org/db/journals/npl/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "ijon",
+            "name": "Neurocomputing",
+            "publisher": "Elsevier",
+            "url": "https://dblp.org/db/journals/ijon/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "PAA",
+            "name": "Pattern Analysis and Applications",
+            "publisher": "Springer",
+            "url": "https://dblp.org/db/journals/paa/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "PRL",
+            "name": "Pattern Recognition Letters",
+            "publisher": "Elsevier",
+            "url": "https://dblp.org/db/journals/prl/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "soco",
+            "name": "Soft Computing",
+            "publisher": "Springer",
+            "url": "https://dblp.org/db/journals/soco/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "WI",
+            "name": "Web Intelligence",
+            "publisher": "IOS Press",
+            "url": "https://dblp.org/db/journals/wias/"
+          }
+        ]
+      },
+      "conference": {
+        "A": [
+          {
+            "isHandle": true,
+            "shortName": "AAAI",
+            "name": "AAAI Conference on Artificial Intelligence",
+            "publisher": "AAAI",
+            "url": "https://dblp.org/db/conf/aaai/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "NeurIPS",
+            "name": "Annual Conference on Neural Information Processing Systems",
+            "publisher": "MIT Press",
+            "url": "https://dblp.org/db/conf/nips/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "ACL",
+            "name": "Annual Meeting of the Association for Computational Linguistics",
+            "publisher": "ACL",
+            "url": "https://dblp.org/db/conf/acl/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "CVPR",
+            "name": "IEEE Conference on Computer Vision and Pattern Recognition",
+            "publisher": "IEEE",
+            "url": "https://dblp.org/db/conf/cvpr/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "ICCV",
+            "name": "International Conference on Computer Vision",
+            "publisher": "IEEE",
+            "url": "https://dblp.org/db/conf/iccv/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "ICML",
+            "name": "International Conference on Machine Learning",
+            "publisher": "ACM",
+            "url": "https://dblp.org/db/conf/icml/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "IJCAI",
+            "name": "International Joint Conference on Artificial Intelligence",
+            "publisher": "Morgan Kaufmann",
+            "url": "https://dblp.org/db/conf/ijcai/"
+          }
+        ],
+        "B": [
+          {
+            "isHandle": true,
+            "shortName": "COLT",
+            "name": "Annual Conference on Computational Learning Theory",
+            "publisher": "Springer",
+            "url": "https://dblp.org/db/conf/colt/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "EMNLP",
+            "name": "Conference on Empirical Methods in Natural Language Processing",
+            "publisher": "ACL",
+            "url": "https://dblp.org/db/conf/emnlp/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "ECAI",
+            "name": "European Conference on Artificial Intelligence",
+            "publisher": "IOS Press",
+            "url": "https://dblp.org/db/conf/ecai/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "ECCV",
+            "name": "European Conference on Computer Vision",
+            "publisher": "Springer",
+            "url": "https://dblp.org/db/conf/eccv/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "ICRA",
+            "name": "IEEE International Conference on Robotics and Automation",
+            "publisher": "IEEE",
+            "url": "https://dblp.org/db/conf/icra/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "ICAPS",
+            "name": "International Conference on Automated Planning and Scheduling",
+            "publisher": "AAAI",
+            "url": "https://dblp.org/db/conf/aips/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "ICCBR",
+            "name": "International Conference on Case-Based Reasoning and Development",
+            "publisher": "Springer",
+            "url": "https://dblp.org/db/conf/iccbr/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "COLING",
+            "name": "International Conference on Computational Linguistics",
+            "publisher": "ACM",
+            "url": "https://dblp.org/db/conf/coling/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "KR",
+            "name": "International Conference on Principles of Knowledge Representation and Reasoning",
+            "publisher": "Morgan Kaufmann",
+            "url": "https://dblp.org/db/conf/kr/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "UAI",
+            "name": "International Conference on Uncertainty in Artificial Intelligence",
+            "publisher": "AUAI",
+            "url": "https://dblp.org/db/conf/uai/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "AAMAS",
+            "name": "International Joint Conference on Autonomous Agents and Multi-agent Systems",
+            "publisher": "Springer",
+            "url": "https://dblp.org/db/conf/atal/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "PPSN",
+            "name": "Parallel Problem Solving from Nature",
+            "publisher": "Springer",
+            "url": "https://dblp.org/db/conf/ppsn/"
+          }
+        ],
+        "C": [
+          {
+            "isHandle": true,
+            "shortName": "AISTATS",
+            "name": "Artificial Intelligence and Statistics",
+            "publisher": "JMLR",
+            "url": "https://dblp.org/db/conf/aistats/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "ACCV",
+            "name": "Asian Conference on Computer Vision",
+            "publisher": "Springer",
+            "url": "https://dblp.org/db/conf/accv/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "ACML",
+            "name": "Asian Conference on Machine Learning",
+            "publisher": "JMLR",
+            "url": "https://dblp.org/db/conf/acml/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "BMVC",
+            "name": "British Machine Vision Conference",
+            "publisher": "British Machine Vision Association",
+            "url": "https://dblp.org/db/conf/bmvc/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "NLPCC",
+            "name": "CCF International Conference on Natural Language Processing and Chinese Computing",
+            "publisher": "Springer",
+            "url": "https://dblp.org/db/conf/nlpcc/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "CoNLL",
+            "name": "Conference on Computational Natural Language Learning",
+            "publisher": "Association for Computational Linguistics",
+            "url": "https://dblp.org/db/conf/conll/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "GECCO",
+            "name": "Genetic and Evolutionary Computation Conference",
+            "publisher": "ACM",
+            "url": "https://dblp.org/db/conf/gecco/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "ICTAI",
+            "name": "IEEE International Conference on Tools with Artificial Intelligence",
+            "publisher": "IEEE",
+            "url": "https://dblp.org/db/conf/ictai/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "IROS",
+            "name": "IEEE\\RSJ International Conference on Intelligent Robots and Systems",
+            "publisher": "IEEE",
+            "url": "https://dblp.org/db/conf/iros/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "ALT",
+            "name": "International Conference on Algorithmic Learning Theory",
+            "publisher": "Springer",
+            "url": "https://dblp.org/db/conf/alt/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "ICANN",
+            "name": "International Conference on Artificial Neural Networks",
+            "publisher": "Springer",
+            "url": "https://dblp.org/db/conf/icann/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "FG",
+            "name": "International Conference on Automatic Face and Gesture Recognition",
+            "publisher": "IEEE",
+            "url": "https://dblp.org/db/conf/fgr/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "ICDAR",
+            "name": "International Conference on Document Analysis and Recognition",
+            "publisher": "IEEE",
+            "url": "https://dblp.org/db/conf/icdar/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "ILP",
+            "name": "International Conference on Inductive Logic Programming",
+            "publisher": "Springer",
+            "url": "https://dblp.org/db/conf/ilp/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "KSEM",
+            "name": "International conference on Knowledge Science, Engineering and Management",
+            "publisher": "Springer",
+            "url": "https://dblp.org/db/conf/ksem/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "ICONIP",
+            "name": "International Conference on Neural Information Processing",
+            "publisher": "Springer",
+            "url": "https://dblp.org/db/conf/iconip/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "ICPR",
+            "name": "International Conference on Pattern Recognition",
+            "publisher": "IEEE",
+            "url": "https://dblp.org/db/conf/icpr/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "ICB",
+            "name": "International Joint Conference on Biometrics",
+            "publisher": "IEEE",
+            "url": "https://dblp.org/db/conf/icb/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "IJCNN",
+            "name": "International Joint Conference on Neural Networks",
+            "publisher": "IEEE",
+            "url": "https://dblp.org/db/conf/ijcnn/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "PRICAI",
+            "name": "Pacific Rim International Conference on Artificial Intelligence",
+            "publisher": "Springer",
+            "url": "https://dblp.org/db/conf/pricai/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "NAACL",
+            "name": "The Annual Conference of the North American Chapter of the Association for Computational Linguistics",
+            "publisher": "NAACL",
+            "url": "https://dblp.org/db/conf/naacl/"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Human Computer Interaction",
+      "zhName": "人机交互与普适计算",
+      "journal": {
+        "A": [
+          {
+            "isHandle": true,
+            "shortName": "TOCHI",
+            "name": "ACM Transactions on Computer-Human Interaction",
+            "publisher": "ACM",
+            "url": "https://dblp.org/db/journals/tochi/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "IJHCS",
+            "name": "International Journal of Human Computer Studies",
+            "publisher": "Elsevier",
+            "url": "https://dblp.org/db/journals/ijmms/"
+          }
+        ],
+        "B": [
+          {
+            "isHandle": true,
+            "shortName": "CSCW",
+            "name": "Computer Supported Cooperative Work",
+            "publisher": "Springer",
+            "url": "https://dblp.org/db/journals/cscw/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "HCI",
+            "name": "Human Computer Interaction",
+            "publisher": "Taylor & Francis",
+            "url": "https://dblp.org/db/journals/hhci/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "thms",
+            "name": "IEEE Transactions on Human-Machine Systems",
+            "publisher": "IEEE",
+            "url": "https://dblp.org/db/journals/thms/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "IWC",
+            "name": "Interacting with Computers",
+            "publisher": "Oxford University Press",
+            "url": "https://dblp.org/db/journals/iwc/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "IJHCI",
+            "name": "International Journal of Human-Computer Interaction",
+            "publisher": "Taylor & Francis",
+            "url": "https://dblp.org/db/journals/ijhci/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "UMUAI",
+            "name": "User Modeling and User-Adapted Interaction",
+            "publisher": "Springer",
+            "url": "https://dblp.org/db/journals/umuai/"
+          }
+        ],
+        "C": [
+          {
+            "isHandle": true,
+            "shortName": "BIT",
+            "name": "Behaviour & Information Technology",
+            "publisher": "Taylor & Francis",
+            "url": "https://dblp.org/db/journals/behaviourIT/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "PUC",
+            "name": "Personal and Ubiquitous Computing",
+            "publisher": "Springer",
+            "url": "https://dblp.org/db/journals/puc/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "PMC",
+            "name": "Pervasive and Mobile Computing",
+            "publisher": "Elsevier",
+            "url": "https://dblp.org/db/journals/percom/"
+          }
+        ]
+      },
+      "conference": {
+        "A": [
+          {
+            "isHandle": true,
+            "shortName": "CSCW",
+            "name": "ACM Conference on Computer Supported Cooperative Work and Social Computing",
+            "publisher": "ACM",
+            "url": "https://dblp.org/db/conf/cscw/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "CHI",
+            "name": "ACM Conference on Human Factors in Computing Systems",
+            "publisher": "ACM",
+            "url": "https://dblp.org/db/conf/chi/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "UbiComp",
+            "name": "ACM International Conference on Ubiquitous Computing",
+            "publisher": "ACM",
+            "url": "https://dblp.org/db/conf/huc/"
+          }
+        ],
+        "B": [
+          {
+            "isHandle": true,
+            "shortName": "GROUP",
+            "name": "ACM Conference on Supporting Group Work",
+            "publisher": "ACM",
+            "url": "https://dblp.org/db/conf/group/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "IUI",
+            "name": "ACM International Conference on Intelligent User Interfaces",
+            "publisher": "ACM",
+            "url": "https://dblp.org/db/conf/iui/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "ITS",
+            "name": "ACM International Conference on Interactive Tabletops and Surfaces",
+            "publisher": "ACM",
+            "url": "https://dblp.org/db/conf/tabletop/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "UIST",
+            "name": "ACM Symposium on User Interface Software and Technology",
+            "publisher": "ACM",
+            "url": "https://dblp.org/db/conf/uist/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "ECSCW",
+            "name": "European Conference on Computer Supported Cooperative Work",
+            "publisher": "Springer",
+            "url": "https://dblp.org/db/conf/ecscw/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "PERCOM",
+            "name": "IEEE International Conference on Pervasive Computing and Communications",
+            "publisher": "IEEE",
+            "url": "https://dblp.org/db/conf/percom/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "MobileHCI",
+            "name": "International Conference on Human Computer Interaction with Mobile Devices and Services",
+            "publisher": "ACM",
+            "url": "https://dblp.org/db/conf/mhci/"
+          }
+        ],
+        "C": [
+          {
+            "isHandle": true,
+            "shortName": "DIS",
+            "name": "ACM Conference on Designing Interactive Systems",
+            "publisher": "ACM",
+            "url": "https://dblp.org/db/conf/ACMdis/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "ICMI",
+            "name": "ACM International Conference on Multimodal Interaction",
+            "publisher": "ACM",
+            "url": "https://dblp.org/db/conf/icmi/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "ASSETS",
+            "name": "ACM SIGACCESS Conference on Computers and Accessibility",
+            "publisher": "ACM",
+            "url": "https://dblp.org/db/conf/assets/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "GI",
+            "name": "Graphics Interface conference",
+            "publisher": "ACM",
+            "url": "https://dblp.org/db/conf/graphicsinterface/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "UIC",
+            "name": "IEEE International Conference on Ubiquitous Intelligence and Computing",
+            "publisher": "IEEE",
+            "url": "https://dblp.org/db/conf/uic/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "haptics",
+            "name": "IEEE World Haptics Conference",
+            "publisher": "IEEE",
+            "url": "https://dblp.org/db/conf/haptics/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "INTERACT",
+            "name": "IFIP TC13 Conference on Human-Computer Interaction",
+            "publisher": "IFIP",
+            "url": "https://dblp.org/db/conf/interact/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "IDC",
+            "name": "Interaction Design and Children",
+            "publisher": "ACM",
+            "url": "https://dblp.org/db/conf/acmidc/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "CollaborateCom",
+            "name": "International Conference on Collaborative Computing: Networking, Applications and Worksharing",
+            "publisher": "Springer",
+            "url": "http://collaboratecom.org/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "CSCWD",
+            "name": "International Conference on Computer Supported Cooperative Work in Design",
+            "publisher": "Springer",
+            "url": "https://dblp.org/db/conf/cscwd/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "CoopIS",
+            "name": "International Conference on Cooperative Information Systems",
+            "publisher": "Springer",
+            "url": "https://dblp.org/db/conf/coopis/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "MobiQuitous",
+            "name": "International Conference on Mobile and Ubiquitous Systems: Computing, Networking and Services",
+            "publisher": "Springer",
+            "url": "https://dblp.org/db/conf/mobiquitous/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "AVI",
+            "name": "International Working Conference on Advanced Visual Interfaces",
+            "publisher": "ACM",
+            "url": "https://dblp.org/db/conf/avi/"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Crossover and Integration",
+      "zhName": "交叉/综合/新兴",
+      "journal": {
+        "A": [
+          {
+            "isHandle": true,
+            "shortName": "JACM",
+            "name": "Journal of the ACM",
+            "publisher": "ACM",
+            "url": "https://dblp.org/db/journals/jacm/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "Proc. IEEE",
+            "name": "Proceedings of the IEEE",
+            "publisher": "IEEE",
+            "url": "https://dblp.org/db/journals/pieee/"
+          }
+        ],
+        "B": [
+          {
+            "isHandle": true,
+            "shortName": "bioinformatics",
+            "name": "Bioinformatics",
+            "publisher": "Oxford University Press",
+            "url": "https://dblp.org/db/journals/bioinformatics/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "bib",
+            "name": "Briefings in Bioinformatics",
+            "publisher": "Oxford University Press",
+            "url": "https://dblp.org/db/journals/bib/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "Cognition",
+            "name": "Cognition：International Journal of Cognitive Science",
+            "publisher": "Elsevier",
+            "url": "http://www.journals.elsevier.com/cognition/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "TASAE",
+            "name": "IEEE Transactions on Automation Science and Engineering",
+            "publisher": "IEEE",
+            "url": "https://dblp.org/db/journals/tase/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "TGARS",
+            "name": "IEEE Transactions on Geoscience and Remote Sensing",
+            "publisher": "IEEE",
+            "url": "https://dblp.org/db/journals/tgrs/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "TITS",
+            "name": "IEEE Transactions on Intelligent Transportation Systems",
+            "publisher": "IEEE",
+            "url": "https://dblp.org/db/journals/tits/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "TMI",
+            "name": "IEEE Transactions on Medical Imaging",
+            "publisher": "IEEE",
+            "url": "https://dblp.org/db/journals/tmi/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "TR",
+            "name": "IEEE Transactions on Robotics",
+            "publisher": "IEEE",
+            "url": "https://dblp.org/db/journals/trob/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "TCBB",
+            "name": "IEEE-ACM Transactions on Computational Biology and Bioinformatics",
+            "publisher": "IEEE/ACM",
+            "url": "https://dblp.org/db/journals/tcbb/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "JCST",
+            "name": "Journal of Computer Science and Technology",
+            "publisher": "SCIENCE PRESS/Springer",
+            "url": "https://dblp.org/db/journals/jcst/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "JAMIA",
+            "name": "Journal of the American Medical Informatics Association",
+            "publisher": "BMJ Journals",
+            "url": "https://dblp.org/db/journals/jamia/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "ploscb",
+            "name": "PLOS Computational Biology",
+            "publisher": "Public Library of Science",
+            "url": "https://dblp.org/db/journals/ploscb/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "chinaf",
+            "name": "Science China Information Sciences",
+            "publisher": "Science in China Press/Springer",
+            "url": "https://dblp.org/db/journals/chinaf/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "cj",
+            "name": "The Computer Journal",
+            "publisher": "Oxford University Press",
+            "url": "https://dblp.org/db/journals/cj/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "wwwj",
+            "name": "World Wide Web Journal",
+            "publisher": "Springer",
+            "url": "https://dblp.org/db/journals/wwwj/"
+          }
+        ],
+        "C": [
+          {
+            "isHandle": true,
+            "shortName": "bmcbi",
+            "name": "BMC Bioinformatics",
+            "publisher": "BioMed Central",
+            "url": "https://dblp.org/db/journals/bmcbi/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "cas",
+            "name": "Cybernetics and Systems",
+            "publisher": "Taylor & Francis",
+            "url": "https://dblp.org/db/journals/cas/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "FCS",
+            "name": "Frontiers of Computer Science",
+            "publisher": "Higher Education Press",
+            "url": "https://dblp.org/db/journals/fcsc/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "lgrs",
+            "name": "IEEE Geoscience and Remote Sensing Letters",
+            "publisher": "IEEE",
+            "url": "https://dblp.org/db/journals/lgrs/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "JBHI",
+            "name": "IEEE Journal of Biomedical and Health Informatics",
+            "publisher": "IEEE",
+            "url": "https://dblp.org/db/journals/titb/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "TBD",
+            "name": "IEEE Transactions on Big Data",
+            "publisher": "IEEE",
+            "url": "https://dblp.org/db/journals/tbd/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "iet-its",
+            "name": "IET Intelligent Transport Systems",
+            "publisher": "IET",
+            "url": "http://digital-library.theiet.org/content/journals/iet-its/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "JBI",
+            "name": "Journal of Biomedical Informatics",
+            "publisher": "Elsevier",
+            "url": "https://dblp.org/db/journals/jbi/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "mia",
+            "name": "Medical Image Analysis",
+            "publisher": "Elsevier",
+            "url": "https://dblp.org/db/journals/mia/"
+          }
+        ]
+      },
+      "conference": {
+        "A": [
+          {
+            "isHandle": true,
+            "shortName": "WWW",
+            "name": "International World Wide Web Conferences",
+            "publisher": "ACM",
+            "url": "https://dblp.org/db/conf/www/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "RTSS",
+            "name": "Real-Time Systems Symposium",
+            "publisher": "IEEE",
+            "url": "https://dblp.org/db/conf/rtss/"
+          }
+        ],
+        "B": [
+          {
+            "isHandle": true,
+            "shortName": "CogSci",
+            "name": "Cognitive Science Society Annual Conference",
+            "publisher": "Psychology Press",
+            "url": "https://dblp.org/db/conf/cogsci/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "BIBM",
+            "name": "IEEE International Conference on Bioinformatics and Biomedicine",
+            "publisher": "IEEE",
+            "url": "https://dblp.org/db/conf/bibm/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "EMSOFT",
+            "name": "International Conference on Embedded Software",
+            "publisher": "ACM/IEEE/IFIP",
+            "url": "https://dblp.org/db/conf/emsoft/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "ISMB",
+            "name": "International conference on Intelligent Systems for Molecular Biology",
+            "publisher": "Oxford Journals",
+            "url": "http://www.iscb.org/about-ismb/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "RECOMB",
+            "name": "International Conference on Research in Computational Molecular Biology",
+            "publisher": "Springer",
+            "url": "https://dblp.org/db/conf/recomb/"
+          }
+        ],
+        "C": [
+          {
+            "isHandle": true,
+            "shortName": "AMIA",
+            "name": "American Medical Informatics Association Annual Symposium",
+            "publisher": "AMIA",
+            "url": "https://dblp.org/db/conf/amia/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "APBC",
+            "name": "Asia Pacific Bioinformatics Conference",
+            "publisher": "BioMed Central",
+            "url": "https://dblp.org/db/conf/apbc/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "bigdataconf",
+            "name": "IEEE International Conference on Big Data",
+            "publisher": "IEEE",
+            "url": "https://dblp.org/db/conf/bigdataconf/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "IEEEcloud",
+            "name": "IEEE International Conference on Cloud Computing",
+            "publisher": "IEEE",
+            "url": "https://dblp.org/db/conf/IEEEcloud/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "SMC",
+            "name": "IEEE International Conference on Systems, Man, and Cybernetics",
+            "publisher": "IEEE",
+            "url": "https://dblp.org/db/conf/smc/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "COSIT",
+            "name": "International Conference on Spatial Information Theory",
+            "publisher": "ACM",
+            "url": "https://dblp.org/db/conf/cosit/"
+          },
+          {
+            "isHandle": true,
+            "shortName": "ISBRA",
+            "name": "International Symposium on Bioinformatics Research and Applications",
+            "publisher": "Springer",
+            "url": "https://dblp.org/db/conf/isbra/"
+          }
+        ]
+      }
     }
   ]
 }
