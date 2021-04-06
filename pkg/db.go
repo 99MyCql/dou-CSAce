@@ -4,6 +4,7 @@ import (
 	"context"
 	"fmt"
 	"log"
+	"strings"
 
 	driver "github.com/arangodb/go-driver"
 	"github.com/arangodb/go-driver/http"
@@ -53,7 +54,23 @@ func NewDB(DBUrl string, username string, passwd string, database string, cols m
 	db.Cols = make(map[string]driver.Collection)
 	for k, v := range cols {
 		ctx := context.Background()
-		col, err := db.Database.Collection(ctx, v)
+		exist, err := db.Database.CollectionExists(ctx, v)
+		if err != nil {
+			log.Fatal(err)
+			return nil
+		}
+
+		// 如果不存在，则创建
+		var col driver.Collection
+		if !exist {
+			options := &driver.CreateCollectionOptions{}
+			if strings.Index(v, "_") != -1 {
+				options.Type = driver.CollectionTypeEdge
+			}
+			col, err = db.Database.CreateCollection(ctx, v, options)
+		} else {
+			col, err = db.Database.Collection(ctx, v)
+		}
 		if err != nil {
 			log.Fatal(err)
 			return nil

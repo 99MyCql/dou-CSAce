@@ -21,6 +21,7 @@ import (
 
 const (
 	jsonFileName  = "ccf_field.json"
+	logFileName   = ""
 	CCFFieldType  = 1
 	ConfPaperType = 1
 	JouPaperType  = 2
@@ -469,7 +470,7 @@ func handleField(fieldMap map[string]interface{}, typ uint) {
 // 初始化：读取配置、启动日志、连接数据库
 func init() {
 	pkg.Conf = pkg.NewConfig("../conf.yaml")
-	pkg.Log = pkg.NewLog("dblp_crawler.log", pkg.DebugLevel)
+	pkg.Log = pkg.NewLog(logFileName, pkg.DebugLevel)
 	pkg.DB = pkg.NewDB(pkg.Conf.ArangoDB.Url, pkg.Conf.ArangoDB.Username,
 		pkg.Conf.ArangoDB.Passwd, pkg.Conf.ArangoDB.Database, pkg.Conf.ArangoDB.ColNames)
 }

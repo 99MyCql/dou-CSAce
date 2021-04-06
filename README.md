@@ -221,6 +221,31 @@ swag init
 在根目录下创建配置文件 `conf.yaml` ，内容如下：
 
 ```yaml
+addr: 0.0.0.0:8080
+arangoDB:
+  url: http://localhost:8529/
+  username: dounine
+  passwd: 123456
+  database: douCSAce
+  collections:
+    # 各模型对应的集合名（表名）
+    paper: papers
+    confInstance: confInstances
+    confSeries: confSeries
+    journal: journals
+    field: fields
+    author: authors
+    affiliation: affiliations
+    cit_by: cit_by
+    publish_on_confIns: publish_on_confIns
+    publish_on_jou: publish_on_jou
+    write_by: write_by
+    confIns_belong_to_confSer: confIns_belong_to_confSer
+    confSer_belong_to_field: confSer_belong_to_field
+    jou_belong_to_field: jou_belong_to_field
+    co_with: co_with
+    author_belong_to_aff: author_belong_to_aff
+logPath:
 ```
 
 ### 运行
