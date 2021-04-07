@@ -8,14 +8,16 @@ import (
 	"gopkg.in/yaml.v2"
 )
 
+// ArangoDBInfo ArangoDB 相关信息
 type ArangoDBInfo struct {
-	Url      string            `yaml:"url"`
-	Username string            `yaml:"username"`
-	Passwd   string            `yaml:"passwd"`
-	Database string            `yaml:"database"`
-	ColNames map[string]string `yaml:"collections"`
+	Url             string            `yaml:"url"`
+	Username        string            `yaml:"username"`
+	Passwd          string            `yaml:"passwd"`
+	Database        string            `yaml:"database"`
+	ModelColNameMap map[string]string `yaml:"collections"` // key:各模块名（模块名定义在 pkg/GLOBAL.go 中），value:数据库中的集合名
 }
 
+// Config 配置信息
 type Config struct {
 	Addr     string       `yaml:"addr"`
 	ArangoDB ArangoDBInfo `yaml:"arangoDB"`

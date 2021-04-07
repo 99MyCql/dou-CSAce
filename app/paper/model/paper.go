@@ -44,7 +44,7 @@ func (p *Paper) Delete() error {
 func (p *Paper) DeletePublishOnJou() error {
 	ctx := context.Background()
 	query := fmt.Sprintf("for p, poJ in outbound '%s' %s remove poJ in %s", p.ID,
-		pkg.Conf.ArangoDB.ColNames[pkg.PublishOnJouName], pkg.Conf.ArangoDB.ColNames[pkg.PublishOnJouName])
+		pkg.Conf.ArangoDB.ModelColNameMap[pkg.PublishOnJouName], pkg.Conf.ArangoDB.ModelColNameMap[pkg.PublishOnJouName])
 	_, err := pkg.DB.Database.Query(ctx, query, nil)
 	return err
 }
@@ -53,7 +53,7 @@ func (p *Paper) DeletePublishOnJou() error {
 func (p *Paper) DeletePublishOnConfIns() error {
 	ctx := context.Background()
 	query := fmt.Sprintf("for p, poCI in outbound '%s' %s remove poCI in %s", p.ID,
-		pkg.Conf.ArangoDB.ColNames[pkg.PublishOnConfInsName], pkg.Conf.ArangoDB.ColNames[pkg.PublishOnConfInsName])
+		pkg.Conf.ArangoDB.ModelColNameMap[pkg.PublishOnConfInsName], pkg.Conf.ArangoDB.ModelColNameMap[pkg.PublishOnConfInsName])
 	_, err := pkg.DB.Database.Query(ctx, query, nil)
 	return err
 }
@@ -62,7 +62,7 @@ func (p *Paper) DeletePublishOnConfIns() error {
 func (p *Paper) DeleteWriteBy() error {
 	ctx := context.Background()
 	query := fmt.Sprintf("for p, wb in outbound '%s' %s remove wb in %s", p.ID,
-		pkg.Conf.ArangoDB.ColNames[pkg.WriteByName], pkg.Conf.ArangoDB.ColNames[pkg.WriteByName])
+		pkg.Conf.ArangoDB.ModelColNameMap[pkg.WriteByName], pkg.Conf.ArangoDB.ModelColNameMap[pkg.WriteByName])
 	_, err := pkg.DB.Database.Query(ctx, query, nil)
 	return err
 }

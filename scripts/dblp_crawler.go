@@ -472,7 +472,7 @@ func init() {
 	pkg.Conf = pkg.NewConfig("../conf.yaml")
 	pkg.Log = pkg.NewLog(logFileName, pkg.DebugLevel)
 	pkg.DB = pkg.NewDB(pkg.Conf.ArangoDB.Url, pkg.Conf.ArangoDB.Username,
-		pkg.Conf.ArangoDB.Passwd, pkg.Conf.ArangoDB.Database, pkg.Conf.ArangoDB.ColNames)
+		pkg.Conf.ArangoDB.Passwd, pkg.Conf.ArangoDB.Database, pkg.Conf.ArangoDB.ModelColNameMap)
 }
 
 func main() {

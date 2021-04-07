@@ -39,7 +39,7 @@ func (j *Journal) Delete() error {
 func (j *Journal) DeleteJouBelongToField() error {
 	ctx := context.Background()
 	query := fmt.Sprintf("for j, j2f in outbound '%s' %s remove j2f in %s", j.ID,
-		pkg.Conf.ArangoDB.ColNames[pkg.JouBelongToFieldName], pkg.Conf.ArangoDB.ColNames[pkg.JouBelongToFieldName])
+		pkg.Conf.ArangoDB.ModelColNameMap[pkg.JouBelongToFieldName], pkg.Conf.ArangoDB.ModelColNameMap[pkg.JouBelongToFieldName])
 	_, err := pkg.DB.Database.Query(ctx, query, nil)
 	return err
 }
