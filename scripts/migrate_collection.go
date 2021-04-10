@@ -13,12 +13,13 @@ import (
 )
 
 const (
-	targetDBUrl          = "http://172.31.203.57:8529/"
-	targetDBUsername     = "dounine"
-	targetDBPasswd       = "123456"
-	targetDBDatabaseName = "douCSAce"
-	targetDBColName      = "write_by"
-	sourceDBColName      = "write_by"
+	targetDBUrl          = "http://x.x.x.x:8529/"
+	targetDBUsername     = ""
+	targetDBPasswd       = ""
+	targetDBDatabaseName = ""
+	targetDBColName      = ""
+	sourceDBColName      = ""
+	start                = 0
 )
 
 // 初始化：读取配置、启动日志、连接数据库
@@ -33,6 +34,11 @@ func main() {
 	sourceDatabase := pkg.OpenDB(
 		pkg.ConnectDB(pkg.Conf.ArangoDB.Url, pkg.Conf.ArangoDB.Username, pkg.Conf.ArangoDB.Passwd),
 		targetDBDatabaseName)
+	// 打开目标集合
+	sourceCol, err := sourceDatabase.Collection(ctx, sourceDBColName)
+	if err != nil {
+		log.Fatal(err)
+	}
 
 	// 连接目标数据库
 	targetClient := pkg.ConnectDB(targetDBUrl, targetDBUsername, targetDBPasswd)
@@ -59,18 +65,10 @@ func main() {
 	}
 	log.Printf("open collection %s successfully", targetDBColName)
 
-	// 先把目标集合中数据全部清除
-	query := fmt.Sprintf("FOR doc IN %s REMOVE doc IN %s", targetDBColName, targetDBColName)
-	cursor, err := targetDatabase.Query(ctx, query, nil)
-	if err != nil {
-		log.Fatal(err)
-	}
-	cursor.Close()
-	log.Printf("collection %s truncate successfully", targetDBColName)
-
 	// 将源集合中的数据复制到目标集合，查询的返回上限是 1000 条记录，需以此为基本单位
-	for i := 0; i < 5400; i++ {
-		query := fmt.Sprintf("FOR d IN %s LIMIT %d, %d RETURN d", sourceDBColName, i*1000, 1000)
+	sum, _ := sourceCol.Count(ctx)
+	for i := 0; i <= int(sum/1000); i++ {
+		query := fmt.Sprintf("FOR d IN %s LIMIT %d, %d RETURN d", sourceDBColName, start+i*1000, 1000)
 		cursor, err := sourceDatabase.Query(ctx, query, nil)
 		if err != nil {
 			log.Fatal(err)
