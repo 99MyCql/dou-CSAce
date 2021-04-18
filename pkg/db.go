@@ -13,7 +13,7 @@ import (
 type DBInfo struct {
 	Client   driver.Client
 	Database driver.Database
-	Cols     map[string]driver.Collection
+	Cols     map[string]driver.Collection // key: modelName -> value: driver.Collection
 }
 
 // ConnectDB 连接数据库
@@ -57,6 +57,7 @@ func OpenDB(DBClient driver.Client, databaseName string) driver.Database {
 	return database
 }
 
+// 打开集合，若不存在则创建
 func OpenCols(database driver.Database, colNameMap map[string]string) map[string]driver.Collection {
 	cols := make(map[string]driver.Collection)
 	for modelName, colName := range colNameMap {

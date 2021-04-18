@@ -1,4 +1,4 @@
-// 从 dblp 爬取数据，处理，并存储到数据库
+// 从 dblp 爬取基础数据，处理，并存储到数据库
 package main
 
 import (

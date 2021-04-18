@@ -2,8 +2,11 @@ package model
 
 import (
 	"context"
+	"errors"
 	"fmt"
 	"strings"
+
+	"github.com/arangodb/go-driver"
 
 	"douCSAce/pkg"
 )
@@ -40,11 +43,19 @@ func (p *Paper) Delete() error {
 	return err
 }
 
+// Update 更新数据
+func (p *Paper) Update(update map[string]interface{}) error {
+	_, err := pkg.DB.Cols[pkg.PaperName].UpdateDocument(nil, p.Key, update)
+	return err
+}
+
 // DeletePublishOnJou 删除所有与 paper 关联的 PublishOnJou 边
 func (p *Paper) DeletePublishOnJou() error {
 	ctx := context.Background()
-	query := fmt.Sprintf("for p, poJ in outbound '%s' %s remove poJ in %s", p.ID,
-		pkg.Conf.ArangoDB.ModelColNameMap[pkg.PublishOnJouName], pkg.Conf.ArangoDB.ModelColNameMap[pkg.PublishOnJouName])
+	query := fmt.Sprintf("for p, poJ in outbound '%s' %s remove poJ in %s",
+		p.ID,
+		pkg.Conf.ArangoDB.ModelColNameMap[pkg.PublishOnJouName],
+		pkg.Conf.ArangoDB.ModelColNameMap[pkg.PublishOnJouName])
 	_, err := pkg.DB.Database.Query(ctx, query, nil)
 	return err
 }
@@ -63,6 +74,15 @@ func (p *Paper) DeleteWriteBy() error {
 	ctx := context.Background()
 	query := fmt.Sprintf("for p, wb in outbound '%s' %s remove wb in %s", p.ID,
 		pkg.Conf.ArangoDB.ModelColNameMap[pkg.WriteByName], pkg.Conf.ArangoDB.ModelColNameMap[pkg.WriteByName])
+	_, err := pkg.DB.Database.Query(ctx, query, nil)
+	return err
+}
+
+// DeleteCitBy 删除所有与 paper 关联的 CitBy 边
+func (p *Paper) DeleteCitBy() error {
+	ctx := context.Background()
+	query := fmt.Sprintf("for p, cb in outbound '%s' %s remove cb in %s", p.ID,
+		pkg.Conf.ArangoDB.ModelColNameMap[pkg.CitByName], pkg.Conf.ArangoDB.ModelColNameMap[pkg.CitByName])
 	_, err := pkg.DB.Database.Query(ctx, query, nil)
 	return err
 }
@@ -92,4 +112,37 @@ func FindByKey(key string) (*Paper, error) {
 func Count() (int64, error) {
 	ctx := context.Background()
 	return pkg.DB.Cols[pkg.PaperName].Count(ctx)
+}
+
+// List 返回多个 Paper 文档（记录），Limit start, count
+func List(start int64, count int) ([]*Paper, error) {
+	if count > 1000 {
+		pkg.Log.Error("一次不能获取超过1000条的数据")
+		return nil, errors.New("一次不能获取超过1000条的数据")
+	}
+
+	query := fmt.Sprintf("FOR d IN %s LIMIT %d, %d RETURN d",
+		pkg.Conf.ArangoDB.ModelColNameMap[pkg.PaperName], start, count)
+	ctx := context.Background()
+	cursor, err := pkg.DB.Database.Query(ctx, query, nil)
+	if err != nil {
+		pkg.Log.Error(err)
+		return nil, err
+	}
+	defer cursor.Close()
+
+	var papers []*Paper
+	for {
+		var tmp *Paper
+		meta, err := cursor.ReadDocument(ctx, &tmp)
+		if driver.IsNoMoreDocuments(err) {
+			break
+		} else if err != nil {
+			pkg.Log.Error(err)
+			return nil, err
+		}
+		tmp.ID = meta.ID.String()
+		papers = append(papers, tmp)
+	}
+	return papers, nil
 }
