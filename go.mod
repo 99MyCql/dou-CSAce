@@ -3,6 +3,7 @@ module douCSAce
 go 1.14
 
 require (
+	github.com/PuerkitoBio/goquery v1.6.1
 	github.com/alecthomas/template v0.0.0-20190718012654-fb15b899a751
 	github.com/arangodb/go-driver v0.0.0-20210304082257-d7e0ea043b7f
 	github.com/beevik/etree v1.1.0

@@ -11,19 +11,21 @@ import (
 )
 
 type DBInfo struct {
-	Conn     driver.Connection
 	Client   driver.Client
 	Database driver.Database
-	Cols     map[string]driver.Collection
+	Cols     map[string]driver.Collection // key: modelName -> value: driver.Collection
 }
 
-// NewDB 初始化数据库连接
-func NewDB(DBUrl string, username string, passwd string, database string, cols map[string]string) *DBInfo {
-	db := new(DBInfo)
+// ConnectDB 连接数据库
+func ConnectDB(DBUrl string, username string, passwd string) driver.Client {
+	var (
+		err    error
+		conn   driver.Connection
+		client driver.Client
+	)
 
 	// 连接数据库
-	var err error
-	db.Conn, err = http.NewConnection(http.ConnectionConfig{
+	conn, err = http.NewConnection(http.ConnectionConfig{
 		// The driver has a built-in connection pooling and the connection limit (ConnLimit) defaults to 32.
 		Endpoints: []string{DBUrl},
 	})
@@ -31,8 +33,8 @@ func NewDB(DBUrl string, username string, passwd string, database string, cols m
 		log.Fatal(err)
 		return nil
 	}
-	db.Client, err = driver.NewClient(driver.ClientConfig{
-		Connection:     db.Conn,
+	client, err = driver.NewClient(driver.ClientConfig{
+		Connection:     conn,
 		Authentication: driver.BasicAuthentication(username, passwd),
 	})
 	if err != nil {
@@ -40,45 +42,60 @@ func NewDB(DBUrl string, username string, passwd string, database string, cols m
 		return nil
 	}
 	log.Print("connect to ArangoDB successfully")
+	return client
+}
 
-	// 打开指定数据库
+// OpenDB 打开指定数据库
+func OpenDB(DBClient driver.Client, databaseName string) driver.Database {
 	ctx := context.Background()
-	db.Database, err = db.Client.Database(ctx, database)
+	database, err := DBClient.Database(ctx, databaseName)
 	if err != nil {
 		log.Fatal(err)
 		return nil
 	}
-	log.Printf("open database %s successfully", database)
+	log.Printf("open database %s successfully", databaseName)
+	return database
+}
 
-	// 打开集合
-	db.Cols = make(map[string]driver.Collection)
-	for k, v := range cols {
+// 打开集合，若不存在则创建
+func OpenCols(database driver.Database, colNameMap map[string]string) map[string]driver.Collection {
+	cols := make(map[string]driver.Collection)
+	for modelName, colName := range colNameMap {
 		ctx := context.Background()
-		exist, err := db.Database.CollectionExists(ctx, v)
+		exist, err := database.CollectionExists(ctx, colName)
 		if err != nil {
 			log.Fatal(err)
 			return nil
 		}
 
-		// 如果不存在，则创建
 		var col driver.Collection
 		if !exist {
+			// 如果不存在，则创建
 			options := &driver.CreateCollectionOptions{}
-			if strings.Index(v, "_") != -1 {
+			// 带下划线的是边集合
+			if strings.Index(colName, "_") != -1 {
 				options.Type = driver.CollectionTypeEdge
 			}
-			col, err = db.Database.CreateCollection(ctx, v, options)
+			col, err = database.CreateCollection(ctx, colName, options)
 		} else {
-			col, err = db.Database.Collection(ctx, v)
+			col, err = database.Collection(ctx, colName)
 		}
 		if err != nil {
 			log.Fatal(err)
 			return nil
 		}
-		db.Cols[k] = col
-		log.Printf("open collection %s successfully", v)
+		cols[modelName] = col
+		log.Printf("open collection %s successfully", colName)
 	}
+	return cols
+}
 
+// NewDB 初始化数据库连接
+func NewDB(DBUrl string, username string, passwd string, databaseName string, colNameMap map[string]string) *DBInfo {
+	db := new(DBInfo)
+	db.Client = ConnectDB(DBUrl, username, passwd)
+	db.Database = OpenDB(db.Client, databaseName)
+	db.Cols = OpenCols(db.Database, colNameMap)
 	return db
 }
 

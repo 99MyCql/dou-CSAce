@@ -39,8 +39,8 @@ func (c *ConfSeries) Delete() error {
 func (c *ConfSeries) DeleteConfSerBelongToField() error {
 	ctx := context.Background()
 	query := fmt.Sprintf("for cs, cs2f in outbound '%s' %s remove cs2f in %s", c.ID,
-		pkg.Conf.ArangoDB.ColNames[pkg.ConfSerBelongToFieldName],
-		pkg.Conf.ArangoDB.ColNames[pkg.ConfSerBelongToFieldName])
+		pkg.Conf.ArangoDB.ModelColNameMap[pkg.ConfSerBelongToFieldName],
+		pkg.Conf.ArangoDB.ModelColNameMap[pkg.ConfSerBelongToFieldName])
 	_, err := pkg.DB.Database.Query(ctx, query, nil)
 	return err
 }

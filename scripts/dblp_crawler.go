@@ -1,4 +1,4 @@
-// 从 dblp 爬取数据，处理，并存储到数据库
+// 从 dblp 爬取基础数据，处理，并存储到数据库
 package main
 
 import (
@@ -472,7 +472,7 @@ func init() {
 	pkg.Conf = pkg.NewConfig("../conf.yaml")
 	pkg.Log = pkg.NewLog(logFileName, pkg.DebugLevel)
 	pkg.DB = pkg.NewDB(pkg.Conf.ArangoDB.Url, pkg.Conf.ArangoDB.Username,
-		pkg.Conf.ArangoDB.Passwd, pkg.Conf.ArangoDB.Database, pkg.Conf.ArangoDB.ColNames)
+		pkg.Conf.ArangoDB.Passwd, pkg.Conf.ArangoDB.Database, pkg.Conf.ArangoDB.ModelColNameMap)
 }
 
 func main() {

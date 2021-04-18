@@ -19,7 +19,7 @@ func initial(confFilepath string, logLevel string) {
 	pkg.Conf = pkg.NewConfig(confFilepath)
 	pkg.Log = pkg.NewLog(pkg.Conf.LogPath, logLevel)
 	pkg.DB = pkg.NewDB(pkg.Conf.ArangoDB.Url, pkg.Conf.ArangoDB.Username, pkg.Conf.ArangoDB.Passwd,
-		pkg.Conf.ArangoDB.Database, pkg.Conf.ArangoDB.ColNames)
+		pkg.Conf.ArangoDB.Database, pkg.Conf.ArangoDB.ModelColNameMap)
 }
 
 func main() {

@@ -42,8 +42,8 @@ func (c *ConfInstance) Delete() error {
 func (c *ConfInstance) DeleteConfInsBelongToConfSer() error {
 	ctx := context.Background()
 	query := fmt.Sprintf("for ci, ci2cs in outbound '%s' %s remove ci2cs in %s", c.ID,
-		pkg.Conf.ArangoDB.ColNames[pkg.ConfInsBelongToConfSerName],
-		pkg.Conf.ArangoDB.ColNames[pkg.ConfInsBelongToConfSerName])
+		pkg.Conf.ArangoDB.ModelColNameMap[pkg.ConfInsBelongToConfSerName],
+		pkg.Conf.ArangoDB.ModelColNameMap[pkg.ConfInsBelongToConfSerName])
 	_, err := pkg.DB.Database.Query(ctx, query, nil)
 	return err
 }

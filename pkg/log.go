@@ -3,6 +3,7 @@ package pkg
 import (
 	"fmt"
 	"os"
+	"path/filepath"
 	"strings"
 	"time"
 
@@ -24,8 +25,13 @@ type myFormatter struct{}
 
 func (f *myFormatter) Format(entry *logrus.Entry) ([]byte, error) {
 	timestamp := time.Now().Local().Format("2006/01/02-15:04:05")
-	msg := fmt.Sprintf("[%s] [%s] %s %s:%d %s\n", ProjectName, strings.ToUpper(entry.Level.String()), timestamp,
-		entry.Caller.File, entry.Caller.Line, entry.Message)
+	msg := fmt.Sprintf("[%s] [%s] %s %s:%d %s\n",
+		ProjectName,
+		strings.ToUpper(entry.Level.String()),
+		timestamp,
+		filepath.Base(entry.Caller.File),
+		entry.Caller.Line,
+		entry.Message)
 	return []byte(msg), nil
 }
 
