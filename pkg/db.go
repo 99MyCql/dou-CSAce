@@ -110,3 +110,41 @@ func ComDocCreate(data interface{}, modelName string) (string, error) {
 	Log.Info(fmt.Sprintf("create document successfully: %+v", docMeta))
 	return docMeta.ID.String(), nil
 }
+
+// ComDocUpdate
+func ComDocUpdate(modelName string, key string, data interface{}) error {
+	Log.Info(fmt.Sprintf("ready to update document %s/%s: %+v", modelName, key, data))
+	ctx := context.Background()
+	docMeta, err := DB.Cols[modelName].UpdateDocument(ctx, key, data)
+	if err != nil {
+		return err
+	}
+	Log.Info(fmt.Sprintf("update document successfully: %s", docMeta.ID.String()))
+	return nil
+}
+
+// ComDocList
+func ComDocList(query string, count uint) ([]map[string]interface{}, error) {
+	ctx := context.Background()
+	// 默认返回 1000 条数据，若大于则需设置 BatchSize
+	if count > 1000 {
+		ctx = driver.WithQueryBatchSize(ctx, int(count))
+	}
+	cursor, err := DB.Database.Query(ctx, query, nil)
+	if err != nil {
+		Log.Error(err)
+		return nil, err
+	}
+	defer cursor.Close()
+
+	var list []map[string]interface{}
+	for cursor.HasMore() {
+		var tmp map[string]interface{}
+		if _, err := cursor.ReadDocument(ctx, &tmp); err != nil {
+			Log.Error(err)
+			return nil, err
+		}
+		list = append(list, tmp)
+	}
+	return list, nil
+}

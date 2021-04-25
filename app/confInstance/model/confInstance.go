@@ -10,8 +10,8 @@ import (
 
 // ConfInstance 会议实例（哪一年哪一场的会议）
 type ConfInstance struct {
-	ID            string `json:"-"`    // ArangoDB 中文档的默认属性，_id = <collection name>/<_key>
-	Key           string `json:"_key"` // 唯一标识，等同于 dblp 中会议实例的 key ，_key = dblpKey.replaceAll("/", "-")，比如：conf-ppopp-2020
+	ID            string `json:"_id,omitempty"` // ArangoDB 中文档的默认属性，_id = <collection name>/<_key>
+	Key           string `json:"_key"`          // 唯一标识，等同于 dblp 中会议实例的 key ，_key = dblpKey.replaceAll("/", "-")，比如：conf-ppopp-2020
 	Title         string `json:"title"`
 	Publisher     string `json:"publisher"`
 	BookTitle     string `json:"bookTitle"`

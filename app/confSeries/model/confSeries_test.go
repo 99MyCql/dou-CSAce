@@ -28,7 +28,7 @@ func TestConfSeries_DeleteConfSerBelongToField(t *testing.T) {
 	cs2f.Create()
 
 	if err := cs.DeleteConfSerBelongToField(); err != nil {
-		t.Error(err)
+		t.Fatal(err)
 	}
 
 	f.Delete()

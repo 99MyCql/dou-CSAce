@@ -27,7 +27,7 @@ func TestConfSeries_DeleteConfInsBelongToConfSer(t *testing.T) {
 	ci2cs.Create()
 
 	if err := ci.DeleteConfInsBelongToConfSer(); err != nil {
-		t.Error(err)
+		t.Fatal(err)
 	}
 
 	cs.Delete()

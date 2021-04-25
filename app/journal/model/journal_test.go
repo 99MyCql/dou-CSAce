@@ -28,7 +28,7 @@ func TestJournal_Create(t *testing.T) {
 	}
 	err := j.Create()
 	if err != nil {
-		t.Error(err)
+		t.Fatal(err)
 	}
 	t.Log(fmt.Sprintf("%+v", j))
 }
@@ -39,7 +39,7 @@ func TestJournal_Delete(t *testing.T) {
 	}
 	j.Create()
 	if err := j.Delete(); err != nil {
-		t.Error(err)
+		t.Fatal(err)
 	}
 }
 
@@ -59,7 +59,7 @@ func TestJournal_DeleteJouBelongToField(t *testing.T) {
 	j2f.Create()
 
 	if err := j.DeleteJouBelongToField(); err != nil {
-		t.Error(err)
+		t.Fatal(err)
 	}
 
 	f.Delete()

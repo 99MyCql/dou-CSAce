@@ -10,8 +10,8 @@ import (
 
 // ConfSeries 会议
 type ConfSeries struct {
-	ID            string `json:"-"`    // ArangoDB 中文档的默认属性，_id = <collection name>/<_key>
-	Key           string `json:"_key"` // 唯一标识，等同于 dblp 中期刊的 key ，_key = shortName ，比如：ppopp
+	ID            string `json:"_id,omitempty"` // ArangoDB 中文档的默认属性，_id = <collection name>/<_key>
+	Key           string `json:"_key"`          // 唯一标识，等同于 dblp 中期刊的 key ，_key = shortName ，比如：ppopp
 	Name          string `json:"name"`
 	ShortName     string `json:"shortName"`
 	Publisher     string `json:"publisher"`

@@ -27,9 +27,17 @@ func TestJournal_DeletePublishOnJou(t *testing.T) {
 	poJ.Create()
 
 	if err := p.DeletePublishOnJou(); err != nil {
-		t.Error(err)
+		t.Fatal(err)
 	}
 
 	j.Delete()
 	p.Delete()
+}
+
+func TestList(t *testing.T) {
+	papers, err := List(0, 10000)
+	if err != nil {
+		t.Fatal(err)
+	}
+	t.Log(len(papers))
 }

@@ -1,7 +1,6 @@
 package model
 
 import (
-	"fmt"
 	"os"
 	"testing"
 
@@ -19,9 +18,56 @@ func TestField_Create(t *testing.T) {
 	}
 	err := f.Create()
 	if err != nil {
-		t.Error(err)
+		t.Fatal(err)
 	}
-	t.Log(fmt.Sprintf("%+v", f))
+	t.Logf("%+v", f)
+}
+
+func TestFindByKey(t *testing.T) {
+	f, err := FindByKey("1-Computer_Architecture")
+	if err != nil {
+		t.Fatal(err)
+	}
+	t.Logf("%+v", f)
+}
+
+func TestField_ListVenue(t *testing.T) {
+	f, err := FindByKey("1-Computer_Architecture")
+	if err != nil {
+		t.Fatal(err)
+	}
+	venues, err := f.ListVenue(0, 100)
+	if err != nil {
+		t.Fatal(err)
+	}
+	t.Log(len(venues))
+	t.Logf("%+v", venues[0])
+}
+
+func TestField_ListPaper(t *testing.T) {
+	f, err := FindByKey("1-Computer_Architecture")
+	if err != nil {
+		t.Fatal(err)
+	}
+	papers, err := f.ListPaper(0, 1000)
+	if err != nil {
+		t.Fatal(err)
+	}
+	t.Log(len(papers))
+	t.Logf("%+v", papers[0])
+}
+
+func TestField_ListAuthor(t *testing.T) {
+	f, err := FindByKey("1-Computer_Architecture")
+	if err != nil {
+		t.Fatal(err)
+	}
+	authors, err := f.ListAuthor(0, 100)
+	if err != nil {
+		t.Fatal(err)
+	}
+	t.Log(len(authors))
+	t.Logf("%+v", authors[0])
 }
 
 func TestMain(m *testing.M) {
