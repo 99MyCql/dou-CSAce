@@ -87,7 +87,12 @@ func (p *Paper) DeleteCitBy() error {
 	return err
 }
 
-// GenKey 返回 Key，需传入 dblp 中 article 的 key 属性，_key = dblpKey.replaceAll("/", "-")，比如：journals-tocs-BalmauDZGCD20
+// GetDblpKey 返回 dblp 中的 key，比如：journals-tocs-BalmauDZGCD20 --> journals/tocs/BalmauDZGCD20
+func (p *Paper) GetDblpKey() string {
+	return strings.ReplaceAll(p.Key, "-", "/")
+}
+
+// GenKey 返回 Key，需传入 dblp 中 article 的 key 属性，比如：journals/tocs/BalmauDZGCD20 --> journals-tocs-BalmauDZGCD20
 func GenKey(dblpKey string) string {
 	return strings.ReplaceAll(dblpKey, "/", "-")
 }
