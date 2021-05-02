@@ -8,6 +8,7 @@ import (
 	"douCSAce/app/author"
 	"douCSAce/app/confInstance"
 	"douCSAce/app/confSeries"
+	"douCSAce/app/field"
 	"douCSAce/app/journal"
 	"douCSAce/app/paper"
 	"douCSAce/pkg"
@@ -60,10 +61,10 @@ func main() {
 		}
 		fieldRouter := v1.Group("/field")
 		{
-			fieldRouter.GET("/get", nil)
-			fieldRouter.GET("/listVenue", nil)
-			fieldRouter.GET("/listPaper", nil)
-			fieldRouter.GET("/listAuthor", nil)
+			fieldRouter.GET("/get", field.Get)
+			fieldRouter.POST("/listVenue", field.ListVenue)
+			fieldRouter.POST("/listPaper", field.ListPaper)
+			fieldRouter.POST("/listAuthor", field.ListAuthor)
 		}
 		journalRouter := v1.Group("/journal")
 		{

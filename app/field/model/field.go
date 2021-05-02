@@ -80,10 +80,18 @@ func (f *Field) UpdCountPYear() error {
 }
 
 // ListVenue 获取所属 Venue 列表
-func (f *Field) ListVenue(offset uint64, count uint64) ([]map[string]interface{}, error) {
+func (f *Field) ListVenue(offset uint64, count uint64, sortAttr string, sortType string) (
+	[]map[string]interface{}, error) {
+	limitQuery := ""
+	if count != 0 {
+		limitQuery = fmt.Sprintf("limit %d, %d", offset, count)
+	}
+	sortQuery := ""
+	if sortAttr != "" {
+		sortQuery = fmt.Sprintf("sort v.%s %s", sortAttr, sortType)
+	}
 	query := fmt.Sprintf(`for v in 1..1 inbound '%s' jou_belong_to_field,confSer_belong_to_field
-	limit %d, %d
-	return v`, f.ID, offset, count)
+	%s %s return v`, f.ID, sortQuery, limitQuery)
 	return pkg.ComList(query, count)
 }
 
