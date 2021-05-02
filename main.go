@@ -46,9 +46,9 @@ func main() {
 		confInsRouter := v1.Group("/confInstance")
 		{
 			confInsRouter.GET("/count", confInstance.Count)
-			confInsRouter.GET("/get", nil)
-			confInsRouter.GET("/listPaper", nil)
-			confInsRouter.GET("/listAuthor", nil)
+			confInsRouter.GET("/get", confInstance.Get)
+			confInsRouter.POST("/listPaper", confInstance.ListPaper)
+			confInsRouter.POST("/listAuthor", confInstance.ListAuthor)
 		}
 		confSeriesRouter := v1.Group("/confSeries")
 		{
