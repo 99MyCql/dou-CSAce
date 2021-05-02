@@ -7,6 +7,7 @@ import (
 	"strings"
 
 	authorModel "douCSAce/app/author/model"
+	confInsModel "douCSAce/app/confInstance/model"
 	paperModel "douCSAce/app/paper/model"
 	"douCSAce/pkg"
 )
@@ -58,6 +59,34 @@ func (c *ConfSeries) DeleteConfSerBelongToField() error {
 	return err
 }
 
+// UpdCountPYear 更新每年的引用数和论文数
+func (c *ConfSeries) UpdCountPYear() error {
+	query := fmt.Sprintf(`for p in 2 inbound '%s' publish_on_confIns, confIns_belong_to_confSer
+    return {'citationCount':p.citationCount, 'year':p.year}`, c.ID)
+	data, err := pkg.ComList(query, 0)
+	if err != nil {
+		return err
+	}
+	c.CitCountPYear = make(map[string]uint64)
+	c.PaperCountPYear = make(map[string]uint64)
+	for _, tmp := range data {
+		if _, ok := c.CitCountPYear[tmp["year"].(string)]; !ok {
+			c.CitCountPYear[tmp["year"].(string)] = 0
+		}
+		c.CitCountPYear[tmp["year"].(string)] += uint64(tmp["citationCount"].(float64))
+		if _, ok := c.PaperCountPYear[tmp["year"].(string)]; !ok {
+			c.PaperCountPYear[tmp["year"].(string)] = 0
+		}
+		c.PaperCountPYear[tmp["year"].(string)]++
+	}
+	if err := c.Update(map[string]interface{}{
+		"paperCountPYear": c.PaperCountPYear,
+		"citCountPYear":   c.CitCountPYear}); err != nil {
+		return err
+	}
+	return nil
+}
+
 // ListPaper
 func (c *ConfSeries) ListPaper(offset uint64, count uint64, sortAttr string, sortType string) (
 	[]*paperModel.Paper, error) {
@@ -95,7 +124,7 @@ func (c *ConfSeries) ListAuthor(offset uint64, count uint64, sortAttr string, so
 	if sortAttr != "" {
 		sortQuery = fmt.Sprintf("sort author.%s %s", sortAttr, sortType)
 	}
-	query := fmt.Sprintf(`for p in 2inbound '%s' publish_on_confIns, confIns_belong_to_confSer
+	query := fmt.Sprintf(`for p in 2 inbound '%s' publish_on_confIns, confIns_belong_to_confSer
 	for author, wb in outbound p._id write_by
 		%s %s return author`, c.ID, sortQuery, limitQuery)
 	data, err := pkg.ComList(query, count)
@@ -111,32 +140,30 @@ func (c *ConfSeries) ListAuthor(offset uint64, count uint64, sortAttr string, so
 	return authors, err
 }
 
-// UpdCountPYear 更新每年的引用数和论文数
-func (c *ConfSeries) UpdCountPYear() error {
-	query := fmt.Sprintf(`for p in 2 inbound '%s' publish_on_confIns, confIns_belong_to_confSer
-    return {'citationCount':p.citationCount, 'year':p.year}`, c.ID)
-	data, err := pkg.ComList(query, 0)
+// ListConfIns
+func (c *ConfSeries) ListConfIns(offset uint64, count uint64, sortAttr string, sortType string) (
+	[]*confInsModel.ConfInstance, error) {
+	limitQuery := ""
+	if count != 0 {
+		limitQuery = fmt.Sprintf("limit %d, %d", offset, count)
+	}
+	sortQuery := ""
+	if sortAttr != "" {
+		sortQuery = fmt.Sprintf("sort ci.%s %s", sortAttr, sortType)
+	}
+	query := fmt.Sprintf(`for ci in 1 inbound '%s' confIns_belong_to_confSer
+	%s %s return ci`, c.ID, sortQuery, limitQuery)
+	data, err := pkg.ComList(query, count)
 	if err != nil {
-		return err
+		return nil, err
 	}
-	c.CitCountPYear = make(map[string]uint64)
-	c.PaperCountPYear = make(map[string]uint64)
-	for _, tmp := range data {
-		if _, ok := c.CitCountPYear[tmp["year"].(string)]; !ok {
-			c.CitCountPYear[tmp["year"].(string)] = 0
-		}
-		c.CitCountPYear[tmp["year"].(string)] += uint64(tmp["citationCount"].(float64))
-		if _, ok := c.PaperCountPYear[tmp["year"].(string)]; !ok {
-			c.PaperCountPYear[tmp["year"].(string)] = 0
-		}
-		c.PaperCountPYear[tmp["year"].(string)]++
+	var confInsList []*confInsModel.ConfInstance
+	b, err := json.Marshal(&data)
+	if err != nil {
+		return nil, err
 	}
-	if err := c.Update(map[string]interface{}{
-		"paperCountPYear": c.PaperCountPYear,
-		"citCountPYear":   c.CitCountPYear}); err != nil {
-		return err
-	}
-	return nil
+	err = json.Unmarshal(b, &confInsList)
+	return confInsList, err
 }
 
 // GenKey 需传入会议实体的 ShortName 属性

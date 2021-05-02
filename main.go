@@ -53,10 +53,10 @@ func main() {
 		confSeriesRouter := v1.Group("/confSeries")
 		{
 			confSeriesRouter.GET("/count", confSeries.Count)
-			confSeriesRouter.GET("/get", nil)
-			confSeriesRouter.GET("/listPaper", nil)
-			confSeriesRouter.GET("/listAuthor", nil)
-			confSeriesRouter.GET("/listConfIns", nil)
+			confSeriesRouter.GET("/get", confSeries.Get)
+			confSeriesRouter.POST("/listPaper", confSeries.ListPaper)
+			confSeriesRouter.POST("/listAuthor", confSeries.ListAuthor)
+			confSeriesRouter.POST("/listConfIns", confSeries.ListConfIns)
 		}
 		fieldRouter := v1.Group("/field")
 		{
