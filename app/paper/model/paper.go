@@ -6,6 +6,7 @@ import (
 	"fmt"
 	"strings"
 
+	authorModel "douCSAce/app/author/model"
 	"douCSAce/pkg"
 )
 
@@ -90,6 +91,24 @@ func (p *Paper) DeleteCitBy() error {
 // GetDblpKey 返回 dblp 中的 key，比如：journals-tocs-BalmauDZGCD20 --> journals/tocs/BalmauDZGCD20
 func (p *Paper) GetDblpKey() string {
 	return strings.ReplaceAll(p.Key, "-", "/")
+}
+
+// ListAuthor
+func (p *Paper) ListAuthor(offset uint64, count uint64) (
+	[]*authorModel.Author, error) {
+	query := fmt.Sprintf(`for author, wb in outbound '%s' write_by
+		return author`, p.ID)
+	data, err := pkg.ComList(query, count)
+	if err != nil {
+		return nil, err
+	}
+	var authors []*authorModel.Author
+	b, err := json.Marshal(&data)
+	if err != nil {
+		return nil, err
+	}
+	err = json.Unmarshal(b, &authors)
+	return authors, err
 }
 
 // GenKey 返回 Key，需传入 dblp 中 article 的 key 属性，比如：journals/tocs/BalmauDZGCD20 --> journals-tocs-BalmauDZGCD20

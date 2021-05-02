@@ -76,7 +76,8 @@ func main() {
 		paperRouter := v1.Group("/paper")
 		{
 			paperRouter.GET("/count", paper.Count)
-			paperRouter.GET("/get", nil)
+			paperRouter.GET("/get", paper.Get)
+			paperRouter.POST("/listAuthor", paper.ListAuthor)
 		}
 	}
 

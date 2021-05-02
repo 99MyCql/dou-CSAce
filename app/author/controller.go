@@ -5,7 +5,7 @@ import (
 
 	"github.com/gin-gonic/gin"
 
-	"douCSAce/app/author/model"
+	"douCSAce/app/author/dao"
 	"douCSAce/pkg"
 )
 
@@ -16,7 +16,7 @@ import (
 // @Failure 200 {string} json "{"code":!0,"data":{},"msg":""}"
 // @Router /api/v1/author/count [get]
 func Count(c *gin.Context) {
-	count, err := model.Count()
+	count, err := dao.Count()
 	if err != nil {
 		pkg.Log.Error(err)
 		c.JSON(http.StatusOK, pkg.ServerErr("服务端错误"))
@@ -40,7 +40,7 @@ func Get(c *gin.Context) {
 		return
 	}
 	pkg.Log.Info(key)
-	author, err := model.FindByKey(key)
+	author, err := dao.FindByKey(key)
 	if err != nil {
 		pkg.Log.Error(err)
 		c.JSON(http.StatusOK, pkg.ServerErr("find by key error:"+err.Error()))
@@ -71,7 +71,7 @@ func ListPaper(c *gin.Context) {
 		c.JSON(http.StatusOK, pkg.ClientErr(err.Error()))
 		return
 	}
-	author, err := model.FindByKey(req.Key)
+	author, err := dao.FindByKey(req.Key)
 	if err != nil {
 		pkg.Log.Error(err)
 		c.JSON(http.StatusOK, pkg.ServerErr("find by key error:"+err.Error()))
