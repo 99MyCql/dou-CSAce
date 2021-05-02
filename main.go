@@ -40,8 +40,8 @@ func main() {
 		authorRouter := v1.Group("/author")
 		{
 			authorRouter.GET("/count", author.Count)
-			authorRouter.GET("/get", nil)
-			authorRouter.GET("/listPaper", nil)
+			authorRouter.GET("/get", author.Get)
+			authorRouter.POST("/listPaper", author.ListPaper)
 		}
 		confInsRouter := v1.Group("/confInstance")
 		{
