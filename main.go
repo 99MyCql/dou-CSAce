@@ -69,9 +69,9 @@ func main() {
 		journalRouter := v1.Group("/journal")
 		{
 			journalRouter.GET("/count", journal.Count)
-			journalRouter.GET("/get", nil)
-			journalRouter.GET("/listPaper", nil)
-			journalRouter.GET("/listAuthor", nil)
+			journalRouter.GET("/get", journal.Get)
+			journalRouter.POST("/listPaper", journal.ListPaper)
+			journalRouter.POST("/listAuthor", journal.ListAuthor)
 		}
 		paperRouter := v1.Group("/paper")
 		{
