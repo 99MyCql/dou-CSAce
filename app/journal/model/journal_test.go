@@ -5,6 +5,8 @@ import (
 	"os"
 	"testing"
 
+	"github.com/stretchr/testify/assert"
+
 	fieldModel "douCSAce/app/field/model"
 	"douCSAce/pkg"
 )
@@ -64,4 +66,32 @@ func TestJournal_DeleteJouBelongToField(t *testing.T) {
 
 	f.Delete()
 	j.Delete()
+}
+
+func TestJournal_ListPaper(t *testing.T) {
+	j, err := FindByKey("TOCS")
+	assert.Nil(t, err)
+	papers, err := j.ListPaper(0, 10, "citationCount", pkg.SortDesc)
+	assert.Nil(t, err)
+	assert.NotEqual(t, len(papers), 0)
+	t.Log(papers[0])
+}
+
+func TestJournal_ListAuthor(t *testing.T) {
+	j, err := FindByKey("TOCS")
+	assert.Nil(t, err)
+	authors, err := j.ListAuthor(0, 10, "citationCount", pkg.SortDesc)
+	assert.Nil(t, err)
+	assert.NotEqual(t, len(authors), 0)
+	t.Logf("%+v", authors[0])
+}
+
+func TestJournal_UpdCountPYear(t *testing.T) {
+	j, err := FindByKey("TOCS")
+	assert.Nil(t, err)
+	err = j.UpdCountPYear()
+	assert.Nil(t, err)
+	j, err = FindByKey("TOCS")
+	assert.Nil(t, err)
+	t.Log(j)
 }

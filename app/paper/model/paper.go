@@ -29,7 +29,7 @@ type Paper struct {
 // Create
 func (p *Paper) Create() error {
 	var err error
-	if p.ID, err = pkg.ComDocCreate(p, pkg.PaperName); err != nil {
+	if p.ID, err = pkg.ComCreate(p, pkg.PaperName); err != nil {
 		return err
 	}
 	return nil
@@ -44,9 +44,9 @@ func (p *Paper) Delete() error {
 // Update 更新数据
 func (p *Paper) Update(updateData map[string]interface{}) error {
 	if updateData == nil {
-		return pkg.ComDocUpdate(pkg.PaperName, p.Key, p)
+		return pkg.ComUpdate(pkg.PaperName, p.Key, p)
 	}
-	return pkg.ComDocUpdate(pkg.PaperName, p.Key, updateData)
+	return pkg.ComUpdate(pkg.PaperName, p.Key, updateData)
 }
 
 // DeletePublishOnJou 删除所有与 paper 关联的 PublishOnJou 边
@@ -120,10 +120,10 @@ func Count() (int64, error) {
 }
 
 // List 返回多个 Paper 文档（记录），Limit start, count
-func List(offset uint64, count uint) ([]*Paper, error) {
+func List(offset uint64, count uint64) ([]*Paper, error) {
 	query := fmt.Sprintf("FOR d IN %s LIMIT %d, %d RETURN d",
 		pkg.Conf.ArangoDB.ModelColNameMap[pkg.PaperName], offset, count)
-	data, err := pkg.ComDocList(query, count)
+	data, err := pkg.ComList(query, count)
 	var papers []*Paper
 	b, _ := json.Marshal(&data)
 	err = json.Unmarshal(b, &papers)

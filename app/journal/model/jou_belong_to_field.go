@@ -12,7 +12,7 @@ type JouBelongToField struct {
 
 // Create
 func (j2f *JouBelongToField) Create() error {
-	if _, err := pkg.ComDocCreate(j2f, pkg.JouBelongToFieldName); err != nil {
+	if _, err := pkg.ComCreate(j2f, pkg.JouBelongToFieldName); err != nil {
 		return err
 	}
 	return nil

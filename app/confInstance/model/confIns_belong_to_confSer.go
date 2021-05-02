@@ -11,7 +11,7 @@ type ConfInsBelongToConfSer struct {
 
 // Create 在数据库中创建数据
 func (ci2cs *ConfInsBelongToConfSer) Create() error {
-	if _, err := pkg.ComDocCreate(ci2cs, pkg.ConfInsBelongToConfSerName); err != nil {
+	if _, err := pkg.ComCreate(ci2cs, pkg.ConfInsBelongToConfSerName); err != nil {
 		return err
 	}
 	return nil

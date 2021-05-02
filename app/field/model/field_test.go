@@ -4,8 +4,16 @@ import (
 	"os"
 	"testing"
 
+	"github.com/stretchr/testify/assert"
+
 	"douCSAce/pkg"
 )
+
+func TestMain(m *testing.M) {
+	pkg.TestSetup("../../../conf.yaml")
+	code := m.Run()
+	os.Exit(code)
+}
 
 func TestField_Create(t *testing.T) {
 	f := &Field{
@@ -49,7 +57,7 @@ func TestField_ListPaper(t *testing.T) {
 	if err != nil {
 		t.Fatal(err)
 	}
-	papers, err := f.ListPaper(0, 1000)
+	papers, err := f.ListPaper(0, 10, "citationCount", pkg.SortDesc)
 	if err != nil {
 		t.Fatal(err)
 	}
@@ -62,7 +70,7 @@ func TestField_ListAuthor(t *testing.T) {
 	if err != nil {
 		t.Fatal(err)
 	}
-	authors, err := f.ListAuthor(0, 100)
+	authors, err := f.ListAuthor(0, 10, "citationCount", pkg.SortDesc)
 	if err != nil {
 		t.Fatal(err)
 	}
@@ -70,8 +78,12 @@ func TestField_ListAuthor(t *testing.T) {
 	t.Logf("%+v", authors[0])
 }
 
-func TestMain(m *testing.M) {
-	pkg.TestSetup("../../../conf.yaml")
-	code := m.Run()
-	os.Exit(code)
+func TestField_UpdCountPYear(t *testing.T) {
+	f, err := FindByKey("1-Computer_Network")
+	assert.Nil(t, err)
+	err = f.UpdCountPYear()
+	assert.Nil(t, err)
+	f, err = FindByKey("1-Computer_Network")
+	assert.Nil(t, err)
+	t.Log(f)
 }

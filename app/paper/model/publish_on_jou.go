@@ -11,7 +11,7 @@ type PublishOnJou struct {
 
 // Create
 func (poJ *PublishOnJou) Create() error {
-	if _, err := pkg.ComDocCreate(poJ, pkg.PublishOnJouName); err != nil {
+	if _, err := pkg.ComCreate(poJ, pkg.PublishOnJouName); err != nil {
 		return err
 	}
 	return nil

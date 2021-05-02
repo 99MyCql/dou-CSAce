@@ -11,7 +11,7 @@ type CoWith struct {
 
 // Create 在数据库中创建数据
 func (c *CoWith) Create() error {
-	if _, err := pkg.ComDocCreate(c, pkg.CoWithName); err != nil {
+	if _, err := pkg.ComCreate(c, pkg.CoWithName); err != nil {
 		return err
 	}
 	return nil

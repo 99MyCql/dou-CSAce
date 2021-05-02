@@ -257,7 +257,7 @@ func main() {
 	for i := uint64(0); ; {
 		pkg.Log.Infof("****** %d - start:%d ******", i, start)
 		// 由于 ArangoDB 文档 Update 之后会放到集合结尾，所以每次都从 start 开始（遇到错误不进行更新 start++）
-		papers, err := paperModel.List(uint64(start), uint(goroutine))
+		papers, err := paperModel.List(uint64(start), uint64(goroutine))
 		if err != nil {
 			pkg.Log.Fatal(err)
 		}

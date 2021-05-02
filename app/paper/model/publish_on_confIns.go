@@ -11,7 +11,7 @@ type PublishOnConfIns struct {
 
 // Create
 func (poCI *PublishOnConfIns) Create() error {
-	if _, err := pkg.ComDocCreate(poCI, pkg.PublishOnConfInsName); err != nil {
+	if _, err := pkg.ComCreate(poCI, pkg.PublishOnConfInsName); err != nil {
 		return err
 	}
 	return nil

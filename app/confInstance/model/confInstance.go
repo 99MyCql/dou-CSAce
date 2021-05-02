@@ -2,9 +2,12 @@ package model
 
 import (
 	"context"
+	"encoding/json"
 	"fmt"
 	"strings"
 
+	authorModel "douCSAce/app/author/model"
+	paperModel "douCSAce/app/paper/model"
 	"douCSAce/pkg"
 )
 
@@ -26,7 +29,7 @@ type ConfInstance struct {
 // Create 在数据库中创建数据
 func (c *ConfInstance) Create() error {
 	var err error
-	if c.ID, err = pkg.ComDocCreate(c, pkg.ConfInstanceName); err != nil {
+	if c.ID, err = pkg.ComCreate(c, pkg.ConfInstanceName); err != nil {
 		return err
 	}
 	return nil
@@ -38,6 +41,14 @@ func (c *ConfInstance) Delete() error {
 	return err
 }
 
+// Update 更新数据
+func (c *ConfInstance) Update(updateData map[string]interface{}) error {
+	if updateData == nil {
+		return pkg.ComUpdate(pkg.ConfInstanceName, c.Key, c)
+	}
+	return pkg.ComUpdate(pkg.ConfInstanceName, c.Key, updateData)
+}
+
 // DeleteConfInsBelongToConfSer 删除所有与 confInstance 关联的 ConfInsBelongToConfSer 边
 func (c *ConfInstance) DeleteConfInsBelongToConfSer() error {
 	ctx := context.Background()
@@ -46,6 +57,59 @@ func (c *ConfInstance) DeleteConfInsBelongToConfSer() error {
 		pkg.Conf.ArangoDB.ModelColNameMap[pkg.ConfInsBelongToConfSerName])
 	_, err := pkg.DB.Database.Query(ctx, query, nil)
 	return err
+}
+
+// ListPaper
+func (c *ConfInstance) ListPaper(offset uint64, count uint64, sortAttr string, sortType string) (
+	[]*paperModel.Paper, error) {
+	limitQuery := ""
+	if count != 0 {
+		limitQuery = fmt.Sprintf("limit %d, %d", offset, count)
+	}
+	sortQuery := ""
+	if sortAttr != "" {
+		sortQuery = fmt.Sprintf("sort p.%s %s", sortAttr, sortType)
+	}
+	query := fmt.Sprintf(`for p in 1 inbound '%s' publish_on_confIns
+	%s %s return p`, c.ID, sortQuery, limitQuery)
+	data, err := pkg.ComList(query, count)
+	if err != nil {
+		return nil, err
+	}
+	var papers []*paperModel.Paper
+	b, err := json.Marshal(&data)
+	if err != nil {
+		return nil, err
+	}
+	err = json.Unmarshal(b, &papers)
+	return papers, err
+}
+
+// ListAuthor
+func (c *ConfInstance) ListAuthor(offset uint64, count uint64, sortAttr string, sortType string) (
+	[]*authorModel.Author, error) {
+	limitQuery := ""
+	if count != 0 {
+		limitQuery = fmt.Sprintf("limit %d, %d", offset, count)
+	}
+	sortQuery := ""
+	if sortAttr != "" {
+		sortQuery = fmt.Sprintf("sort author.%s %s", sortAttr, sortType)
+	}
+	query := fmt.Sprintf(`for paper in 1 inbound '%s' publish_on_confIns
+	for author, wb in outbound paper._id write_by
+		%s %s return author`, c.ID, sortQuery, limitQuery)
+	data, err := pkg.ComList(query, count)
+	if err != nil {
+		return nil, err
+	}
+	var authors []*authorModel.Author
+	b, err := json.Marshal(&data)
+	if err != nil {
+		return nil, err
+	}
+	err = json.Unmarshal(b, &authors)
+	return authors, err
 }
 
 // GenKey 返回 Key，dblpKey 为 dblp 中 conference instance 的 key 属性
@@ -73,4 +137,15 @@ func FindByKey(key string) (*ConfInstance, error) {
 func Count() (int64, error) {
 	ctx := context.Background()
 	return pkg.DB.Cols[pkg.ConfInstanceName].Count(ctx)
+}
+
+// List
+func List(offset uint64, count uint64) ([]*ConfInstance, error) {
+	query := fmt.Sprintf("FOR d IN %s LIMIT %d, %d RETURN d",
+		pkg.Conf.ArangoDB.ModelColNameMap[pkg.ConfInstanceName], offset, count)
+	data, err := pkg.ComList(query, count)
+	var confIns []*ConfInstance
+	b, _ := json.Marshal(&data)
+	err = json.Unmarshal(b, &confIns)
+	return confIns, err
 }

@@ -14,7 +14,7 @@ type AuthorBelongToAff struct {
 
 // Create 在数据库中创建数据
 func (a2a *AuthorBelongToAff) Create() error {
-	if _, err := pkg.ComDocCreate(a2a, pkg.AuthorBelongToAffName); err != nil {
+	if _, err := pkg.ComCreate(a2a, pkg.AuthorBelongToAffName); err != nil {
 		return err
 	}
 	return nil

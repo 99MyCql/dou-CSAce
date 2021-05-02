@@ -20,13 +20,14 @@ type Field struct {
 	Type            uint              `json:"type"` // 0:Other, 1:CCF
 	PaperCount      uint64            `json:"paperCount"`
 	CitationCount   uint64            `json:"citationCount"`
-	CitCountPerYear map[string]uint64 `json:"citCountPerYear"`
+	PaperCountPYear map[string]uint64 `json:"paperCountPYear"`
+	CitCountPYear   map[string]uint64 `json:"citCountPYear"`
 }
 
 // Create 在数据库中创建数据
 func (f *Field) Create() error {
 	var err error
-	if f.ID, err = pkg.ComDocCreate(f, pkg.FieldName); err != nil {
+	if f.ID, err = pkg.ComCreate(f, pkg.FieldName); err != nil {
 		return err
 	}
 	return nil
@@ -38,39 +39,105 @@ func (f *Field) Delete() error {
 	return err
 }
 
+// Update 更新数据
+func (f *Field) Update(updateData map[string]interface{}) error {
+	if updateData == nil {
+		return pkg.ComUpdate(pkg.FieldName, f.Key, f)
+	}
+	return pkg.ComUpdate(pkg.FieldName, f.Key, updateData)
+}
+
+// UpdCountPYear 更新每年的引用数和论文数
+func (f *Field) UpdCountPYear() error {
+	query := fmt.Sprintf(`for v in 1 inbound '%s' jou_belong_to_field, confSer_belong_to_field
+	return {'citCountPYear':v.citCountPYear, 'paperCountPYear':v.paperCountPYear}`, f.ID)
+	data, err := pkg.ComList(query, 0)
+	if err != nil {
+		return err
+	}
+	f.CitCountPYear = make(map[string]uint64)
+	f.PaperCountPYear = make(map[string]uint64)
+	for _, tmp := range data {
+		for year, citCount := range tmp["citCountPYear"].(map[string]interface{}) {
+			if _, ok := f.CitCountPYear[year]; !ok {
+				f.CitCountPYear[year] = 0
+			}
+			f.CitCountPYear[year] += uint64(citCount.(float64))
+		}
+		for year, paperCount := range tmp["paperCountPYear"].(map[string]interface{}) {
+			if _, ok := f.PaperCountPYear[year]; !ok {
+				f.PaperCountPYear[year] = 0
+			}
+			f.PaperCountPYear[year] += uint64(paperCount.(float64))
+		}
+	}
+	if err := f.Update(map[string]interface{}{
+		"paperCountPYear": f.PaperCountPYear,
+		"citCountPYear":   f.CitCountPYear}); err != nil {
+		return err
+	}
+	return nil
+}
+
 // ListVenue 获取所属 Venue 列表
-func (f *Field) ListVenue(offset uint64, count uint) ([]map[string]interface{}, error) {
+func (f *Field) ListVenue(offset uint64, count uint64) ([]map[string]interface{}, error) {
 	query := fmt.Sprintf(`for v in 1..1 inbound '%s' jou_belong_to_field,confSer_belong_to_field
 	limit %d, %d
 	return v`, f.ID, offset, count)
-	return pkg.ComDocList(query, count)
+	return pkg.ComList(query, count)
 }
 
 // ListPaper
-func (f *Field) ListPaper(offset uint64, count uint) ([]*paperModel.Paper, error) {
-	query := fmt.Sprintf(`for v in 2..3
-	inbound '%s'
+func (f *Field) ListPaper(offset uint64, count uint64, sortAttr string, sortType string) (
+	[]*paperModel.Paper, error) {
+	limitQuery := ""
+	if count != 0 {
+		limitQuery = fmt.Sprintf("limit %d, %d", offset, count)
+	}
+	sortQuery := ""
+	if sortAttr != "" {
+		sortQuery = fmt.Sprintf("sort p.%s %s", sortAttr, sortType)
+	}
+	query := fmt.Sprintf(`for p in 2..3 inbound '%s'
 	jou_belong_to_field,confSer_belong_to_field,publish_on_jou,publish_on_confIns,confIns_belong_to_confSer
-	limit %d, %d
-	return distinct v`, f.ID, offset, count)
-	data, err := pkg.ComDocList(query, count)
+	%s %s return p`, f.ID, sortQuery, limitQuery)
+	data, err := pkg.ComList(query, count)
+	if err != nil {
+		return nil, err
+	}
 	var papers []*paperModel.Paper
-	b, _ := json.Marshal(&data)
+	b, err := json.Marshal(&data)
+	if err != nil {
+		return nil, err
+	}
 	err = json.Unmarshal(b, &papers)
 	return papers, err
 }
 
 // ListAuthor
-func (f *Field) ListAuthor(offset uint64, count uint) ([]*authorModel.Author, error) {
-	query := fmt.Sprintf(`for paper in 2..3
-	inbound '%s'
+func (f *Field) ListAuthor(offset uint64, count uint64, sortAttr string, sortType string) (
+	[]*authorModel.Author, error) {
+	limitQuery := ""
+	if count != 0 {
+		limitQuery = fmt.Sprintf("limit %d, %d", offset, count)
+	}
+	sortQuery := ""
+	if sortAttr != "" {
+		sortQuery = fmt.Sprintf("sort author.%s %s", sortAttr, sortType)
+	}
+	query := fmt.Sprintf(`for p in 2..3 inbound '%s'
 	jou_belong_to_field,confSer_belong_to_field,publish_on_jou,publish_on_confIns,confIns_belong_to_confSer
-	for author, wb in outbound paper._id write_by
-		limit %d, %d
-		return distinct author`, f.ID, offset, count)
-	data, err := pkg.ComDocList(query, count)
+	for author, wb in outbound p._id write_by
+		%s %s return author`, f.ID, sortQuery, limitQuery)
+	data, err := pkg.ComList(query, count)
+	if err != nil {
+		return nil, err
+	}
 	var authors []*authorModel.Author
-	b, _ := json.Marshal(&data)
+	b, err := json.Marshal(&data)
+	if err != nil {
+		return nil, err
+	}
 	err = json.Unmarshal(b, &authors)
 	return authors, err
 }
@@ -94,4 +161,15 @@ func FindByKey(key string) (*Field, error) {
 	}
 	f.ID = docMeta.ID.String()
 	return f, nil
+}
+
+// List
+func List(offset uint64, count uint64) ([]*Field, error) {
+	query := fmt.Sprintf("FOR d IN %s LIMIT %d, %d RETURN d",
+		pkg.Conf.ArangoDB.ModelColNameMap[pkg.FieldName], offset, count)
+	data, err := pkg.ComList(query, count)
+	var fields []*Field
+	b, _ := json.Marshal(&data)
+	err = json.Unmarshal(b, &fields)
+	return fields, err
 }

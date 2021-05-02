@@ -11,7 +11,7 @@ type WriteBy struct {
 
 // Create
 func (w *WriteBy) Create() error {
-	if _, err := pkg.ComDocCreate(w, pkg.WriteByName); err != nil {
+	if _, err := pkg.ComCreate(w, pkg.WriteByName); err != nil {
 		return err
 	}
 	return nil

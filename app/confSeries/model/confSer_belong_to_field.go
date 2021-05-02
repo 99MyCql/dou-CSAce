@@ -12,7 +12,7 @@ type ConfSerBelongToField struct {
 
 // Create 在数据库中创建数据
 func (cs2f *ConfSerBelongToField) Create() error {
-	if _, err := pkg.ComDocCreate(cs2f, pkg.ConfSerBelongToFieldName); err != nil {
+	if _, err := pkg.ComCreate(cs2f, pkg.ConfSerBelongToFieldName); err != nil {
 		return err
 	}
 	return nil

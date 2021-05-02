@@ -11,7 +11,7 @@ type CitBy struct {
 
 // Create
 func (c *CitBy) Create() error {
-	if _, err := pkg.ComDocCreate(c, pkg.CitByName); err != nil {
+	if _, err := pkg.ComCreate(c, pkg.CitByName); err != nil {
 		return err
 	}
 	return nil

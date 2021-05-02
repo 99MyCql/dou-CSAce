@@ -15,7 +15,7 @@ type Affiliation struct {
 // Create 在数据库中创建数据
 func (a *Affiliation) Create() error {
 	var err error
-	if a.ID, err = pkg.ComDocCreate(a, pkg.AffiliationName); err != nil {
+	if a.ID, err = pkg.ComCreate(a, pkg.AffiliationName); err != nil {
 		return err
 	}
 	return nil
