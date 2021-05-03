@@ -8,6 +8,7 @@ import (
 	"douCSAce/app/author"
 	"douCSAce/app/confInstance"
 	"douCSAce/app/confSeries"
+	"douCSAce/app/field"
 	"douCSAce/app/journal"
 	"douCSAce/app/paper"
 	"douCSAce/pkg"
@@ -40,23 +41,43 @@ func main() {
 		authorRouter := v1.Group("/author")
 		{
 			authorRouter.GET("/count", author.Count)
+			authorRouter.GET("/get", author.Get)
+			authorRouter.POST("/listPaper", author.ListPaper)
 		}
 		confInsRouter := v1.Group("/confInstance")
 		{
 			confInsRouter.GET("/count", confInstance.Count)
+			confInsRouter.GET("/get", confInstance.Get)
+			confInsRouter.POST("/listPaper", confInstance.ListPaper)
+			confInsRouter.POST("/listAuthor", confInstance.ListAuthor)
 		}
 		confSeriesRouter := v1.Group("/confSeries")
 		{
 			confSeriesRouter.GET("/count", confSeries.Count)
+			confSeriesRouter.GET("/get", confSeries.Get)
+			confSeriesRouter.POST("/listPaper", confSeries.ListPaper)
+			confSeriesRouter.POST("/listAuthor", confSeries.ListAuthor)
+			confSeriesRouter.POST("/listConfIns", confSeries.ListConfIns)
 		}
-		// fieldRouter := v1.Group("/field")
+		fieldRouter := v1.Group("/field")
+		{
+			fieldRouter.GET("/get", field.Get)
+			fieldRouter.POST("/listVenue", field.ListVenue)
+			fieldRouter.POST("/listPaper", field.ListPaper)
+			fieldRouter.POST("/listAuthor", field.ListAuthor)
+		}
 		journalRouter := v1.Group("/journal")
 		{
 			journalRouter.GET("/count", journal.Count)
+			journalRouter.GET("/get", journal.Get)
+			journalRouter.POST("/listPaper", journal.ListPaper)
+			journalRouter.POST("/listAuthor", journal.ListAuthor)
 		}
 		paperRouter := v1.Group("/paper")
 		{
 			paperRouter.GET("/count", paper.Count)
+			paperRouter.GET("/get", paper.Get)
+			paperRouter.POST("/listAuthor", paper.ListAuthor)
 		}
 	}
 

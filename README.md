@@ -258,4 +258,5 @@ or 直接生成可执行程序：
 
 ```
 go build
+./douCSAce
 ```

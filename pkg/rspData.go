@@ -8,9 +8,9 @@ type RspData struct {
 }
 
 const (
-	SucCode       = 0 // 成功码
-	ClientErrCode = 1 // 客户端错误码
-	ServerErrCode = 2 // 服务器错误码
+	SucCode       = 200 // 成功码
+	ClientErrCode = 400 // 客户端错误码
+	ServerErrCode = 500 // 服务器错误码
 )
 
 // ClientErr 客户端错误时返回信息

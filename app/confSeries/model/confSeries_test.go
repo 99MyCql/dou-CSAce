@@ -4,6 +4,8 @@ import (
 	"os"
 	"testing"
 
+	"github.com/stretchr/testify/assert"
+
 	fieldModel "douCSAce/app/field/model"
 	"douCSAce/pkg"
 )
@@ -28,9 +30,27 @@ func TestConfSeries_DeleteConfSerBelongToField(t *testing.T) {
 	cs2f.Create()
 
 	if err := cs.DeleteConfSerBelongToField(); err != nil {
-		t.Error(err)
+		t.Fatal(err)
 	}
 
 	f.Delete()
 	cs.Delete()
+}
+
+func TestConfSeries_UpdCountPYear(t *testing.T) {
+	cs, err := FindByKey("PPoPP")
+	assert.Nil(t, err)
+	err = cs.UpdCountPYear()
+	assert.Nil(t, err)
+	cs, err = FindByKey("PPoPP")
+	assert.Nil(t, err)
+	t.Log(cs)
+}
+
+func TestConfSeries_ListAuthor(t *testing.T) {
+	cs, err := FindByKey("PPoPP")
+	assert.Nil(t, err)
+	authors, err := cs.ListAuthor(0, 10, "citationCount", pkg.SortDesc)
+	assert.Nil(t, err)
+	t.Logf("%+v", authors[0])
 }

@@ -2,19 +2,18 @@ package model
 
 import (
 	"context"
-	"errors"
+	"encoding/json"
 	"fmt"
 	"strings"
 
-	"github.com/arangodb/go-driver"
-
+	authorModel "douCSAce/app/author/model"
 	"douCSAce/pkg"
 )
 
 // Paper 论文实体模型
 type Paper struct {
-	ID             string `json:"-"`    // ArangoDB 中文档的默认属性，_id = <collection name>/<_key>
-	Key            string `json:"_key"` // 唯一标识，等同于 dblp 中文章的 key ，_key = dblpKey.replaceAll("/", "-")，比如：journals-tocs-BalmauDZGCD20
+	ID             string `json:"_id,omitempty"` // ArangoDB 中文档的默认属性，_id = <collection name>/<_key>
+	Key            string `json:"_key"`          // 唯一标识，等同于 dblp 中文章的 key ，_key = dblpKey.replaceAll("/", "-")，比如：journals-tocs-BalmauDZGCD20
 	Title          string `json:"title"`
 	Type           uint   `json:"type"` // 0:Other, 1:Conference, 2:Journal
 	Pages          string `json:"pages"`
@@ -31,7 +30,7 @@ type Paper struct {
 // Create
 func (p *Paper) Create() error {
 	var err error
-	if p.ID, err = pkg.ComDocCreate(p, pkg.PaperName); err != nil {
+	if p.ID, err = pkg.ComCreate(p, pkg.PaperName); err != nil {
 		return err
 	}
 	return nil
@@ -44,9 +43,11 @@ func (p *Paper) Delete() error {
 }
 
 // Update 更新数据
-func (p *Paper) Update(update map[string]interface{}) error {
-	_, err := pkg.DB.Cols[pkg.PaperName].UpdateDocument(nil, p.Key, update)
-	return err
+func (p *Paper) Update(updateData map[string]interface{}) error {
+	if updateData == nil {
+		return pkg.ComUpdate(pkg.PaperName, p.Key, p)
+	}
+	return pkg.ComUpdate(pkg.PaperName, p.Key, updateData)
 }
 
 // DeletePublishOnJou 删除所有与 paper 关联的 PublishOnJou 边
@@ -87,7 +88,30 @@ func (p *Paper) DeleteCitBy() error {
 	return err
 }
 
-// GenKey 返回 Key，需传入 dblp 中 article 的 key 属性，_key = dblpKey.replaceAll("/", "-")，比如：journals-tocs-BalmauDZGCD20
+// GetDblpKey 返回 dblp 中的 key，比如：journals-tocs-BalmauDZGCD20 --> journals/tocs/BalmauDZGCD20
+func (p *Paper) GetDblpKey() string {
+	return strings.ReplaceAll(p.Key, "-", "/")
+}
+
+// ListAuthor
+func (p *Paper) ListAuthor(offset uint64, count uint64) (
+	[]*authorModel.Author, error) {
+	query := fmt.Sprintf(`for author, wb in outbound '%s' write_by
+		return author`, p.ID)
+	data, err := pkg.ComList(query, count)
+	if err != nil {
+		return nil, err
+	}
+	var authors []*authorModel.Author
+	b, err := json.Marshal(&data)
+	if err != nil {
+		return nil, err
+	}
+	err = json.Unmarshal(b, &authors)
+	return authors, err
+}
+
+// GenKey 返回 Key，需传入 dblp 中 article 的 key 属性，比如：journals/tocs/BalmauDZGCD20 --> journals-tocs-BalmauDZGCD20
 func GenKey(dblpKey string) string {
 	return strings.ReplaceAll(dblpKey, "/", "-")
 }
@@ -115,34 +139,12 @@ func Count() (int64, error) {
 }
 
 // List 返回多个 Paper 文档（记录），Limit start, count
-func List(start int64, count int) ([]*Paper, error) {
-	if count > 1000 {
-		pkg.Log.Error("一次不能获取超过1000条的数据")
-		return nil, errors.New("一次不能获取超过1000条的数据")
-	}
-
+func List(offset uint64, count uint64) ([]*Paper, error) {
 	query := fmt.Sprintf("FOR d IN %s LIMIT %d, %d RETURN d",
-		pkg.Conf.ArangoDB.ModelColNameMap[pkg.PaperName], start, count)
-	ctx := context.Background()
-	cursor, err := pkg.DB.Database.Query(ctx, query, nil)
-	if err != nil {
-		pkg.Log.Error(err)
-		return nil, err
-	}
-	defer cursor.Close()
-
+		pkg.Conf.ArangoDB.ModelColNameMap[pkg.PaperName], offset, count)
+	data, err := pkg.ComList(query, count)
 	var papers []*Paper
-	for {
-		var tmp *Paper
-		meta, err := cursor.ReadDocument(ctx, &tmp)
-		if driver.IsNoMoreDocuments(err) {
-			break
-		} else if err != nil {
-			pkg.Log.Error(err)
-			return nil, err
-		}
-		tmp.ID = meta.ID.String()
-		papers = append(papers, tmp)
-	}
-	return papers, nil
+	b, _ := json.Marshal(&data)
+	err = json.Unmarshal(b, &papers)
+	return papers, err
 }

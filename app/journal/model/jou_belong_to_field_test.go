@@ -12,7 +12,7 @@ func TestJouBelongToField_Create(t *testing.T) {
 	}
 	err := j2f.Create()
 	if err != nil {
-		t.Error(err)
+		t.Fatal(err)
 	}
 	t.Log(j2f)
 }
