@@ -96,7 +96,7 @@ func (p *Paper) GetDblpKey() string {
 // ListAuthor
 func (p *Paper) ListAuthor(offset uint64, count uint64) (
 	[]*authorModel.Author, error) {
-	query := fmt.Sprintf(`for author, wb in outbound '%s' write_by
+	query := fmt.Sprintf(`for author in outbound '%s' write_by
 		return author`, p.ID)
 	data, err := pkg.ComList(query, count)
 	if err != nil {

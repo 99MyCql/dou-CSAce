@@ -135,7 +135,8 @@ func (f *Field) ListAuthor(offset uint64, count uint64, sortAttr string, sortTyp
 	}
 	query := fmt.Sprintf(`for p in 2..3 inbound '%s'
 	jou_belong_to_field,confSer_belong_to_field,publish_on_jou,publish_on_confIns,confIns_belong_to_confSer
-	for author, wb in outbound p._id write_by
+	for a in outbound p._id write_by
+		COLLECT author = a
 		%s %s return author`, f.ID, sortQuery, limitQuery)
 	data, err := pkg.ComList(query, count)
 	if err != nil {
