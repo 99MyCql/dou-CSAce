@@ -172,10 +172,9 @@ func FindByKey(key string) (*Field, error) {
 }
 
 // List
-func List(offset uint64, count uint64) ([]*Field, error) {
-	query := fmt.Sprintf("FOR d IN %s LIMIT %d, %d RETURN d",
-		pkg.Conf.ArangoDB.ModelColNameMap[pkg.FieldName], offset, count)
-	data, err := pkg.ComList(query, count)
+func List() ([]*Field, error) {
+	query := fmt.Sprintf("FOR d IN %s RETURN d", pkg.Conf.ArangoDB.ModelColNameMap[pkg.FieldName])
+	data, err := pkg.ComList(query, 0)
 	var fields []*Field
 	b, _ := json.Marshal(&data)
 	err = json.Unmarshal(b, &fields)

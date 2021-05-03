@@ -62,6 +62,7 @@ func main() {
 		fieldRouter := v1.Group("/field")
 		{
 			fieldRouter.GET("/get", field.Get)
+			fieldRouter.GET("/list", field.List)
 			fieldRouter.POST("/listVenue", field.ListVenue)
 			fieldRouter.POST("/listPaper", field.ListPaper)
 			fieldRouter.POST("/listAuthor", field.ListAuthor)

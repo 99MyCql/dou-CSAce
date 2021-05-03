@@ -76,5 +76,10 @@ func ListAuthor(c *gin.Context) {
 		return
 	}
 	authors, err := paper.ListAuthor(req.Offset, req.Count)
+	if err != nil {
+		pkg.Log.Error(err)
+		c.JSON(http.StatusOK, pkg.ServerErr("list author error:"+err.Error()))
+		return
+	}
 	c.JSON(http.StatusOK, pkg.SucWithData("", authors))
 }
