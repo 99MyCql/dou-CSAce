@@ -78,6 +78,11 @@ func ListPaper(c *gin.Context) {
 		return
 	}
 	papers, err := confInstance.ListPaper(req.Offset, req.Count, req.SortAttr, req.SortType)
+	if err != nil {
+		pkg.Log.Error(err)
+		c.JSON(http.StatusOK, pkg.ServerErr("list paper error:"+err.Error()))
+		return
+	}
 	c.JSON(http.StatusOK, pkg.SucWithData("", papers))
 }
 
@@ -102,5 +107,10 @@ func ListAuthor(c *gin.Context) {
 		return
 	}
 	authors, err := confInstance.ListAuthor(req.Offset, req.Count, req.SortAttr, req.SortType)
+	if err != nil {
+		pkg.Log.Error(err)
+		c.JSON(http.StatusOK, pkg.ServerErr("list author error:"+err.Error()))
+		return
+	}
 	c.JSON(http.StatusOK, pkg.SucWithData("", authors))
 }

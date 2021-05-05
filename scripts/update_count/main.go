@@ -2,7 +2,7 @@
 package main
 
 import (
-	authorModel "douCSAce/app/author/model"
+	authorDao "douCSAce/app/author/dao"
 	confSerModel "douCSAce/app/confSeries/model"
 	fieldModel "douCSAce/app/field/model"
 	jouModel "douCSAce/app/journal/model"
@@ -87,7 +87,7 @@ func updateConfSerCountPYear() {
 }
 
 func updateFieldCountPYear() {
-	fields, err := fieldModel.List(0, 1000)
+	fields, err := fieldModel.List()
 	if err != nil {
 		pkg.Log.Fatal(err)
 	}
@@ -103,7 +103,7 @@ func updateFieldCountPYear() {
 
 func updateAuthorCount() {
 	for {
-		authors, err := authorModel.List(0, 10000)
+		authors, err := authorDao.List(0, 10000)
 		if err != nil {
 			pkg.Log.Fatal(err)
 		}
@@ -121,7 +121,7 @@ func updateAuthorCount() {
 func updateAuthorCountPYear() {
 	for i := 0; ; i++ {
 		pkg.Log.Infof("====== %d ======", i)
-		authors, err := authorModel.List(0, 10000)
+		authors, err := authorDao.List(0, 10000)
 		if err != nil {
 			pkg.Log.Fatal(err)
 		}

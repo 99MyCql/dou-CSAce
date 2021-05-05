@@ -19,6 +19,7 @@ type Journal struct {
 	ShortName       string            `json:"shortName"`
 	Publisher       string            `json:"publisher"`
 	Url             string            `json:"url"`
+	Category        string            `json:"category"`
 	PaperCount      uint64            `json:"paperCount"`
 	CitationCount   uint64            `json:"citationCount"`
 	PaperCountPYear map[string]uint64 `json:"paperCountPYear"`
@@ -94,8 +95,9 @@ func (j *Journal) ListAuthor(offset uint64, count uint64, sortAttr string, sortT
 	if sortAttr != "" {
 		sortQuery = fmt.Sprintf("sort author.%s %s", sortAttr, sortType)
 	}
-	query := fmt.Sprintf(`for paper in 1 inbound '%s' publish_on_jou
-	for author, wb in outbound paper._id write_by
+	query := fmt.Sprintf(`for p in 1 inbound '%s' publish_on_jou
+	for a in outbound p._id write_by
+		COLLECT author = a
 		%s %s return author`, j.ID, sortQuery, limitQuery)
 	data, err := pkg.ComList(query, count)
 	if err != nil {

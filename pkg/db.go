@@ -156,5 +156,6 @@ func ComList(query string, count uint64) ([]map[string]interface{}, error) {
 		}
 		list = append(list, tmp)
 	}
+	Log.Info(fmt.Sprintf("query successfully: %s", query))
 	return list, nil
 }

@@ -20,6 +20,7 @@ type ConfSeries struct {
 	ShortName       string            `json:"shortName"`
 	Publisher       string            `json:"publisher"`
 	Url             string            `json:"url"`
+	Category        string            `json:"category"`
 	PaperCount      uint64            `json:"paperCount"`
 	CitationCount   uint64            `json:"citationCount"`
 	PaperCountPYear map[string]uint64 `json:"paperCountPYear"`
@@ -125,7 +126,8 @@ func (c *ConfSeries) ListAuthor(offset uint64, count uint64, sortAttr string, so
 		sortQuery = fmt.Sprintf("sort author.%s %s", sortAttr, sortType)
 	}
 	query := fmt.Sprintf(`for p in 2 inbound '%s' publish_on_confIns, confIns_belong_to_confSer
-	for author, wb in outbound p._id write_by
+	for a in outbound p._id write_by
+		COLLECT author = a
 		%s %s return author`, c.ID, sortQuery, limitQuery)
 	data, err := pkg.ComList(query, count)
 	if err != nil {
