@@ -10,7 +10,7 @@ import (
 
 	"github.com/beevik/etree"
 
-	authorModel "douCSAce/app/author/model"
+	author "douCSAce/app/author/service"
 	confInsModel "douCSAce/app/confInstance/model"
 	confSerModel "douCSAce/app/confSeries/model"
 	fieldModel "douCSAce/app/field/model"
@@ -18,6 +18,8 @@ import (
 	paperModel "douCSAce/app/paper/model"
 	"douCSAce/pkg"
 )
+
+type Author author.Author
 
 const (
 	jsonFileName  = "ccf_field.json"
@@ -27,16 +29,16 @@ const (
 	JouPaperType  = 2
 )
 
-func handleAuthor(authorXml *etree.Element) *authorModel.Author {
-	key := authorModel.GenKey(authorXml.SelectAttr("pid").Value)
+func handleAuthor(authorXml *etree.Element) *author.Author {
+	key := author.GenKey(authorXml.SelectAttr("pid").Value)
 	pkg.Log.Info("handle author:" + key)
 
-	var a *authorModel.Author
+	var a *author.Author
 	// 如果已存在则直接获取
-	if exist, _ := authorModel.IsExist(key); exist {
-		a, _ = authorModel.FindByKey(key)
+	if exist, _ := author.IsExist(key); exist {
+		a, _ = author.FindByKey(key)
 	} else {
-		a = &authorModel.Author{
+		a = &author.Author{
 			Key:  key,
 			Name: authorXml.Text(),
 		}
