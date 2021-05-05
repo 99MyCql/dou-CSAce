@@ -83,3 +83,33 @@ func ListAuthor(c *gin.Context) {
 	}
 	c.JSON(http.StatusOK, pkg.SucWithData("", authors))
 }
+
+// @Summary GetPublishVenue
+// @Tags Paper
+// @Accept json
+// @Param key query string true "唯一标识"
+// @Success 200 {string} json "{"code":0,"data":{},"msg":""}"
+// @Failure 200 {string} json "{"code":!0,"data":{},"msg":""}"
+// @Router /api/v1/paper/getPublishVenue [get]
+func GetPublishVenue(c *gin.Context) {
+	var key string
+	if key = c.DefaultQuery("key", ""); key == "" {
+		pkg.Log.Error("need key")
+		c.JSON(http.StatusOK, pkg.ClientErr("need key"))
+		return
+	}
+	pkg.Log.Info(key)
+	paper, err := model.FindByKey(key)
+	if err != nil {
+		pkg.Log.Error(err)
+		c.JSON(http.StatusOK, pkg.ServerErr("find by key error:"+err.Error()))
+		return
+	}
+	venue, err := paper.GetPublishVenue()
+	if err != nil {
+		pkg.Log.Error(err)
+		c.JSON(http.StatusOK, pkg.ServerErr("get venue error:"+err.Error()))
+		return
+	}
+	c.JSON(http.StatusOK, pkg.SucWithData("", venue))
+}

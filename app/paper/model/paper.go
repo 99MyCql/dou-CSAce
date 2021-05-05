@@ -3,6 +3,7 @@ package model
 import (
 	"context"
 	"encoding/json"
+	"errors"
 	"fmt"
 	"strings"
 
@@ -109,6 +110,36 @@ func (p *Paper) ListAuthor(offset uint64, count uint64) (
 	}
 	err = json.Unmarshal(b, &authors)
 	return authors, err
+}
+
+// GetPublishVenue 获取论文所发布的会议/期刊
+func (p *Paper) GetPublishVenue() (map[string]interface{}, error) {
+	var query string
+	if p.Type == 2 {
+		query = fmt.Sprintf(`for j in 1 outbound "%s" 
+	publish_on_jou
+	return j`, p.ID)
+	} else if p.Type == 1 {
+		query = fmt.Sprintf(`for cs in 2 outbound "%s" 
+	publish_on_confIns, confIns_belong_to_confSer
+	return cs`, p.ID)
+	} else {
+		pkg.Log.Error(fmt.Sprintf("%s's no match type:%d", p.ID, p.Type))
+		return nil, errors.New(fmt.Sprintf("%s's no match type:%d", p.ID, p.Type))
+	}
+	pkg.Log.Info(query)
+	cursorJou, err := pkg.DB.Database.Query(nil, query, nil)
+	if err != nil {
+		pkg.Log.Error(err)
+		return nil, err
+	}
+	defer cursorJou.Close()
+	var venue map[string]interface{}
+	if _, err := cursorJou.ReadDocument(nil, &venue); err != nil {
+		pkg.Log.Error(query, err)
+		return nil, err
+	}
+	return venue, nil
 }
 
 // GenKey 返回 Key，需传入 dblp 中 article 的 key 属性，比如：journals/tocs/BalmauDZGCD20 --> journals-tocs-BalmauDZGCD20

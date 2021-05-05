@@ -96,7 +96,7 @@ func (c *ConfInstance) ListAuthor(offset uint64, count uint64, sortAttr string, 
 	if sortAttr != "" {
 		sortQuery = fmt.Sprintf("sort author.%s %s", sortAttr, sortType)
 	}
-	query := fmt.Sprintf(`for paper in 1 inbound '%s' publish_on_confIns
+	query := fmt.Sprintf(`for p in 1 inbound '%s' publish_on_confIns
 	for a in outbound p._id write_by
 		COLLECT author = a
 		%s %s return author`, c.ID, sortQuery, limitQuery)

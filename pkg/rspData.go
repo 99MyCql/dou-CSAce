@@ -24,7 +24,7 @@ func ClientErr(msg string) RspData {
 // ServerErr 服务端错误时返回信息
 func ServerErr(msg string) RspData {
 	return RspData{
-		Code: ClientErrCode,
+		Code: ServerErrCode,
 		Msg:  msg,
 	}
 }

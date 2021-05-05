@@ -95,7 +95,7 @@ func (j *Journal) ListAuthor(offset uint64, count uint64, sortAttr string, sortT
 	if sortAttr != "" {
 		sortQuery = fmt.Sprintf("sort author.%s %s", sortAttr, sortType)
 	}
-	query := fmt.Sprintf(`for paper in 1 inbound '%s' publish_on_jou
+	query := fmt.Sprintf(`for p in 1 inbound '%s' publish_on_jou
 	for a in outbound p._id write_by
 		COLLECT author = a
 		%s %s return author`, j.ID, sortQuery, limitQuery)
