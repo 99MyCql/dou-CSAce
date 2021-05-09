@@ -43,3 +43,14 @@ func TestAuthor_ListPaper(t *testing.T) {
 	assert.Nil(t, err)
 	t.Logf("%+v", papers[0])
 }
+
+func TestAuthor_GetCoAuthor(t *testing.T) {
+	a, err := FindByKey("01-3367")
+	assert.Nil(t, err)
+	coauthors, err := a.ListCoAuthor()
+	assert.Nil(t, err)
+	t.Log(len(coauthors))
+	for _, coauthor := range coauthors {
+		t.Log(coauthor)
+	}
+}

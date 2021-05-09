@@ -43,6 +43,7 @@ func main() {
 			authorRouter.GET("/count", author.Count)
 			authorRouter.GET("/get", author.Get)
 			authorRouter.POST("/listPaper", author.ListPaper)
+			authorRouter.GET("/listCoAuthor", author.ListCoAuthor)
 		}
 		confInsRouter := v1.Group("/confInstance")
 		{
