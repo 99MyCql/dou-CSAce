@@ -11,6 +11,7 @@ import (
 	"douCSAce/app/field"
 	"douCSAce/app/journal"
 	"douCSAce/app/paper"
+	"douCSAce/app/search"
 	"douCSAce/pkg"
 
 	_ "douCSAce/docs"
@@ -82,6 +83,7 @@ func main() {
 			paperRouter.POST("/listAuthor", paper.ListAuthor)
 			paperRouter.GET("/getPublishVenue", paper.GetPublishVenue)
 		}
+		v1.GET("/search", search.Search)
 	}
 
 	// 运行
