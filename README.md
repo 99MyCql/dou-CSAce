@@ -9,8 +9,71 @@
 特色功能：
 - 主要针对计算机领域的学术数据进行可视化分析与展示。
 - 结合国内需求，根据《CCF推荐会议和期刊》进行研究方向的划分，可视化显示每个方向的变化趋势和对比。
-- 在每个方向中，可视化显示其中每个会议/期刊论文数、被引用数的变化趋势、TOP作者论文信息，以及不同会议/期刊之间的对比。
+- 在每个方向中，可视化对比不同会议/期刊的论文数、被引用数等，并显示TOP作者、论文信息。
+- 在会议/期刊中，可视化展示历年变化趋势，显示TOP作者、论文等信息。
 - 在作者信息中，展示作者的合作关系网。
+
+## 快速开始
+
+### 准备
+
+1. Go 1.14
+2. ArangoDB 3.7.6
+
+安装 swag 生成工具：
+
+```
+go get -u github.com/swaggo/swag/cmd/swag
+```
+
+生成 swagger 文档：
+
+```
+swag init
+```
+
+在根目录下创建配置文件 `conf.yaml` ，内容如下：
+
+```yaml
+addr: 0.0.0.0:8080
+arangoDB:
+  url: http://localhost:8529/
+  username: dounine
+  passwd: 123456
+  database: douCSAce
+  collections:
+    # 各模型对应的集合名（表名）
+    paper: papers
+    confInstance: confInstances
+    confSeries: confSeries
+    journal: journals
+    field: fields
+    author: authors
+    affiliation: affiliations
+    cit_by: cit_by
+    publish_on_confIns: publish_on_confIns
+    publish_on_jou: publish_on_jou
+    write_by: write_by
+    confIns_belong_to_confSer: confIns_belong_to_confSer
+    confSer_belong_to_field: confSer_belong_to_field
+    jou_belong_to_field: jou_belong_to_field
+    co_with: co_with
+    author_belong_to_aff: author_belong_to_aff
+logPath:
+```
+
+### 运行
+
+```
+go run main.go
+```
+
+or 直接生成可执行程序：
+
+```
+go build
+./douCSAce
+```
 
 ## 国内外情况
 
@@ -198,65 +261,3 @@
 |startYear|string||
 |endYear|string||
 |note|string|备注|
-
-## 快速开始
-
-### 准备
-
-1. Go 1.14
-2. ArangoDB 3.7.6
-
-安装 swag 生成工具：
-
-```
-go get -u github.com/swaggo/swag/cmd/swag
-```
-
-生成 swagger 文档：
-
-```
-swag init
-```
-
-在根目录下创建配置文件 `conf.yaml` ，内容如下：
-
-```yaml
-addr: 0.0.0.0:8080
-arangoDB:
-  url: http://localhost:8529/
-  username: dounine
-  passwd: 123456
-  database: douCSAce
-  collections:
-    # 各模型对应的集合名（表名）
-    paper: papers
-    confInstance: confInstances
-    confSeries: confSeries
-    journal: journals
-    field: fields
-    author: authors
-    affiliation: affiliations
-    cit_by: cit_by
-    publish_on_confIns: publish_on_confIns
-    publish_on_jou: publish_on_jou
-    write_by: write_by
-    confIns_belong_to_confSer: confIns_belong_to_confSer
-    confSer_belong_to_field: confSer_belong_to_field
-    jou_belong_to_field: jou_belong_to_field
-    co_with: co_with
-    author_belong_to_aff: author_belong_to_aff
-logPath:
-```
-
-### 运行
-
-```
-go run main.go
-```
-
-or 直接生成可执行程序：
-
-```
-go build
-./douCSAce
-```
