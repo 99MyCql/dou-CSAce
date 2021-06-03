@@ -105,6 +105,31 @@ func (a *Author) ListPaper(offset uint64, count uint64, sortAttr string, sortTyp
 	return papers, err
 }
 
+// ListCoAuthor 获取合作者
+func (a *Author) ListCoAuthor() ([]map[string]interface{}, error) {
+	query := fmt.Sprintf(`for p in 1 inbound "%s" write_by
+	for a in 1 outbound p._id write_by
+		filter a._id != "%s"
+		return a`, a.ID, a.ID)
+	data, err := pkg.ComList(query, 0)
+	if err != nil {
+		return nil, err
+	}
+	coauthors := make([]map[string]interface{}, 0)
+	ca_pos_map := make(map[string]int)
+	for i := 0; i < len(data); i++ {
+		name := data[i]["name"].(string)
+		if pos, ok := ca_pos_map[name]; ok {
+			coauthors[pos]["weight"] = coauthors[pos]["weight"].(int) + 1
+		} else {
+			data[i]["weight"] = 1
+			coauthors = append(coauthors, data[i])
+			ca_pos_map[name] = len(coauthors) - 1
+		}
+	}
+	return coauthors, nil
+}
+
 // GenKey 返回 Key，需要 dblp 中 author 的 pid 属性，_key = pid.replaceAll("/", "-")，比如：journals-tocs-BalmauDZGCD20
 func GenKey(dblpPid string) string {
 	return strings.ReplaceAll(dblpPid, "/", "-")

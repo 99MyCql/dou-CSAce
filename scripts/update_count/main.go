@@ -14,8 +14,6 @@ const (
 	confFilepath = "../../conf.yaml"
 	logLevel     = pkg.DebugLevel
 
-	updateAuthor = ``
-
 	updateJou = `for j in journals
 	let pcits = (
 		for p in 1 inbound j._id publish_on_jou

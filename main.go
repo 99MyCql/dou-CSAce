@@ -11,6 +11,7 @@ import (
 	"douCSAce/app/field"
 	"douCSAce/app/journal"
 	"douCSAce/app/paper"
+	"douCSAce/app/search"
 	"douCSAce/pkg"
 
 	_ "douCSAce/docs"
@@ -43,6 +44,7 @@ func main() {
 			authorRouter.GET("/count", author.Count)
 			authorRouter.GET("/get", author.Get)
 			authorRouter.POST("/listPaper", author.ListPaper)
+			authorRouter.GET("/listCoAuthor", author.ListCoAuthor)
 		}
 		confInsRouter := v1.Group("/confInstance")
 		{
@@ -81,6 +83,7 @@ func main() {
 			paperRouter.POST("/listAuthor", paper.ListAuthor)
 			paperRouter.GET("/getPublishVenue", paper.GetPublishVenue)
 		}
+		v1.GET("/search", search.Search)
 	}
 
 	// 运行

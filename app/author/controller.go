@@ -85,3 +85,33 @@ func ListPaper(c *gin.Context) {
 	}
 	c.JSON(http.StatusOK, pkg.SucWithData("", papers))
 }
+
+// @Summary ListCoAuthor
+// @Tags Author
+// @Accept json
+// @Param key query string true "author唯一标识"
+// @Success 200 {string} json "{"code":0,"data":{},"msg":""}"
+// @Failure 200 {string} json "{"code":!0,"data":{},"msg":""}"
+// @Router /api/v1/author/listCoAuthor [get]
+func ListCoAuthor(c *gin.Context) {
+	var key string
+	if key = c.DefaultQuery("key", ""); key == "" {
+		pkg.Log.Error("need key")
+		c.JSON(http.StatusOK, pkg.ClientErr("need key"))
+		return
+	}
+	pkg.Log.Info(key)
+	author, err := service.FindByKey(key)
+	if err != nil {
+		pkg.Log.Error(err)
+		c.JSON(http.StatusOK, pkg.ServerErr("find by key error:"+err.Error()))
+		return
+	}
+	coauthors, err := author.ListCoAuthor()
+	if err != nil {
+		pkg.Log.Error(err)
+		c.JSON(http.StatusOK, pkg.ServerErr("list coauthor error:"+err.Error()))
+		return
+	}
+	c.JSON(http.StatusOK, pkg.SucWithData("", coauthors))
+}
