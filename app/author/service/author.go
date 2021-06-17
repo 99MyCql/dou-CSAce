@@ -6,12 +6,12 @@ import (
 	"fmt"
 	"strings"
 
-	"douCSAce/app/author/model"
+	authorModel "douCSAce/app/author/model"
 	paperModel "douCSAce/app/paper/model"
 	"douCSAce/pkg"
 )
 
-type Author model.Author
+type Author authorModel.Author
 
 // Create 在数据库中创建数据
 func (a *Author) Create() error {

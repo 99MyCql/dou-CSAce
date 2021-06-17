@@ -17,20 +17,8 @@
 
 ### 准备
 
-1. Go 1.14
-2. ArangoDB 3.7.6
-
-安装 swag 生成工具：
-
-```
-go get -u github.com/swaggo/swag/cmd/swag
-```
-
-生成 swagger 文档：
-
-```
-swag init
-```
+1. [Go](https://golang.org/) 1.14
+2. [ArangoDB](https://www.arangodb.com/) 3.7.6
 
 在根目录下创建配置文件 `conf.yaml` ，内容如下：
 
@@ -61,6 +49,34 @@ arangoDB:
     author_belong_to_aff: author_belong_to_aff
 logPath:
 ```
+
+安装 swagger 生成工具：
+
+```
+go get -u github.com/swaggo/swag/cmd/swag
+```
+
+生成 swagger 文档：
+
+```
+swag init
+```
+
+### 数据爬取
+
+爬取基础数据：
+
+```
+go run scripts/dblp_crawler/main.go
+```
+
+爬取引用数据：
+
+```
+go run scripts/dblp_cit_crawler/main.go
+```
+
+也可以参考上述程序代码，自定义爬虫程序爬取数据。
 
 ### 运行
 
